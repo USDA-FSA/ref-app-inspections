@@ -1,0 +1,9 @@
+{
+  "name": "ref-app-inspections",
+  "description": "Prototype",
+  "private": true,
+  "author": "Francis C. Rupert",
+  "scripts": {
+    "start": "browser-sync src -w"
+  }
+}
