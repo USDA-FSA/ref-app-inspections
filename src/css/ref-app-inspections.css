@@ -1,3 +1,19 @@
-body {
-  color: green;
+/* [name] **********************************************************************/
+
+/* [name] **********************************************************************/
+
+/* [name] **********************************************************************/
+
+/* PROTOTYPE ONLY *************************************************************/
+.TBD {
+  margin-top: 24px;
+  background-color: white;
+  border: 1px solid #dbdad9;
+  padding: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+  color: #f0f0f0;
+  text-shadow: -1px -1px 0 #dbdad9;
 }

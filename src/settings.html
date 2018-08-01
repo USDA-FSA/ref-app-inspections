@@ -26,160 +26,221 @@
   <a class="skipnav" href="#primary-navigation">Skip to primary navigation</a>
   <a class="skipnav" href="#main-content">Skip to main content</a>
 
-  <header>
-    <div class="fsa-tophat">
-      <div class="fsa-tophat__bd">
-        <div class="fsa-tophat__primary">
-          <span class="fsa-tophat__agency">
-            <a class="fsa-tophat__link" href="//usda.gov" title="Link to USDA homepage">
-              <img role="presentation" class="fsa-tophat__agency-logo" src="img/usda-logo--white.svg" alt="">
-              <abbr class="fsa-tophat__agency-abbr" title="United States Department of Agriculture">USDA</abbr>
-              <span class="fsa-tophat__agency-fullname">United States Department of Agriculture</span>
-            </a>
-          </span>
-        </div>
-        <div class="fsa-tophat__secondary">
-          <span class="fsa-tophat__subagency">
-            <a class="fsa-tophat__link" href="//fsa.usda.gov" title="Link to FSA homepage">Farm Service Agency</a>
-          </span>
-        </div>
-      </div>
-    </div>
-    <div class="fsa-header-app">
-      <div class="fsa-header-app__bd">
-        <div class="fsa-header-app__primary">
-          <a class="fsa-header-app__home-link" href="index.html">
-            <span class="fsa-header-app__app-name">
-              <abbr class="fsa-header-app__app-abbr">FIC</abbr>
-              <span class="fsa-header-app__app-full">Farm Inspection Console</span>
-            </span>
-          </a>
-        </div>
-        <div class="fsa-header-app__secondary">
-          <span class="fsa-header-app__profile">
-            <a href="profile.html" class="fsa-header-app__profile-link">
-              <span class="fsa-header-app__profile-name">Francis Christopher Rupert</span>
-              <span class="fsa-header-app__profile-expand"></span>
-            </a>
-          </span>
-        </div>
-      </div>
-    </div>
-    <nav>
-      <div class="fsa-nav-global">
-        <div class="fsa-nav-global__bd">
-          <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation">
-            <li class="fsa-nav-global__list-item">
-              <a class="fsa-nav-global__link fsa-nav-global__link--active" href="link.html" aria-current="page">
-                <span class="fsa-nav-global__text">Inspections</span>
-              </a>
-            </li>
-            <li class="fsa-nav-global__list-item">
-
-              <button class="fsa-nav-global__link fsa-nav-global__link--has-sub-menu" type="button" aria-expanded="false" aria-controls="UNIQUE-ID-593945">
-                <span class="fsa-nav-global__text" id="UNIQUE-ID-123456789">Reports</span>
-              </button>
-
-              <div class="fsa-nav-global__sub-menu" id="UNIQUE-ID-593945" aria-hidden="true">
-
-                <div class="fsa-nav-global__sub-menu-bd">
-                  <ul class="fsa-nav-global__sub-menu-list" aria-labelledby="UNIQUE-ID-123456789">
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Overview</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Burden Investment</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Budgetery Max Funding</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Technology Plans</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Drive Texture Mechanics</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Unilateral Placement Shifting</a></li>
-                  </ul>
-                </div>
-
-              </div>
-
-            </li>
-            <li class="fsa-nav-global__list-item">
-              <a class="fsa-nav-global__link" href="settings.html">
-                <span class="fsa-nav-global__text">Settings</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
 
   <main id="main-content" tabindex="-1">
     <div class="fsa-section">
       <div class="fsa-section__bd">
-        <h1>Page Title</h1>
-        <div class="TBD">
-          TBD
+        <div class="fsa-content-tabs">
+          <ul class="fsa-content-tabs__list">
+            <li class="fsa-content-tabs__item">
+              <a class="fsa-content-tabs__label fsa-content-tabs__label--active" href="index.html" aria-current="true">
+                <span class="fsa-content-tabs__label-text">Employees</span>
+              </a>
+            </li>
+            <li class="fsa-content-tabs__item">
+              <a class="fsa-content-tabs__label" href="territories.html">
+                <span class="fsa-content-tabs__label-text">Territories</span>
+              </a>
+            </li>
+            <li class="fsa-content-tabs__item">
+              <a class="fsa-content-tabs__label" href="programs.html">
+                <span class="fsa-content-tabs__label-text">Programs</span>
+              </a>
+            </li>
+          </ul>
+          <div class="fsa-content-tabs__aside"></div>
         </div>
+        <p class="fsa-m-t--l">
+          <button class="fsa-btn fsa-btn--primary" type="button" aria-expanded="false" title="Add an Employee" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-new"> Add </button>
+        </p>
+        <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal">
+          <caption class="sr-only">Employees</caption>
+          <thead>
+            <tr>
+              <th scope="col" class="fsa-table__th--sticky" aria-sort="ascending"><button class="fsa-table__sort fsa-table__sort--ascending" type="button">ID</button></th>
+              <th scope="col" class="fsa-table__th--sticky"><button class="fsa-table__sort" type="button">First Name</button></th>
+              <th scope="col" class="fsa-table__th--sticky"><button class="fsa-table__sort" type="button">Last Name</button></th>
+              <th scope="col" class="fsa-table__th--sticky"><button class="fsa-table__sort" type="button">Job Title</button></th>
+              <th scope="col" class="fsa-table__th--sticky"><button class="fsa-table__sort" type="button">Hire Date</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">11211</button></th>
+              <td aria-label="First Name" scope="row">Jimmy</td>
+              <td aria-label="Last Name" scope="row">McNulty</td>
+              <td aria-label="Job Title" scope="row">Patrol Officer</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="1991-09-01">1991-09-01</time></td>
+            </tr>
+            <tr id="UNIQUE-ID__employee-56190">
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">56190</button></th>
+              <td aria-label="First Name" scope="row">Stringer</td>
+              <td aria-label="Last Name" scope="row">Bell</td>
+              <td aria-label="Job Title" scope="row">Lieutenant</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="2000-06-01">2000-06-01</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">78451</button></th>
+              <td aria-label="First Name" scope="row">Lestor</td>
+              <td aria-label="Last Name" scope="row">Freamon</td>
+              <td aria-label="Job Title" scope="row">Major Case Unit Detective</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="1975-12-05">1975-12-05</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">84200</button></th>
+              <td aria-label="First Name" scope="row">Cedris</td>
+              <td aria-label="Last Name" scope="row">Daniels</td>
+              <td aria-label="Job Title" scope="row">Deputy Commissioner</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="1985-11-29">1985-11-29</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">88892</button></th>
+              <td aria-label="First Name" scope="row">Francis</td>
+              <td aria-label="Last Name" scope="row">Sobotka</td>
+              <td aria-label="Job Title" scope="row">Union Secretary</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="2015-01-20">2015-01-20</time></td>
+            </tr>
+            <tr id="UNIQUE-ID__employee-88893" hidden="true">
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">88893</button></th>
+              <td aria-label="First Name" scope="row">Omar</td>
+              <td aria-label="Last Name" scope="row">Little</td>
+              <td aria-label="Job Title" scope="row">Independent Consultant</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="2015-01-20">2004-10-01</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+            <tr>
+              <th aria-label="ID" scope="row"><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="UNIQUE-ID-emp-detail" aria-expanded="false">[#####]</button></th>
+              <td aria-label="First Name" scope="row">[first_name]</td>
+              <td aria-label="Last Name" scope="row">[last_name]</td>
+              <td aria-label="Job Title" scope="row">[position]</td>
+              <td aria-label="Hire Date" scope="row"><time datetime="yyyy-mm-dd">[yyyy-mm-dd]</time></td>
+            </tr>
+          </tbody>
+        </table>
+        <nav aria-label="Pagination">
+          <div class="fsa-pagination" data-current="1" data-total="120">
+            <ul class="fsa-pagination__list">
+              <li class="fsa-pagination__item fsa-pagination__item--previous" aria-hidden="true">
+                <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled">Previous</span>
+              </li>
+              <li class="fsa-pagination__item">
+                <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true">1</span>
+              </li>
+              <li class="fsa-pagination__item">
+                <a class="fsa-pagination__label" href="link.html">2</a>
+              </li>
+              <li class="fsa-pagination__item" aria-hidden="true">
+                <span class="fsa-pagination__label">…</span>
+              </li>
+              <li class="fsa-pagination__item">
+                <a class="fsa-pagination__label" href="link.html">120</a>
+              </li>
+              <li class="fsa-pagination__item fsa-pagination__item--next">
+                <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
   </main>
-
-  <footer>
-    <div class="fsa-topper">
-      <div class="fsa-topper__bd">
-        <a class="fsa-topper__link" href="#main-content">Return to top</a>
-      </div>
-    </div>
-
-    <div class="fsa-footer">
-      <div class="fsa-footer__bd">
-        <div class="fsa-grid">
-          <div class="fsa-footer__primary fsa-grid__1/1 fsa-grid__9/12@l">
-            <div class="fsa-grid">
-              <div class="fsa-grid__1/1 fsa-grid__1/3@m">
-                <h3 class="fsa-footer__cat-header">Program Information</h3>
-                <ul class="fsa-footer__list">
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">About XMPL</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">XMPL - Handbook 1</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">XMPL - Handbook 2</a></li>
-                </ul>
-              </div>
-              <div class="fsa-grid__1/1 fsa-grid__1/3@m">
-                <h3 class="fsa-footer__cat-header">Agency Guidelines</h3>
-                <ul class="fsa-footer__list">
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Publications</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Handbooks</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Notices</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">FFAS Employee Forms</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Software Transmittals</a></li>
-                </ul>
-              </div>
-              <div class="fsa-grid__1/1 fsa-grid__1/3@m">
-                <h3 class="fsa-footer__cat-header">Resources</h3>
-                <ul class="fsa-footer__list">
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Inside FSA</a></li>
-                  <li class="fsa-footer__list-item"><a href="link.html" target="_blank">Policies and Links</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="fsa-footer__secondary fsa-grid__1/1 fsa-grid__3/12@l">
-            <ul class="fsa-footer__list fsa-footer__secondary-list">
-              <li class="fsa-footer__list-item fsa-footer__secondary-list-item">
-                <a class="fsa-btn fsa-footer__btn" href="link.html" target="_blank">Contact Us</a>
-              </li>
-              <li class="fsa-footer__list-item fsa-footer__secondary-list-item"><a href="tel:+8005551234" target="_blank">1-800-555-1234</a></li>
-              <li class="fsa-footer__list-item fsa-footer__secondary-list-item"><a href="//www.fsa.usda.gov/" target="_blank">FSA Website</a></li>
-              <li class="fsa-footer__list-item fsa-footer__secondary-list-item"><a href="//www.usda.gov/" target="_blank">USDA Website</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="fsa-screen-id">
-      <div class="fsa-screen-id__bd">
-        <dl class="fsa-screen-id__dl">
-          <dt class="fsa-screen-id__dt">Screen ID</dt>
-          <dd class="fsa-screen-id__dd">XYZ-WEB-007</dd>
-        </dl>
-      </div>
-    </div>
-  </footer>
 
   <div>
     <div tabindex="0" id="UNIQUE-ID-emp-detail" class="fsa-modal fsa-modal--top" role="dialog" aria-hidden="true">
