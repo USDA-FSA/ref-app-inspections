@@ -112,6 +112,27 @@
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
         <!-- Rejected | Logged | Assigned | In Progress | Complete -->
+        <div class="fsa-m-t--l">
+          <div class="fsa-grid">
+            <div class="fsa-grid__auto">
+              1-20 of 2400
+            </div>
+            <div class="fsa-grid__auto">
+            </div>
+            <div class="fsa-grid__auto">
+              <div class="fsa-text-align--right">
+                <span class="fsa-btn-group fsa-btn-group--small" role="group" aria-label="Label describing this group">
+                  <button class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button">All</button>
+                  <button class="fsa-btn-group__item" type="button">Logged</button>
+                  <button class="fsa-btn-group__item" type="button">Assigned</button>
+                  <button class="fsa-btn-group__item" type="button">In Progress</button>
+                  <button class="fsa-btn-group__item" type="button">Complete</button>
+                  <button class="fsa-btn-group__item" type="button">Rejected</button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
         <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal fic-inspections">
           <caption class="sr-only">Inspections</caption>
           <thead>
@@ -122,11 +143,11 @@
                   <label for="inpections__select-all"><span class="sr-only">Select all</span></label>
                 </span>
               </th>
-              <th class="fsa-table__th--sticky" aria-sort="ascending"><button type="button" class="fsa-table__sort fsa-table__sort--ascending">Inspection</button></th>
+              <th class="fsa-table__th--sticky" aria-sort="descending"><button type="button" class="fsa-table__sort fsa-table__sort--descending">Inspection</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Farm</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">County</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">State</button></th>
-              <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Assigned to</button></th>
+              <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Assignee</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Due Date</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Status</button></th>
             </tr>
@@ -135,17 +156,302 @@
             <tr>
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--06" type="checkbox" name="inpections__select-inspection--06" value="06">
+                  <label for="inpections__select-inspection--06"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">06</button></strong></td>
+              <td aria-label="Farm Number">3510</td>
+              <td aria-label="County">Cowley</td>
+              <td aria-label="State">Kansas</td>
+              <td aria-label="Assigned to">Norm Peterson</td>
+              <td aria-label="Due Date"><time datetime="2018-12-11">12/11/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--07" type="checkbox" name="inpections__select-inspection--07" value="07">
+                  <label for="inpections__select-inspection--07"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">07</button></strong></td>
+              <td aria-label="Farm Number">8787</td>
+              <td aria-label="County">Johnson</td>
+              <td aria-label="State">Kansas</td>
+              <td aria-label="Assigned to">Carla Tortelli</td>
+              <td aria-label="Due Date"><time datetime="2018-08-05">08/05/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--10" type="checkbox" name="inpections__select-inspection--10" value="10">
                   <label for="inpections__select-inspection--10"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><button type="button" class="fsa-btn fsa-btn--flat" onclick="alert('modal edit')">10</button></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">10</button></strong></td>
               <td aria-label="Farm Number">8080</td>
               <td aria-label="County">Jackson</td>
               <td aria-label="State">Missouri</td>
-              <td aria-label="Assigned to">Sam Malone</td>
-              <td aria-label="Due Date">10/01/2018</td>
+              <td aria-label="Assigned to">Ernie Pantusso</td>
+              <td aria-label="Due Date"><time datetime="2018-10-01">10/01/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--17" type="checkbox" name="inpections__select-inspection--17" value="17">
+                  <label for="inpections__select-inspection--17"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">17</button></strong></td>
+              <td aria-label="Farm Number">5644</td>
+              <td aria-label="County">Ventura</td>
+              <td aria-label="State">California</td>
+              <td aria-label="Assigned to"></td>
+              <td aria-label="Due Date"><time datetime="2018-11-10">11/10/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--24" type="checkbox" name="inpections__select-inspection--24" value="24">
+                  <label for="inpections__select-inspection--24"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">24</button></strong></td>
+              <td aria-label="Farm Number">6662</td>
+              <td aria-label="County">Los Angeles</td>
+              <td aria-label="State">California</td>
+              <td aria-label="Assigned to">Diane Chambers</td>
+              <td aria-label="Due Date"><time datetime="2018-11-16">11/16/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--31" type="checkbox" name="inpections__select-inspection--31" value="31">
+                  <label for="inpections__select-inspection--31"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">31</button></strong></td>
+              <td aria-label="Farm Number">6664</td>
+              <td aria-label="County">San Bernardino</td>
+              <td aria-label="State">California</td>
+              <td aria-label="Assigned to"></td>
+              <td aria-label="Due Date"><time datetime="2018-10-07">10/07/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--33" type="checkbox" name="inpections__select-inspection--33" value="33">
+                  <label for="inpections__select-inspection--33"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">33</button></strong></td>
+              <td aria-label="Farm Number">7510</td>
+              <td aria-label="County">Miami</td>
+              <td aria-label="State">Kansas</td>
+              <td aria-label="Assigned to">Woody Boyd</td>
+              <td aria-label="Due Date"><time datetime="2018-10-05">10/05/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--37" type="checkbox" name="inpections__select-inspection--37" value="37">
+                  <label for="inpections__select-inspection--37"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">37</button></strong></td>
+              <td aria-label="Farm Number">1325</td>
+              <td aria-label="County">Anne Arundel</td>
+              <td aria-label="State">Maryland</td>
+              <td aria-label="Assigned to"></td>
+              <td aria-label="Due Date"><time datetime="2019-05-05">05/05/2019</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--39" type="checkbox" name="inpections__select-inspection--39" value="39">
+                  <label for="inpections__select-inspection--39"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">39</button></strong></td>
+              <td aria-label="Farm Number">1196</td>
+              <td aria-label="County">Clackamas </td>
+              <td aria-label="State">Oregon</td>
+              <td aria-label="Assigned to">Woody Boyd</td>
+              <td aria-label="Due Date"><time datetime="2019-05-05">05/05/2019</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--41" type="checkbox" name="inpections__select-inspection--41" value="41">
+                  <label for="inpections__select-inspection--41"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">41</button></strong></td>
+              <td aria-label="Farm Number">1196</td>
+              <td aria-label="County">Pottawattamie</td>
+              <td aria-label="State">Iowa</td>
+              <td aria-label="Assigned to">Diane Lane</td>
+              <td aria-label="Due Date"><time datetime="2019-05-05">07/01/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--42" type="checkbox" name="inpections__select-inspection--42" value="42">
+                  <label for="inpections__select-inspection--42"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">42</button></strong></td>
+              <td aria-label="Farm Number">5197</td>
+              <td aria-label="County">Hillsborough</td>
+              <td aria-label="State">Florida</td>
+              <td aria-label="Assigned to">Cliff Clavin</td>
+              <td aria-label="Due Date"><time datetime="2019-05-05">08/30/2017</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Complete</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--47" type="checkbox" name="inpections__select-inspection--47" value="47">
+                  <label for="inpections__select-inspection--47"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">47</button></strong></td>
+              <td aria-label="Farm Number">2181</td>
+              <td aria-label="County">Kootenia</td>
+              <td aria-label="State">Idaho</td>
+              <td aria-label="Assigned to">Rebecca Howe</td>
+              <td aria-label="Due Date"><time datetime="2019-05-05">05/26/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--55" type="checkbox" name="inpections__select-inspection--55" value="55">
+                  <label for="inpections__select-inspection--55"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">55</button></strong></td>
+              <td aria-label="Farm Number">8171</td>
+              <td aria-label="County">Collingsworth</td>
+              <td aria-label="State">Texas</td>
+              <td aria-label="Assigned to">Ernie Pantusso</td>
+              <td aria-label="Due Date"><time datetime="2019-05-05">03/29/2019</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--64" type="checkbox" name="inpections__select-inspection--64" value="64">
+                  <label for="inpections__select-inspection--64"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">64</button></strong></td>
+              <td aria-label="Farm Number">3481</td>
+              <td aria-label="County">Santa Barbara</td>
+              <td aria-label="State">California</td>
+              <td aria-label="Assigned to">Carla Tortelli</td>
+              <td aria-label="Due Date"><time datetime="2018-11-19">11/19/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--77" type="checkbox" name="inpections__select-inspection--77" value="77">
+                  <label for="inpections__select-inspection--77"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">77</button></strong></td>
+              <td aria-label="Farm Number">7544</td>
+              <td aria-label="County">Jackson</td>
+              <td aria-label="State">Missouri</td>
+              <td aria-label="Assigned to">Ernie Pantusso</td>
+              <td aria-label="Due Date"><time datetime="2018-11-03">11/03/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--79" type="checkbox" name="inpections__select-inspection--79" value="79">
+                  <label for="inpections__select-inspection--79"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">79</button></strong></td>
+              <td aria-label="Farm Number">2552</td>
+              <td aria-label="County">Anderson</td>
+              <td aria-label="State">Kansas</td>
+              <td aria-label="Assigned to">Sam Malone</td>
+              <td aria-label="Due Date"><time datetime="2018-09-02">09/02/2018</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--85" type="checkbox" name="inpections__select-inspection--85" value="85">
+                  <label for="inpections__select-inspection--85"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">85</button></strong></td>
+              <td aria-label="Farm Number">6548</td>
+              <td aria-label="County">Alexander</td>
+              <td aria-label="State">Illinois</td>
+              <td aria-label="Assigned to">Rebecca Howe</td>
+              <td aria-label="Due Date"><time datetime="2019-01-05">01/05/2019</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--91" type="checkbox" name="inpections__select-inspection--91" value="91">
+                  <label for="inpections__select-inspection--91"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">91</button></strong></td>
+              <td aria-label="Farm Number">3069</td>
+              <td aria-label="County">Cowlitz</td>
+              <td aria-label="State">Washington</td>
+              <td aria-label="Assigned to">Norm Peterson</td>
+              <td aria-label="Due Date"><time datetime="2019-05-07">05/07/2019</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--94" type="checkbox" name="inpections__select-inspection--94" value="94">
+                  <label for="inpections__select-inspection--94"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">94</button></strong></td>
+              <td aria-label="Farm Number">2993</td>
+              <td aria-label="County">Okanogan</td>
+              <td aria-label="State">Washington</td>
+              <td aria-label="Assigned to"></td>
+              <td aria-label="Due Date"><time datetime="2019-03-09">03/09/2019</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
+            </tr>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--98" type="checkbox" name="inpections__select-inspection--98" value="98">
+                  <label for="inpections__select-inspection--98"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">98</button></strong></td>
+              <td aria-label="Farm Number">1320</td>
+              <td aria-label="County">Churchill</td>
+              <td aria-label="State">Nevada</td>
+              <td aria-label="Assigned to">Rebecca Howe</td>
+              <td aria-label="Due Date"><time datetime="2019-05-05">05/05/2019</time></td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
           </tbody>
         </table>
@@ -241,10 +547,10 @@
   </footer>
 
   <div>
-    <div tabindex="0" id="UNIQUE-ID-emp-detail" class="fsa-modal fsa-modal--top" role="dialog" aria-hidden="true">
+    <div tabindex="0" id="modal__inspection-06" class="fsa-modal fsa-modal--top" role="dialog" aria-hidden="true">
       <div class="fsa-modal__dialog">
         <div class="fsa-modal__content">
-          <button class="fsa-modal__close" data-behavior="unsaved-changes" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
+          <button class="fsa-modal__close" data-behavior="close-modal" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
           <form>
             <h1 class="fsa-modal__title">Edit Employee Detail</h1>
             <fieldset>
@@ -253,130 +559,9 @@
                 <input data-behavior="validate-empty-field track-change" class="fsa-input fsa-field__item" id="thingthing-name_887sh" name="thingthing-name_887sh" type="text" value="Stringer">
                 <span class="fsa-field__message" id="thingthing-name__error_887sh-message-01" role="alert">This field is required</span>
               </div>
-              <div class="fsa-field">
-                <label class="fsa-field__label" for="thingthing-last-name_887sh">Last Name <span class="fsa-field__label-desc">Required</span></label>
-                <input data-behavior="validate-empty-field track-change" class="fsa-input fsa-field__item" id="thingthing-last-name_887sh" name="thingthing-last-name_887sh" type="text" value="Bell">
-                <span class="fsa-field__message" id="thingthing-last-name__error_887sh-message-01" role="alert">This field is required</span>
-              </div>
-              <div class="fsa-field">
-                <label class="fsa-field__label" for="thingthing-job-title_887sh">Job Title <span class="fsa-field__label-desc">Required</span></label>
-                <input list="job-title_1234" data-behavior="validate-empty-field track-change" class="fsa-input fsa-field__item" id="thingthing-job-title_887sh" name="thingthing-job-title_887sh" type="text" value="Lieutenant">
-                <span class="fsa-field__message" id="thingthing-job-title__error_887sh-message-01" role="alert">This field is required</span>
-                <datalist id="job-title_1234">
-                  <option value="Lieutenant"></option>
-                  <option value="Independent Consultant"></option>
-                  <option value="Deputy Commissioner"></option>
-                  <option value="Major Case Unit Detective"></option>
-                  <option value="Patrol Officer"></option>
-                  <option value="Union Secretary"></option>
-                </datalist>
-              </div>
-              <div class="fsa-field">
-                <label class="fsa-field__label" for="thingthing-emp-id_887sh">ID</label>
-                <input class="fsa-input fsa-field__item track-change" id="thingthing-emp-id_887sh" name="thingthing-emp-id_887sh" type="text" value="56190" readonly="readonly" aria-describedby="thingthing-emp-id_887sh--desc">
-                <span class="fsa-field__help" id="thingthing-emp-id_887sh--desc">Automatically assigned</span>
-              </div>
-              <div class="fsa-field fsa-field--columns">
-                <label class="fsa-field__label" for="thingthing-date_887__month">Hire Date <span class="fsa-field__label-desc">Required</span></label>
-                <div class="fsa-grid">
-                  <div class="fsa-grid__1 fsa-grid__5/12@m">
-                    <div class="fsa-field__column">
-                      <label class="fsa-field__label sr-only" for="thingthing-date_887__month">Month</label>
-                      <select data-behavior="validate-empty-field all-filled" title="Month" class="fsa-select fsa-field__item" id="thingthing-date_887__month" name="thingthing-date_887__month">
-                    <option value="January" selected="selected">January</option>
-                    <option value="February">February</option>
-                    <option value="March">March</option>
-                    <option value="April">April</option>
-                    <option value="May">May</option>
-                    <option value="June">June</option>
-                    <option value="July">July</option>
-                    <option value="August">August</option>
-                    <option value="September">September</option>
-                    <option value="October">October</option>
-                    <option value="November">November</option>
-                    <option value="December">December</option>
-                  </select>
-                    </div>
-                  </div>
-                  <div class="fsa-grid__1 fsa-grid__3/12@m">
-                    <div class="fsa-field__column">
-                      <label class="fsa-field__label sr-only" for="thingthing-date_887__other">Day</label>
-                      <select data-behavior="validate-empty-field all-filled" title="Day" class="fsa-select fsa-field__item" id="thingthing-date_887__day" name="thingthing-date_887__day">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6" selected="selected">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                  </select>
-                    </div>
-                  </div>
-                  <div class="fsa-grid__1 fsa-grid__4/12@m">
-                    <div class="fsa-field__column">
-                      <label class="fsa-field__label sr-only" for="thingthing-date_887__year">Year</label>
-                      <select data-behavior="validate-empty-field all-filled" title="Year" class="fsa-select fsa-field__item" id="thingthing-date_887__year" name="thingthing-date_887__year">
-                    <option value="2000" selected="selected">2000</option>
-                    <option value="2001">2001</option>
-                    <option value="2002">2002</option>
-                    <option value="2003">2003</option>
-                    <option value="2004">2004</option>
-                    <option value="2005">2005</option>
-                    <option value="2006">2006</option>
-                    <option value="2007">2007</option>
-                    <option value="2008">2008</option>
-                    <option value="2009">2009</option>
-                    <option value="2010">2010</option>
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
-                    <option value="2015">2015</option>
-                    <option value="2015">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2018</option>
-                  </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <div class="fsa-field fsa-m-t--l">
-                <div class="fsa-grid">
-                  <div class="fsa-grid__auto">
-                    <button data-saver class="fsa-btn fsa-btn--primary" disabled type="button" data-behavior="close-modal whiteout-dismiss growl-show growl-dismiss-delay" aria-controls="UNIQUE-ID-8A386E512C033F57">Save</button>
-                    <button class="fsa-btn fsa-btn--flat" type="button" data-behavior="unsaved-changes" aria-controls="UNIQUE-ID-employee-unsaved">Cancel</button>
-                  </div>
-                  <div class="fsa-grid__auto">
-                    <div class="fsa-text-align--right">
-                      <button class="fsa-btn fsa-btn--tertiary" type="button" data-behavior="growl-show whiteout-show" aria-controls="UNIQUE-ID__remove-employee" aria-expanded="false">Remove</button>
-                    </div>
-                  </div>
-                </div>
+                <button class="fsa-btn fsa-btn--primary" type="button" data-behavior="close-modal whiteout-dismiss growl-show growl-dismiss-delay" aria-controls="UNIQUE-ID-458s5g8w5">Save</button>
+                <button class="fsa-btn fsa-btn--flat" data-behavior="close-modal" type="button">Cancel</button>
               </div>
             </fieldset>
           </form>
@@ -386,7 +571,7 @@
     <div tabindex="0" id="UNIQUE-ID-emp-new" class="fsa-modal fsa-modal--top" role="dialog" aria-hidden="true">
       <div class="fsa-modal__dialog">
         <div class="fsa-modal__content">
-          <button class="fsa-modal__close" data-behavior="unsaved-changes" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
+          <button class="fsa-modal__close" data-behavior="" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
           <form>
             <h1 class="fsa-modal__title">Add an Employee</h1>
             <fieldset>
@@ -506,7 +691,7 @@
               </div>
               <div class="fsa-field fsa-m-t--l">
                 <button data-saver class="fsa-btn fsa-btn--primary" disabled type="button" data-behavior="close-modal whiteout-dismiss growl-show growl-dismiss-delay add-employee" aria-controls="UNIQUE-ID__employee-added" data-added-employee="UNIQUE-ID__employee-88893">Save</button>
-                <button class="fsa-btn fsa-btn--flat" type="button" data-behavior="unsaved-changes" aria-controls="UNIQUE-ID-employee-unsaved">Cancel</button>
+                <button class="fsa-btn fsa-btn--flat" type="button" data-behavior="" aria-controls="UNIQUE-ID-employee-unsaved">Cancel</button>
               </div>
             </fieldset>
           </form>
@@ -517,13 +702,13 @@
 
   <div class="fsa-growl-container">
     <!-- Growl Notifications go in here -->
-    <div class="fsa-growl fsa-growl--success" id="UNIQUE-ID-8A386E512C033F57" aria-hidden="true" tabindex="0" role="dialog">
+    <div class="fsa-growl fsa-growl--success" id="UNIQUE-ID-458s5g8w5" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
-        <h2 class="fsa-growl__title">Employee Details Updated</h2>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
+        <h2 class="fsa-growl__title">Inspection Updated</h2>
       </div>
       <div class="fsa-growl__bd">
-        <p><strong>Stringer Bell's</strong> details have been updated.</p>
+        <p><strong>Inspection 06</strong> earum id a fugit qui quo tempora!</p>
         <p>
           <button data-behavior="growl-dismiss" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">Got it</button>
         </p>
@@ -531,7 +716,7 @@
     </div>
     <div class="fsa-growl fsa-growl--success" id="UNIQUE-ID__employee-added" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Employee Added</h2>
       </div>
       <div class="fsa-growl__bd">
@@ -543,7 +728,7 @@
     </div>
     <div class="fsa-growl fsa-growl--success" id="UNIQUE-ID__employee-removed" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Employee Removed</h2>
       </div>
       <div class="fsa-growl__bd">
@@ -560,20 +745,20 @@
     <!-- Modal-based, centered Growl Notifications go in here -->
     <div class="fsa-growl fsa-growl--warning fsa-growl--centered" id="UNIQUE-ID-employee-unsaved" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss whiteout-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss whiteout-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Unsaved Changes</h2>
       </div>
       <div class="fsa-growl__bd">
         <p>Employee Details have changed, do you want to save them?</p>
         <p>
-          <button data-behavior="brute-force-close-modals growl-show growl-dismiss-delay growl-dismiss whiteout-dismiss" aria-controls="UNIQUE-ID-8A386E512C033F57" class="fsa-btn fsa-btn--small fsa-btn--primary" type="button">Save</button>
-          <button data-behavior="brute-force-close-modals growl-dismiss whiteout-dismiss" aria-controls="UNIQUE-ID-8A386E512C033F57" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">Don't Save</button>
+          <button data-behavior="brute-force-close-modals growl-show growl-dismiss-delay growl-dismiss whiteout-dismiss" aria-controls="UNIQUE-ID-458s5g8w5" class="fsa-btn fsa-btn--small fsa-btn--primary" type="button">Save</button>
+          <button data-behavior="brute-force-close-modals growl-dismiss whiteout-dismiss" aria-controls="UNIQUE-ID-458s5g8w5" class="fsa-btn fsa-btn--small fsa-btn--secondary" type="button">Don't Save</button>
         </p>
       </div>
     </div>
     <div class="fsa-growl fsa-growl--warning fsa-growl--centered" id="UNIQUE-ID__remove-employee" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss whiteout-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss whiteout-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Remove Employee</h2>
       </div>
       <div class="fsa-growl__bd">

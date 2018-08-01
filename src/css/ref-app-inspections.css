@@ -1,5 +1,6 @@
 :root {
   --progress-bgc: #E1F3F8;
+  --progress-rejected: #CD2026;
 }
 
 /* [name] **********************************************************************/
@@ -7,7 +8,7 @@
 /* FIC Styles ******************************************************************/
 
 .fic-inspections /* table */ {
-
+  margin-top: 12px;
 }
 .fic-inspections__select-column /* th,td */ {
   width: 36px;
@@ -18,30 +19,55 @@
 .fic-inspections__select-item .fsa-checkbox + label {
   margin-right: 0;
 }
-.fic-inspections__status {
-  transition: all 2s ease-in-out
+.fic-inspections__status {}
+
+.fic-inspections__status--0 /*Rejected*/ {
+  color: var(--progress-rejected);
 }
-
-/*
-Rejected | Logged | Assigned | In Progress | Complete
-   0         25       50           75          100
-*/
-
-.fic-inspections__status--0 {}
-.fic-inspections__status--1 {
+.fic-inspections__status--1 /*Logged*/ {
   background:
     linear-gradient(
       90deg,
-      var(--progress-bgc) 5075%,
-      var(--progress-bgc) 5075%,
+      var(--progress-bgc) 18%,
+      var(--progress-bgc) 18%,
       transparent 0%,
       transparent 100%
     )
   ;
 }
-.fic-inspections__status--2 {}
-.fic-inspections__status--3 {}
-.fic-inspections__status--4 {}
+.fic-inspections__status--2 /*Assigned*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 45%,
+      var(--progress-bgc) 45%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--3 /*In Progress*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 80%,
+      var(--progress-bgc) 80%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--4 /*Complete*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 100%,
+      var(--progress-bgc) 100%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
 
 /* TO BE MOVED TO fsa-style ****************************************************/
 
