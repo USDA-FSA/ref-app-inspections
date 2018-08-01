@@ -1,8 +1,29 @@
 /* [name] **********************************************************************/
 
-/* [name] **********************************************************************/
+/* FIC Styles ******************************************************************/
+.fic-inspections /* table */ {
 
-/* [name] **********************************************************************/
+}
+.fic-inspections__select-column /* th,td */ {
+  width: 36px;
+}
+.fic-inspections__select-item /* span */ {
+  padding-left: 8px;
+}
+.fic-inspections__select-item .fsa-checkbox + label {
+  margin-right: 0;
+}
+
+/* TO BE MOVED TO fsa-style ****************************************************/
+
+.fsa-table__th--sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  background-color: #f8fafc;
+  z-index: 2;
+  box-shadow: 0 1px 0 0 #dbdad9;
+}
 
 /* PROTOTYPE ONLY *************************************************************/
 .TBD {

@@ -111,9 +111,70 @@
     <div class="fsa-section">
       <div class="fsa-section__bd">
         <h1>Page Title</h1>
-        <div class="TBD">
-          TBD
-        </div>
+        <p>
+          Submitted | Assigned | In Progress | Complete | Rejected
+        </p>
+        <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal fic-inspections">
+          <caption class="sr-only">Inspections</caption>
+          <thead>
+            <tr>
+              <th class="fsa-table__th--sticky fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-all" type="checkbox" name="inpections__select-all" value="Select all">
+                  <label for="inpections__select-all"><span class="sr-only">Select all</span></label>
+                </span>
+              </th>
+              <th class="fsa-table__th--sticky" aria-sort="ascending"><button type="button" class="fsa-table__sort fsa-table__sort--ascending">Inspection</button></th>
+              <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Farm</button></th>
+              <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">County</button></th>
+              <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">State</button></th>
+              <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Assigned to</button></th>
+              <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Due Date</button></th>
+              <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Status</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fic-inspections__select-column">
+                <span class="fic-inspections__select-item">
+                  <input class="fsa-checkbox" id="inpections__select-inspection--10" type="checkbox" name="inpections__select-inspection--10" value="10">
+                  <label for="inpections__select-inspection--10"><span class="sr-only">Select this row</span></label>
+                </span>
+              </td>
+              <td aria-label="Inspection Number"><button type="button" class="fsa-btn fsa-btn--flat" onclick="alert('modal edit')">10</button></td>
+              <td aria-label="Farm Number">8080</td>
+              <td aria-label="County">Jackson</td>
+              <td aria-label="State">Missouri</td>
+              <td aria-label="Assigned to">Sam Malone</td>
+              <td aria-label="Due Date">10/01/2018</td>
+              <td aria-label="Status">Submitted</td>
+            </tr>
+          </tbody>
+        </table>
+        <nav aria-label="Pagination">
+          <div class="fsa-pagination" data-current="1" data-total="120">
+          <ul class="fsa-pagination__list">
+            <li class="fsa-pagination__item fsa-pagination__item--previous" aria-hidden="true">
+              <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled">Previous</span>
+            </li>
+            <li class="fsa-pagination__item">
+              <span class="fsa-pagination__label fsa-pagination__label--current" aria-current="true">1</span>
+            </li>
+            <li class="fsa-pagination__item">
+              <a class="fsa-pagination__label" href="link.html">2</a>
+            </li>
+            <li class="fsa-pagination__item" aria-hidden="true">
+              <span class="fsa-pagination__label">…</span>
+            </li>
+            <li class="fsa-pagination__item">
+              <a class="fsa-pagination__label" href="link.html">120</a>
+            </li>
+            <li class="fsa-pagination__item fsa-pagination__item--next">
+              <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>
+            </li>
+          </ul>
+          </div>
+        </nav>
       </div>
     </div>
   </main>
