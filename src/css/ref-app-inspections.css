@@ -1,6 +1,11 @@
+:root {
+  --progress-bgc: #E1F3F8;
+}
+
 /* [name] **********************************************************************/
 
 /* FIC Styles ******************************************************************/
+
 .fic-inspections /* table */ {
 
 }
@@ -13,6 +18,30 @@
 .fic-inspections__select-item .fsa-checkbox + label {
   margin-right: 0;
 }
+.fic-inspections__status {
+  transition: all 2s ease-in-out
+}
+
+/*
+Rejected | Logged | Assigned | In Progress | Complete
+   0         25       50           75          100
+*/
+
+.fic-inspections__status--0 {}
+.fic-inspections__status--1 {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 5075%,
+      var(--progress-bgc) 5075%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--2 {}
+.fic-inspections__status--3 {}
+.fic-inspections__status--4 {}
 
 /* TO BE MOVED TO fsa-style ****************************************************/
 
