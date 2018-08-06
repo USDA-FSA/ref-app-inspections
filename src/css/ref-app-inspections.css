@@ -5,6 +5,21 @@
 
 /* [name] **********************************************************************/
 
+/* TO BE MOVED TO fsa-style ****************************************************/
+
+.fsa-nav-global__list {
+  z-index: 2;
+}
+
+.fsa-table__th--sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  background-color: #f8fafc;
+  z-index: 1;
+  box-shadow: 0 1px 0 0 #dbdad9;
+}
+
 /* FIC Styles ******************************************************************/
 
 .fic-inspections /* table */ {
@@ -69,16 +84,18 @@
   ;
 }
 
-/* TO BE MOVED TO fsa-style ****************************************************/
-
-.fsa-table__th--sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: -1px;
-  background-color: #f8fafc;
-  z-index: 2;
-  box-shadow: 0 1px 0 0 #dbdad9;
+.fic-inspections--status-filter-is-logged  .fic-inspections__status--0, .fic-inspections--status-filter-is-logged  .fic-inspections__status--1, .fic-inspections--status-filter-is-logged  .fic-inspections__status--2, .fic-inspections--status-filter-is-logged  .fic-inspections__status--3, .fic-inspections--status-filter-is-logged  .fic-inspections__status--4,
+.fic-inspections--status-filter-is-assigned  .fic-inspections__status--0, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--1, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--2, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--3, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--4
+.fic-inspections--status-filter-is-in-progress  .fic-inspections__status--0, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--1, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--2, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--3, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--4
+.fic-inspections--status-filter-is-complete  .fic-inspections__status--0, .fic-inspections--status-filter-is-complete  .fic-inspections__status--1, .fic-inspections--status-filter-is-complete  .fic-inspections__status--2, .fic-inspections--status-filter-is-complete  .fic-inspections__status--3, .fic-inspections--status-filter-is-complete  .fic-inspections__status--4 {
+  background-image: none
 }
+
+.fic-inspections--status-filter-is-rejected    [data-status]:not([data-status="is-rejected"]   ) { display: none; }
+.fic-inspections--status-filter-is-logged      [data-status]:not([data-status="is-logged"]     ) { display: none; }
+.fic-inspections--status-filter-is-assigned    [data-status]:not([data-status="is-assigned"]   ) { display: none; }
+.fic-inspections--status-filter-is-in-progress [data-status]:not([data-status="is-in-progress"]) { display: none; }
+.fic-inspections--status-filter-is-complete    [data-status]:not([data-status="is-complete"]   ) { display: none; }
 
 /* PROTOTYPE ONLY *************************************************************/
 .TBD {

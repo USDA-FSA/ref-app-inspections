@@ -10,13 +10,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Inspections</title>
-  <link rel="stylesheet" href="http://usda-fsa.github.io/fsa-style/css/fsa-style.min.css" media="all">
+  <link rel="stylesheet" href="css/fsa-style.min.css" media="all">
   <link rel="stylesheet" href="css/ref-app-inspections.css" media="all">
   <!--[if lt IE 9]>
-    <script src="http://usda-fsa.github.io/fsa-style/js/vendor/html5shiv.js"></script>
-    <script src="http://usda-fsa.github.io/fsa-style/js/vendor/respond.js"></script>
-    <script src="http://usda-fsa.github.io/fsa-style/js/vendor/selectivizr-min.js"></script>
-    <script src="http://usda-fsa.github.io/fsa-style/js/vendor/rem-min.js"></script>
+    <script src="js/vendor/html5shiv.js"></script>
+    <script src="js/vendor/respond.js"></script>
+    <script src="js/vendor/selectivizr-min.js"></script>
+    <script src="js/vendor/rem-min.js"></script>
   <![endif]-->
 </head>
 
@@ -105,35 +105,40 @@
         </div>
       </div>
     </nav>
+
   </header>
 
   <main id="main-content" tabindex="-1">
     <div class="fsa-section">
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
-        <!-- Rejected | Logged | Assigned | In Progress | Complete -->
         <div class="fsa-m-t--l">
           <div class="fsa-grid">
-            <div class="fsa-grid__auto">
+            <div class="fsa-grid__1 fsa-grid__auto@m">
               1-20 of 2400
             </div>
-            <div class="fsa-grid__auto">
-            </div>
-            <div class="fsa-grid__auto">
+            <div class="fsa-grid__1 fsa-grid__auto@m">
               <div class="fsa-text-align--right">
-                <span class="fsa-btn-group fsa-btn-group--small" role="group" aria-label="Label describing this group">
-                  <button class="fsa-btn-group__item fsa-btn-group__item--active" aria-selected="true" type="button">All</button>
-                  <button class="fsa-btn-group__item" type="button">Logged</button>
-                  <button class="fsa-btn-group__item" type="button">Assigned</button>
-                  <button class="fsa-btn-group__item" type="button">In Progress</button>
-                  <button class="fsa-btn-group__item" type="button">Complete</button>
-                  <button class="fsa-btn-group__item" type="button">Rejected</button>
+                <span>
+                  <label class="sr-only" for="inspectionFind">Find</label>
+                  <input class="fsa-input" placeholder="Find" type="text" id="inspectionFind" data-behavior="inspections-find">
+                </span>
+                <span>
+                  <label class="sr-only" for="inspectionsFilterBy">Active Type</label>
+                  <select class="fsa-select" name="inspectionsFilterBy" id="inspectionsFilterBy" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
+                    <option value="is-all" selected="">All</option>
+                    <option value="is-rejected">Rejected</option>
+                    <option value="is-logged">Logged</option>
+                    <option value="is-assigned">Assigned</option>
+                    <option value="is-in-progress">In Progress</option>
+                    <option value="is-complete">Complete</option>
+                  </select>
                 </span>
               </div>
             </div>
           </div>
         </div>
-        <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal fic-inspections">
+        <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal fic-inspections fic-inspections--status-filter-is-all" id="inspectionsTable">
           <caption class="sr-only">Inspections</caption>
           <thead>
             <tr>
@@ -153,7 +158,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr data-status="is-complete">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--06" type="checkbox" name="inpections__select-inspection--06" value="06">
@@ -168,7 +173,7 @@
               <td aria-label="Due Date"><time datetime="2018-12-11">12/11/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
-            <tr>
+            <tr data-status="is-assigned">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--07" type="checkbox" name="inpections__select-inspection--07" value="07">
@@ -183,7 +188,7 @@
               <td aria-label="Due Date"><time datetime="2018-08-05">08/05/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
-            <tr>
+            <tr data-status="is-rejected">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--10" type="checkbox" name="inpections__select-inspection--10" value="10">
@@ -198,7 +203,7 @@
               <td aria-label="Due Date"><time datetime="2018-10-01">10/01/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
-            <tr>
+            <tr data-status="is-logged">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--17" type="checkbox" name="inpections__select-inspection--17" value="17">
@@ -213,7 +218,7 @@
               <td aria-label="Due Date"><time datetime="2018-11-10">11/10/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
-            <tr>
+            <tr data-status="is-in-progress">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--24" type="checkbox" name="inpections__select-inspection--24" value="24">
@@ -228,7 +233,7 @@
               <td aria-label="Due Date"><time datetime="2018-11-16">11/16/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
-            <tr>
+            <tr data-status="is-logged">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--31" type="checkbox" name="inpections__select-inspection--31" value="31">
@@ -243,7 +248,7 @@
               <td aria-label="Due Date"><time datetime="2018-10-07">10/07/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
-            <tr>
+            <tr data-status="is-complete">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--33" type="checkbox" name="inpections__select-inspection--33" value="33">
@@ -258,7 +263,7 @@
               <td aria-label="Due Date"><time datetime="2018-10-05">10/05/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
-            <tr>
+            <tr data-status="is-logged">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--37" type="checkbox" name="inpections__select-inspection--37" value="37">
@@ -273,7 +278,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">05/05/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
-            <tr>
+            <tr data-status="is-in-progress">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--39" type="checkbox" name="inpections__select-inspection--39" value="39">
@@ -288,7 +293,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">05/05/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
-            <tr>
+            <tr data-status="is-assigned">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--41" type="checkbox" name="inpections__select-inspection--41" value="41">
@@ -303,7 +308,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">07/01/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
-            <tr>
+            <tr data-status="is-complete">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--42" type="checkbox" name="inpections__select-inspection--42" value="42">
@@ -316,9 +321,9 @@
               <td aria-label="State">Florida</td>
               <td aria-label="Assigned to">Cliff Clavin</td>
               <td aria-label="Due Date"><time datetime="2019-05-05">08/30/2017</time></td>
-              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Complete</td>
+              <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
-            <tr>
+            <tr data-status="is-rejected">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--47" type="checkbox" name="inpections__select-inspection--47" value="47">
@@ -333,7 +338,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">05/26/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
-            <tr>
+            <tr data-status="is-assigned">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--55" type="checkbox" name="inpections__select-inspection--55" value="55">
@@ -348,7 +353,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">03/29/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
-            <tr>
+            <tr data-status="is-rejected">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--64" type="checkbox" name="inpections__select-inspection--64" value="64">
@@ -363,7 +368,7 @@
               <td aria-label="Due Date"><time datetime="2018-11-19">11/19/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
-            <tr>
+            <tr data-status="is-in-progress">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--77" type="checkbox" name="inpections__select-inspection--77" value="77">
@@ -378,7 +383,7 @@
               <td aria-label="Due Date"><time datetime="2018-11-03">11/03/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
-            <tr>
+            <tr data-status="is-assigned">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--79" type="checkbox" name="inpections__select-inspection--79" value="79">
@@ -393,7 +398,7 @@
               <td aria-label="Due Date"><time datetime="2018-09-02">09/02/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
-            <tr>
+            <tr data-status="is-in-progress">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--85" type="checkbox" name="inpections__select-inspection--85" value="85">
@@ -408,7 +413,7 @@
               <td aria-label="Due Date"><time datetime="2019-01-05">01/05/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
-            <tr>
+            <tr data-status="is-complete">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--91" type="checkbox" name="inpections__select-inspection--91" value="91">
@@ -423,7 +428,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-07">05/07/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
-            <tr>
+            <tr data-status="is-logged">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--94" type="checkbox" name="inpections__select-inspection--94" value="94">
@@ -438,7 +443,7 @@
               <td aria-label="Due Date"><time datetime="2019-03-09">03/09/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
-            <tr>
+            <tr data-status="is-in-progress">
               <td class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input class="fsa-checkbox" id="inpections__select-inspection--98" type="checkbox" name="inpections__select-inspection--98" value="98">
@@ -455,7 +460,7 @@
             </tr>
           </tbody>
         </table>
-        <nav aria-label="Pagination">
+        <nav aria-label="Pagination" id="inspections-pagination">
           <div class="fsa-pagination" data-current="1" data-total="120">
           <ul class="fsa-pagination__list">
             <li class="fsa-pagination__item fsa-pagination__item--previous" aria-hidden="true">
@@ -550,7 +555,7 @@
     <div tabindex="0" id="modal__inspection-06" class="fsa-modal fsa-modal--top" role="dialog" aria-hidden="true">
       <div class="fsa-modal__dialog">
         <div class="fsa-modal__content">
-          <button class="fsa-modal__close" data-behavior="close-modal" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
+          <button class="fsa-modal__close" data-behavior="close-modal" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
           <form>
             <h1 class="fsa-modal__title">Edit Employee Detail</h1>
             <fieldset>
@@ -571,7 +576,7 @@
     <div tabindex="0" id="UNIQUE-ID-emp-new" class="fsa-modal fsa-modal--top" role="dialog" aria-hidden="true">
       <div class="fsa-modal__dialog">
         <div class="fsa-modal__content">
-          <button class="fsa-modal__close" data-behavior="" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
+          <button class="fsa-modal__close" data-behavior="" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
           <form>
             <h1 class="fsa-modal__title">Add an Employee</h1>
             <fieldset>
@@ -704,7 +709,7 @@
     <!-- Growl Notifications go in here -->
     <div class="fsa-growl fsa-growl--success" id="UNIQUE-ID-458s5g8w5" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Inspection Updated</h2>
       </div>
       <div class="fsa-growl__bd">
@@ -716,7 +721,7 @@
     </div>
     <div class="fsa-growl fsa-growl--success" id="UNIQUE-ID__employee-added" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Employee Added</h2>
       </div>
       <div class="fsa-growl__bd">
@@ -728,7 +733,7 @@
     </div>
     <div class="fsa-growl fsa-growl--success" id="UNIQUE-ID__employee-removed" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Employee Removed</h2>
       </div>
       <div class="fsa-growl__bd">
@@ -745,7 +750,7 @@
     <!-- Modal-based, centered Growl Notifications go in here -->
     <div class="fsa-growl fsa-growl--warning fsa-growl--centered" id="UNIQUE-ID-employee-unsaved" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss whiteout-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss whiteout-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Unsaved Changes</h2>
       </div>
       <div class="fsa-growl__bd">
@@ -758,7 +763,7 @@
     </div>
     <div class="fsa-growl fsa-growl--warning fsa-growl--centered" id="UNIQUE-ID__remove-employee" aria-hidden="true" tabindex="0" role="dialog">
       <div class="fsa-growl__hd">
-        <button class="fsa-growl__close" data-behavior="growl-dismiss whiteout-dismiss" type="button"><img class="fsa-growl__close-icon" src="http://usda-fsa.github.io/fsa-style/img/close.svg" alt="close"></button>
+        <button class="fsa-growl__close" data-behavior="growl-dismiss whiteout-dismiss" type="button"><img class="fsa-growl__close-icon" src="img/close.svg" alt="close"></button>
         <h2 class="fsa-growl__title">Remove Employee</h2>
       </div>
       <div class="fsa-growl__bd">
@@ -771,7 +776,9 @@
     </div>
   </div>
 
-  <script src="http://usda-fsa.github.io/fsa-style/js/fsa-style-docs.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="js/fsa-style-docs.min.js"></script>
   <script src="js/ref-app-inspections.js"></script>
 
 </body>
