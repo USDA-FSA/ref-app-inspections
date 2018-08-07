@@ -107,6 +107,9 @@
 .fic-finder {
   display: inline-block;
 }
+.fic-finder--block {
+  display: block;
+}
 .fic-finder__entry {
   display: flex;
 }

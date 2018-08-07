@@ -119,7 +119,7 @@
                 1-20 of 2400
               </div>
               <div class="fsa-grid__1 fsa-grid__auto@m">
-                <div class="fsa-text-align--right">
+                <div class="fsa-text-align--right" hidden>
                   <form>
                     <span class="fsa-m-l--s">
                       <span class="fic-finder">
@@ -201,6 +201,46 @@
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Assignee</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Due Date</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Status</button></th>
+            </tr>
+            <tr>
+              <td>
+                <strong title="Reset Filters" tabindex="0" class="fsa-p-l--xs" style="color: #205493; font-size: 21px; font-weight: bold; font-family: monospace; cursor: pointer">
+                  &#x21bb;
+                </strong>
+              </td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+                <label class="sr-only" for="inspectionsFilterByAssignee">Filter by Assignee</label>
+                <select class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
+                  <option>All</option>
+                  <option value="assignedto-norm-peterson">Norm Peterson</option>
+                  <option value="assignedto-carla-tortelli">Carla Tortelli</option>
+                  <option value="assignedto-ernie-pantusso">Ernie Pantusso</option>
+                  <option value="assignedto-diane-chambers">Diane Chambers</option>
+                  <option value="assignedto-woody-boyd">Woody Boyd</option>
+                  <option value="assignedto-diane-lane">Diane Lane</option>
+                  <option value="assignedto-cliff-clavin">Cliff Clavin</option>
+                  <option value="assignedto-rebecca-howe">Rebecca Howe</option>
+                  <option value="assignedto-sam-malone">Sam Malone</option>
+                </select>
+              </td>
+              <td></td>
+              <td>
+                <span>
+                  <label class="sr-only" for="inspectionsFilterByStatus">Filter by Status</label>
+                  <select class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByStatus" id="inspectionsFilterByStatus" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
+                    <option value="is-all" selected="">All</option>
+                    <option value="is-rejected">Rejected</option>
+                    <option value="is-logged">Logged</option>
+                    <option value="is-assigned">Assigned</option>
+                    <option value="is-in-progress">In Progress</option>
+                    <option value="is-complete">Complete</option>
+                  </select>
+                </span>
+              </td>
             </tr>
           </thead>
           <tbody>
