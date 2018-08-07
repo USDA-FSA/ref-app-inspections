@@ -112,28 +112,35 @@
     <div class="fsa-section">
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
-        <div class="fsa-m-t--l">
+        <div class="fsa-m-t--m">
           <div class="fsa-grid" style="align-items: center;">
             <div class="fsa-grid__1 fsa-grid__auto@m">
               1-20 of 2400
             </div>
             <div class="fsa-grid__1 fsa-grid__auto@m">
               <div class="fsa-text-align--right">
-                <span>
-                  <label class="sr-only" for="inspectionFind">Find</label>
-                  <input class="fsa-input" placeholder="Find" type="text" id="inspectionFind" data-behavior="inspections-find">
-                </span>
-                <span>
-                  <label class="sr-only" for="inspectionsFilterBy">Active Type</label>
-                  <select class="fsa-select" name="inspectionsFilterBy" id="inspectionsFilterBy" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
-                    <option value="is-all" selected="">All</option>
-                    <option value="is-rejected">Rejected</option>
-                    <option value="is-logged">Logged</option>
-                    <option value="is-assigned">Assigned</option>
-                    <option value="is-in-progress">In Progress</option>
-                    <option value="is-complete">Complete</option>
-                  </select>
-                </span>
+                <form>
+                  <span class="fsa-m-l--s">
+                    <span class="fic-finder">
+                      <label class="fic-finder__label sr-only" for="inspectionFind">Find</label>
+                      <span class="fic-finder__entry">
+                        <input class="fsa-input fic-finder__input" placeholder="Find" type="text" id="inspectionFind" data-behavior="inspections-find">
+                        <button data-behavior="clear-finder-entry" class="fsa-btn fsa-btn--flat fic-finder__clearer" type="button" aria-label="Clear input"></button>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="fsa-m-l--s">
+                    <label class="sr-only" for="inspectionsFilterBy">Active Type</label>
+                    <select class="fsa-select" name="inspectionsFilterBy" id="inspectionsFilterBy" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
+                      <option value="is-all" selected="">All</option>
+                      <option value="is-rejected">Rejected</option>
+                      <option value="is-logged">Logged</option>
+                      <option value="is-assigned">Assigned</option>
+                      <option value="is-in-progress">In Progress</option>
+                      <option value="is-complete">Complete</option>
+                    </select>
+                  </span>
+                </form>
               </div>
             </div>
           </div>
@@ -159,9 +166,9 @@
           </thead>
           <tbody>
             <tr class="fic-inspections__row" data-status="is-complete">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--06" type="checkbox" name="inpections__select-inspection--06" value="06">
+                  <input disabled data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--06" type="checkbox" name="inpections__select-inspection--06" value="06">
                   <label for="inpections__select-inspection--06"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
@@ -174,7 +181,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-assigned">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--07" type="checkbox" name="inpections__select-inspection--07" value="07">
                   <label for="inpections__select-inspection--07"><span class="sr-only">Select this row</span></label>
@@ -189,7 +196,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-rejected">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--10" type="checkbox" name="inpections__select-inspection--10" value="10">
                   <label for="inpections__select-inspection--10"><span class="sr-only">Select this row</span></label>
@@ -204,7 +211,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-logged">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--17" type="checkbox" name="inpections__select-inspection--17" value="17">
                   <label for="inpections__select-inspection--17"><span class="sr-only">Select this row</span></label>
@@ -219,7 +226,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-in-progress">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--24" type="checkbox" name="inpections__select-inspection--24" value="24">
                   <label for="inpections__select-inspection--24"><span class="sr-only">Select this row</span></label>
@@ -234,7 +241,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-logged">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--31" type="checkbox" name="inpections__select-inspection--31" value="31">
                   <label for="inpections__select-inspection--31"><span class="sr-only">Select this row</span></label>
@@ -249,9 +256,9 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-complete">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--33" type="checkbox" name="inpections__select-inspection--33" value="33">
+                  <input disabled data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--33" type="checkbox" name="inpections__select-inspection--33" value="33">
                   <label for="inpections__select-inspection--33"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
@@ -264,7 +271,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-logged">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--37" type="checkbox" name="inpections__select-inspection--37" value="37">
                   <label for="inpections__select-inspection--37"><span class="sr-only">Select this row</span></label>
@@ -279,7 +286,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-in-progress">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--39" type="checkbox" name="inpections__select-inspection--39" value="39">
                   <label for="inpections__select-inspection--39"><span class="sr-only">Select this row</span></label>
@@ -294,7 +301,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-assigned">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--41" type="checkbox" name="inpections__select-inspection--41" value="41">
                   <label for="inpections__select-inspection--41"><span class="sr-only">Select this row</span></label>
@@ -309,9 +316,9 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-complete">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--42" type="checkbox" name="inpections__select-inspection--42" value="42">
+                  <input disabled data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--42" type="checkbox" name="inpections__select-inspection--42" value="42">
                   <label for="inpections__select-inspection--42"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
@@ -324,7 +331,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-rejected">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--47" type="checkbox" name="inpections__select-inspection--47" value="47">
                   <label for="inpections__select-inspection--47"><span class="sr-only">Select this row</span></label>
@@ -339,7 +346,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-assigned">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--55" type="checkbox" name="inpections__select-inspection--55" value="55">
                   <label for="inpections__select-inspection--55"><span class="sr-only">Select this row</span></label>
@@ -354,7 +361,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-rejected">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--64" type="checkbox" name="inpections__select-inspection--64" value="64">
                   <label for="inpections__select-inspection--64"><span class="sr-only">Select this row</span></label>
@@ -369,7 +376,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-in-progress">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--77" type="checkbox" name="inpections__select-inspection--77" value="77">
                   <label for="inpections__select-inspection--77"><span class="sr-only">Select this row</span></label>
@@ -384,7 +391,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-assigned">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--79" type="checkbox" name="inpections__select-inspection--79" value="79">
                   <label for="inpections__select-inspection--79"><span class="sr-only">Select this row</span></label>
@@ -399,7 +406,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-in-progress">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--85" type="checkbox" name="inpections__select-inspection--85" value="85">
                   <label for="inpections__select-inspection--85"><span class="sr-only">Select this row</span></label>
@@ -414,9 +421,9 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-complete">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--91" type="checkbox" name="inpections__select-inspection--91" value="91">
+                  <input disabled data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--91" type="checkbox" name="inpections__select-inspection--91" value="91">
                   <label for="inpections__select-inspection--91"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
@@ -429,7 +436,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-logged">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--94" type="checkbox" name="inpections__select-inspection--94" value="94">
                   <label for="inpections__select-inspection--94"><span class="sr-only">Select this row</span></label>
@@ -444,7 +451,7 @@
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
             <tr class="fic-inspections__row" data-status="is-in-progress">
-              <td class="fic-inspections__select-column">
+              <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row" class="fsa-checkbox" id="inpections__select-inspection--98" type="checkbox" name="inpections__select-inspection--98" value="98">
                   <label for="inpections__select-inspection--98"><span class="sr-only">Select this row</span></label>

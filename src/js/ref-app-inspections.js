@@ -35,9 +35,9 @@ $('body').on('change', '[data-behavior~="inspections-select-all"]', function(eve
   var $self = $(this);
   var $row = $self.closest('.fic-inspections__row--thead');
   var $table = $self.closest('.fic-inspections');
-  var $rowsAll = $table.find('.fic-inspections__row');
-  var $rowsAllChecks = $rowsAll.find('.fsa-checkbox');
-  var isChecked = $self.is(':checked')
+  var $rowsAll = $table.find('.fic-inspections__row:not([data-status="is-complete"])');
+  var $rowsAllChecks = $rowsAll.find('.fsa-checkbox:not([disabled])');
+  var isChecked = $self.is(':checked');
 
   if(isChecked) {
     $rowsAll.addClass('fic-inspections__row--selected');
@@ -49,5 +49,16 @@ $('body').on('change', '[data-behavior~="inspections-select-all"]', function(eve
   }
 
   return false;
+
+})
+
+$('body').on('click', '[data-behavior~="clear-finder-entry"]', function(event) {
+
+  var $self = $(this);
+
+  $self.siblings('.fic-finder__input')
+    .val('')
+    .focus()
+  ;
 
 })
