@@ -22,6 +22,22 @@
 
 /* FIC Styles ******************************************************************/
 
+.fic-inspection-hd {}
+
+.fic-inspection-list-header {
+  margin-top: 24px;
+}
+.fic-inspection-list-header__row {
+  align-items: center
+}
+
+.fic-inspection-triage {
+  margin-top: 24px;
+}
+.fic-inspection-triage__row {
+  align-items: center;
+}
+
 .fic-inspections /* table */ {
   margin-top: 12px;
 }
@@ -95,13 +111,19 @@
   display: flex;
 }
 .fic-finder__input {
-  padding-right: 32px;
+  padding-right: 28px;
 }
 .fic-finder__clearer {
   text-decoration: none !important;
-  width: 32px;
+  width: 28px;
   text-align: center;
-  margin-left: -32px !important;
+  margin-left: -28px !important;
+  font-weight: bold;
+}
+.fic-finder__clearer:focus,
+.fic-finder__clearer:active {
+  outline: 0;
+  transform: translate(1px, 1px);
 }
 .fic-finder__clearer:before {
   content: '\00d7'

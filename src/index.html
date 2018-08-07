@@ -112,35 +112,68 @@
     <div class="fsa-section">
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
-        <div class="fsa-m-t--m">
-          <div class="fsa-grid" style="align-items: center;">
-            <div class="fsa-grid__1 fsa-grid__auto@m">
-              1-20 of 2400
-            </div>
-            <div class="fsa-grid__1 fsa-grid__auto@m">
-              <div class="fsa-text-align--right">
-                <form>
-                  <span class="fsa-m-l--s">
-                    <span class="fic-finder">
-                      <label class="fic-finder__label sr-only" for="inspectionFind">Find</label>
-                      <span class="fic-finder__entry">
-                        <input class="fsa-input fic-finder__input" placeholder="Find" type="text" id="inspectionFind" data-behavior="inspections-find">
-                        <button data-behavior="clear-finder-entry" class="fsa-btn fsa-btn--flat fic-finder__clearer" type="button" aria-label="Clear input"></button>
+        <div class="fic-inspection-hd">
+          <div class="fic-inspection-list-header">
+            <div class="fsa-grid fic-inspection-list-header__row">
+              <div class="fsa-grid__1 fsa-grid__auto@m">
+                1-20 of 2400
+              </div>
+              <div class="fsa-grid__1 fsa-grid__auto@m">
+                <div class="fsa-text-align--right">
+                  <form>
+                    <span class="fsa-m-l--s">
+                      <span class="fic-finder">
+                        <label class="fic-finder__label sr-only" for="inspectionFind">Quick Find</label>
+                        <span class="fic-finder__entry">
+                          <input class="fsa-input fsa-input--small fic-finder__input" placeholder="Quick Find" type="text" id="inspectionFind" data-behavior="inspections-find">
+                          <button tabindex="-1" data-behavior="clear-finder-entry" class="fsa-btn fsa-btn--flat fic-finder__clearer" type="button" aria-label="Clear input"></button>
+                        </span>
                       </span>
                     </span>
-                  </span>
-                  <span class="fsa-m-l--s">
-                    <label class="sr-only" for="inspectionsFilterBy">Active Type</label>
-                    <select class="fsa-select" name="inspectionsFilterBy" id="inspectionsFilterBy" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
-                      <option value="is-all" selected="">All</option>
-                      <option value="is-rejected">Rejected</option>
-                      <option value="is-logged">Logged</option>
-                      <option value="is-assigned">Assigned</option>
-                      <option value="is-in-progress">In Progress</option>
-                      <option value="is-complete">Complete</option>
-                    </select>
-                  </span>
-                </form>
+                    <span class="fsa-m-l--s">
+                      <label class="sr-only" for="inspectionsFilterByAssignee">Assigned to</label>
+                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
+                        <option>All Assignees</option>
+                        <option value="assignedto-norm-peterson">Norm Peterson</option>
+                        <option value="assignedto-carla-tortelli">Carla Tortelli</option>
+                        <option value="assignedto-ernie-pantusso">Ernie Pantusso</option>
+                        <option value="assignedto-diane-chambers">Diane Chambers</option>
+                        <option value="assignedto-woody-boyd">Woody Boyd</option>
+                        <option value="assignedto-diane-lane">Diane Lane</option>
+                        <option value="assignedto-cliff-clavin">Cliff Clavin</option>
+                        <option value="assignedto-rebecca-howe">Rebecca Howe</option>
+                        <option value="assignedto-sam-malone">Sam Malone</option>
+                      </select>
+                    </span>
+                    <span class="fsa-m-l--s">
+                      <label class="sr-only" for="inspectionsFilterByStatus">Status</label>
+                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByStatus" id="inspectionsFilterByStatus" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
+                        <option value="is-all" selected="">All Statuses</option>
+                        <option value="is-rejected">Rejected</option>
+                        <option value="is-logged">Logged</option>
+                        <option value="is-assigned">Assigned</option>
+                        <option value="is-in-progress">In Progress</option>
+                        <option value="is-complete">Complete</option>
+                      </select>
+                    </span>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fic-inspection-triage" hidden>
+            <div class="fsa-grid fic-inspection-triage__row">
+              <div class="fsa-grid__1 fsa-grid__auto@m">
+                <span id="triage-selection">2</span> selected
+              </div>
+              <div class="fsa-grid__1 fsa-grid__auto@m">
+                <div class="fsa-text-align--right">
+                  <button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small">Assign</button>
+                  <button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small">Start Progress</button>
+                  <button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small">Complete</button>
+                  <button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small">Approve</button>
+                  <button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small">Reject</button>
+                </div>
               </div>
             </div>
           </div>
@@ -564,7 +597,7 @@
         <div class="fsa-modal__content">
           <button class="fsa-modal__close" data-behavior="close-modal" aria-controls="UNIQUE-ID-employee-unsaved"><img class="fsa-modal__close-icon" src="img/close.svg" alt="close"></button>
           <form>
-            <h1 class="fsa-modal__title">Edit Employee Detail</h1>
+            <h1 class="fsa-modal__title">Inspection Detail</h1>
             <fieldset>
               <div class="fsa-field">
                 <label class="fsa-field__label" for="thingthing-name_887sh">First Name <span class="fsa-field__label-desc">Required</span></label>
