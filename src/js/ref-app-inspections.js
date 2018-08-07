@@ -30,6 +30,16 @@ $('body').on('change', '[data-behavior~="inspections-select-row"]', function(eve
 
 })
 
+$('body').on('change', '[data-behavior~="inspections-toggle-header"]', function(event) {
+
+  var $self = $(this);
+
+  $('#fic-inspection-hd__list-header').attr('hidden', true);
+  $('#fic-inspection-hd__triage').removeAttr('hidden');
+
+
+})
+
 $('body').on('change', '[data-behavior~="inspections-select-all"]', function(event) {
 
   var $self = $(this);
