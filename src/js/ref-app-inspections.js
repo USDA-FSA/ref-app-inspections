@@ -37,7 +37,6 @@ $('body').on('change', '[data-behavior~="inspections-toggle-header"]', function(
   $('#fic-inspection-hd__list-header').attr('hidden', true);
   $('#fic-inspection-hd__triage').removeAttr('hidden');
 
-
 })
 
 $('body').on('change', '[data-behavior~="inspections-select-all"]', function(event) {
@@ -70,5 +69,44 @@ $('body').on('click', '[data-behavior~="clear-finder-entry"]', function(event) {
     .val('')
     .focus()
   ;
+
+})
+
+$('body').on('change', '[data-behavior~="enable-field"]', function(event) {
+
+  var $self = $(this);
+  var $target = $($self.data('enable-target'));
+
+  $target.removeAttr('disabled');
+
+})
+
+$('body').on('change', '[data-behavior~="disable-field"]', function(event) {
+
+  var $self = $(this);
+  var $target = $($self.data('disable-target'));
+
+  $target.attr('disabled', 'disabled');
+
+})
+
+$('body').on('change', '[data-behavior~="reset-field"]', function(event) {
+
+  var $self = $(this);
+  var $target = $($self.data('reset-target'));
+
+  $target.prop("selected", false);
+
+})
+
+$('body').on('click', '[data-behavior~="reset-filter-fields"]', function(event) {
+
+  var $self = $(this);
+  var $row = $self.closest('tr')
+  var $target = $row.find('option:selected');
+  var $targetDisabled = $($self.data('disable-targets'));
+
+  $target.prop("selected", false);
+  $targetDisabled.attr('disabled', true);
 
 })
