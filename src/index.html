@@ -1,11 +1,15 @@
+
+<!-- #PARTIAL "html.hbs"  -->
 <!DOCTYPE html>
 
 <!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en">
 <!--<![endif]-->
+<!-- /PARTIAL "html.hbs"  -->
 
 <head>
+  <!-- #PARTIAL "head.hbs"  -->
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,15 +22,22 @@
     <script src="js/vendor/selectivizr-min.js"></script>
     <script src="js/vendor/rem-min.js"></script>
   <![endif]-->
+  <!-- /PARTIAL "head.hbs"  -->
 </head>
 
 <body>
 
+  <!-- #PARTIAL "browser-upgrade.hbs"  -->
   <!--[if lt IE 10]><p class="fsa-browser-upgrade">You are using an <strong>outdated</strong> browser. Please <strong><a href="http://browsehappy.com/">upgrade your browser</a></strong> to obtain a secure and improved experience.</p><![endif]-->
+  <!-- /PARTIAL "browser-upgrade.hbs"  -->
+
+  <!-- #PARTIAL "skip.hbs"  -->
   <a class="skipnav" href="#primary-navigation">Skip to primary navigation</a>
   <a class="skipnav" href="#main-content">Skip to main content</a>
+  <!-- /PARTIAL "skip.hbs"  -->
 
   <header>
+    <!-- #PARTIAL "tophat.hbs"  -->
     <div class="fsa-tophat">
       <div class="fsa-tophat__bd">
         <div class="fsa-tophat__primary">
@@ -45,6 +56,8 @@
         </div>
       </div>
     </div>
+    <!-- /PARTIAL "tophat.hbs"  -->
+    <!-- #PARTIAL "header-app.hbs"  -->
     <div class="fsa-header-app">
       <div class="fsa-header-app__bd">
         <div class="fsa-header-app__primary">
@@ -66,6 +79,7 @@
       </div>
     </div>
     <nav>
+      <!-- #PARTIAL "nav-global.hbs" -->
       <div class="fsa-nav-global">
         <div class="fsa-nav-global__bd">
           <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation">
@@ -104,14 +118,15 @@
           </ul>
         </div>
       </div>
+      <!-- /PARTIAL "nav-global.hbs" -->
     </nav>
-
   </header>
 
   <main id="main-content" tabindex="-1">
     <div class="fsa-section">
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
+        <!-- #PARTIAL "inspection-hd.hbs"  -->
         <div class="fic-inspection-hd">
           <div id="fic-inspection-hd__list-header" class="fic-inspection-list-header">
             <div class="fsa-grid fic-inspection-list-header__row">
@@ -184,6 +199,8 @@
             </div>
           </div>
         </div>
+        <!-- /PARTIAL "inspection-hd.hbs"  -->
+        <!-- #PARTIAL "table--inspections.hbs"  -->
         <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal fic-inspections fic-inspections--status-filter-is-all" id="inspectionsTable">
           <caption class="sr-only">Inspections</caption>
           <thead>
@@ -749,6 +766,8 @@
             </tr>
           </tbody>
         </table>
+        <!-- /PARTIAL "table-inspections.hbs"  -->
+        <!-- #PARTIAL "pagination.hbs"  -->
         <nav aria-label="Pagination" id="inspections-pagination">
           <div class="fsa-pagination" data-current="1" data-total="120">
           <ul class="fsa-pagination__list">
@@ -773,17 +792,21 @@
           </ul>
           </div>
         </nav>
+        <!-- /PARTIAL "pagination.hbs"  -->
       </div>
     </div>
   </main>
 
   <footer>
+    <!-- #PARTIAL "footer__topper.hbs"  -->
     <div class="fsa-topper">
       <div class="fsa-topper__bd">
         <a class="fsa-topper__link" href="#main-content">Return to top</a>
       </div>
     </div>
+    <!-- /PARTIAL "footer__topper.hbs"  -->
 
+    <!-- #PARTIAL "footer__footer.hbs"  -->
     <div class="fsa-footer">
       <div class="fsa-footer__bd">
         <div class="fsa-grid">
@@ -829,7 +852,9 @@
         </div>
       </div>
     </div>
+    <!-- /PARTIAL "footer__footer.hbs"  -->
 
+    <!-- #PARTIAL "footer__screen-id.hbs"  -->
     <div class="fsa-screen-id">
       <div class="fsa-screen-id__bd">
         <dl class="fsa-screen-id__dl">
@@ -838,6 +863,7 @@
         </dl>
       </div>
     </div>
+    <!-- /PARTIAL "footer__screen-id.hbs"  -->
   </footer>
 
   <div>
