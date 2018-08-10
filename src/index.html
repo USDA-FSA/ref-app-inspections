@@ -1,206 +1,29 @@
-
-<!-- #PARTIAL "html.hbs"  -->
 <!DOCTYPE html>
-
 <!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
 <html lang="en">
 <!--<![endif]-->
-<!-- /PARTIAL "html.hbs"  -->
-
-<head>
-  <!-- #PARTIAL "head.hbs"  -->
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Inspections</title>
-  <link rel="stylesheet" href="css/fsa-style.min.css" media="all">
-  <link rel="stylesheet" href="css/ref-app-inspections.css" media="all">
-  <!--[if lt IE 9]>
-    <script src="js/vendor/html5shiv.js"></script>
-    <script src="js/vendor/respond.js"></script>
-    <script src="js/vendor/selectivizr-min.js"></script>
-    <script src="js/vendor/rem-min.js"></script>
-  <![endif]-->
-  <!-- /PARTIAL "head.hbs"  -->
-</head>
-
+${ require('./includes/head.html') }
 <body>
-
-  <!-- #PARTIAL "browser-upgrade.hbs"  -->
-  <!--[if lt IE 10]><p class="fsa-browser-upgrade">You are using an <strong>outdated</strong> browser. Please <strong><a href="http://browsehappy.com/">upgrade your browser</a></strong> to obtain a secure and improved experience.</p><![endif]-->
-  <!-- /PARTIAL "browser-upgrade.hbs"  -->
-
-  <!-- #PARTIAL "skip.hbs"  -->
-  <a class="skipnav" href="#primary-navigation">Skip to primary navigation</a>
-  <a class="skipnav" href="#main-content">Skip to main content</a>
-  <!-- /PARTIAL "skip.hbs"  -->
+  ${ require('./includes/skipnav.html') }
+  ${ require('./includes/fsa-browser-upgrade.html') }
 
   <header>
-    <!-- #PARTIAL "tophat.hbs"  -->
-    <div class="fsa-tophat">
-      <div class="fsa-tophat__bd">
-        <div class="fsa-tophat__primary">
-          <span class="fsa-tophat__agency">
-            <a class="fsa-tophat__link" href="//usda.gov" title="Link to USDA homepage">
-              <img role="presentation" class="fsa-tophat__agency-logo" src="img/usda-logo--white.svg" alt="">
-              <abbr class="fsa-tophat__agency-abbr" title="United States Department of Agriculture">USDA</abbr>
-              <span class="fsa-tophat__agency-fullname">United States Department of Agriculture</span>
-            </a>
-          </span>
-        </div>
-        <div class="fsa-tophat__secondary">
-          <span class="fsa-tophat__subagency">
-            <a class="fsa-tophat__link" href="//fsa.usda.gov" title="Link to FSA homepage">Farm Service Agency</a>
-          </span>
-        </div>
-      </div>
-    </div>
-    <!-- /PARTIAL "tophat.hbs"  -->
-    <!-- #PARTIAL "header-app.hbs"  -->
-    <div class="fsa-header-app">
-      <div class="fsa-header-app__bd">
-        <div class="fsa-header-app__primary">
-          <a class="fsa-header-app__home-link" href="index.html">
-            <span class="fsa-header-app__app-name">
-              <abbr class="fsa-header-app__app-abbr">FIC</abbr>
-              <span class="fsa-header-app__app-full">Farm Inspection Console</span>
-            </span>
-          </a>
-        </div>
-        <div class="fsa-header-app__secondary">
-          <span class="fsa-header-app__profile">
-            <a href="profile.html" class="fsa-header-app__profile-link">
-              <span class="fsa-header-app__profile-name">Sam Mayday Malone</span>
-              <span class="fsa-header-app__profile-expand"></span>
-            </a>
-          </span>
-        </div>
-      </div>
-    </div>
-    <nav>
-      <!-- #PARTIAL "nav-global.hbs" -->
-      <div class="fsa-nav-global">
-        <div class="fsa-nav-global__bd">
-          <ul class="fsa-nav-global__list" aria-label="Primary Navigation" id="primary-navigation">
-            <li class="fsa-nav-global__list-item">
-              <a class="fsa-nav-global__link fsa-nav-global__link--active" href="link.html" aria-current="page">
-                <span class="fsa-nav-global__text">Inspections</span>
-              </a>
-            </li>
-            <li class="fsa-nav-global__list-item">
-
-              <button class="fsa-nav-global__link fsa-nav-global__link--has-sub-menu" type="button" aria-expanded="false" aria-controls="UNIQUE-ID-593945">
-                <span class="fsa-nav-global__text" id="UNIQUE-ID-123456789">Reports</span>
-              </button>
-
-              <div class="fsa-nav-global__sub-menu" id="UNIQUE-ID-593945" aria-hidden="true">
-
-                <div class="fsa-nav-global__sub-menu-bd">
-                  <ul class="fsa-nav-global__sub-menu-list" aria-labelledby="UNIQUE-ID-123456789">
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Overview</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Burden Investment</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Budgetery Max Funding</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Technology Plans</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Drive Texture Mechanics</a></li>
-                    <li class="fsa-nav-global__sub-menu-item"><a class="fsa-nav-global__sub-menu-link" href="link.html">Unilateral Placement Shifting</a></li>
-                  </ul>
-                </div>
-
-              </div>
-
-            </li>
-            <li class="fsa-nav-global__list-item">
-              <a class="fsa-nav-global__link" href="settings.html">
-                <span class="fsa-nav-global__text">Settings</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!-- /PARTIAL "nav-global.hbs" -->
-    </nav>
+    ${ require('./includes/tophat.html') }
+    ${ require('./includes/header-app.html') }
+    ${ require('./includes/global-nav.html') }
   </header>
 
   <main id="main-content" tabindex="-1">
     <div class="fsa-section">
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
-        <!-- #PARTIAL "inspection-hd.hbs"  -->
-        <div class="fic-inspection-hd">
-          <div id="fic-inspection-hd__list-header" class="fic-inspection-list-header">
-            <div class="fsa-grid fic-inspection-list-header__row">
-              <div class="fsa-grid__1 fsa-grid__auto@m">
-                1-20 of 2400
-              </div>
-              <div class="fsa-grid__1 fsa-grid__auto@m">
-                <div class="fsa-text-align--right" hidden>
-                  <form>
-                    <span class="fsa-m-l--s">
-                      <span class="fic-finder">
-                        <label class="fic-finder__label sr-only" for="inspectionFind">Quick Find</label>
-                        <span class="fic-finder__entry">
-                          <input class="fsa-input fsa-input--small fic-finder__input" placeholder="Quick Find" type="text" id="inspectionFind" data-behavior="inspections-find">
-                          <button tabindex="-1" data-behavior="clear-finder-entry" class="fsa-btn fsa-btn--flat fic-finder__clearer" type="button" aria-label="Clear input"></button>
-                        </span>
-                      </span>
-                    </span>
-                    <span class="fsa-m-l--s">
-                      <label class="sr-only" for="inspectionsFilterByAssignee">Assigned to</label>
-                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
-                        <option>All Assignees</option>
-                        <option value="assignedto-norm-peterson">Norm Peterson</option>
-                        <option value="assignedto-carla-tortelli">Carla Tortelli</option>
-                        <option value="assignedto-ernie-pantusso">Ernie Pantusso</option>
-                        <option value="assignedto-diane-chambers">Diane Chambers</option>
-                        <option value="assignedto-woody-boyd">Woody Boyd</option>
-                        <option value="assignedto-diane-lane">Diane Lane</option>
-                        <option value="assignedto-cliff-clavin">Cliff Clavin</option>
-                        <option value="assignedto-rebecca-howe">Rebecca Howe</option>
-                        <option value="assignedto-sam-malone">Sam Malone</option>
-                      </select>
-                    </span>
-                    <span class="fsa-m-l--s">
-                      <label class="sr-only" for="inspectionsFilterByStatus">Status</label>
-                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByStatus" id="inspectionsFilterByStatus" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
-                        <option value="is-all" selected="">All Statuses</option>
-                        <option value="is-rejected">Rejected</option>
-                        <option value="is-logged">Logged</option>
-                        <option value="is-assigned">Assigned</option>
-                        <option value="is-in-progress">In Progress</option>
-                        <option value="is-complete">Complete</option>
-                      </select>
-                    </span>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="fic-inspection-hd__triage" class="fic-inspection-triage" hidden>
-            <div class="fsa-grid fic-inspection-triage__row">
-              <div class="fsa-grid__1 fsa-grid__auto@m">
-                <span id="triage-selection">2</span> selected
-              </div>
-              <div class="fsa-grid__1 fsa-grid__auto@m">
-                <div class="fsa-text-align--right">
-                  <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
-                  <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
-                  <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
-                  <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
-                  <!--
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Assign[[[/button]]]
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Start[[[/button]]]
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Complete[[[/button]]]
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Approve[[[/button]]]
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Reject[[[/button]]]
-                  -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /PARTIAL "inspection-hd.hbs"  -->
+        
+        ${ require('./includes/inspection-hd.html') }
+
+
         <!-- #PARTIAL "table--inspections.hbs"  -->
+
         <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal fic-inspections fic-inspections--status-filter-is-all" id="inspectionsTable">
           <caption class="sr-only">Inspections</caption>
           <thead>
@@ -1091,10 +914,7 @@
     </div>
   </div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <script src="js/fsa-style-docs.min.js"></script>
-  <script src="js/ref-app-inspections.js"></script>
+  ${ require('./includes/scripts.html') }
 
 </body>
 
