@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const HTMLBeautifyPlugin = require('html-beautify-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const HandlebarsWebpackPlugin = require('handlebars-webpack-plugin');
 const path = require('path');
 
 
@@ -34,11 +35,32 @@ module.exports = {
         ]
       },
       {
+        test: /\.hbs$/,
+        use: [
+          {
+            loader: "handlebars-loader",
+            query: {
+              partialDirs: [
+                  path.join(__dirname, 'src', '/**/')
+              ]
+            }
+          }
+        ]
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
           { 
             loader: 'babel-loader'
+          }
+        ]
+      },
+      {
+        test: require.resolve("jquery"),
+        use: [
+          {
+            loader: "imports-loader?$=jquery"
           }
         ]
       },
@@ -95,15 +117,16 @@ module.exports = {
         to: './fonts/'
       }
     ]),
-    
+
     new HTMLWebpackPlugin({
+      title: "Webpack Title",
       // the template you want to use
-      template: "./src/index.html",
+      template: "./src/index.hbs",
       // the output file name
       filename: path.join(__dirname, "./dist/index.html"),
       inject: "body"
     }),
-    
+
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional

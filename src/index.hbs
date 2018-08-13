@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+{{> includes/head }}
+<body>
+  {{> includes/skipnav }}
+  {{> includes/fsa-browser-upgrade }}
+
+  <header>
+    {{> components/tophat/tophat }}
+    {{> components/header-app/header-app }}
+    {{> components/global-nav/global-nav }}
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div class="fsa-section">
+      <div class="fsa-section__bd">
+        
+        <h1>Inspections</h1>
+        
+        {{> includes/inspection-hd }}
+
+        {{> components/table/table-inspections }}
+        
+        {{> components/pagination/pagination }}
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    {{> components/footer/footer-topper }}
+    
+    {{> components/footer/footer-footer }}
+    
+    {{> components/footer/footer-screen-id }}
+  </footer>
+
+  <!-- HIDDEN - FOR MODALS/GROWL CONTENT -->
+  {{> includes/hidden }}
+  <!-- HIDDEN -->
+  
+  {{> includes/scripts }}
+
+</body>
+
+</html>
