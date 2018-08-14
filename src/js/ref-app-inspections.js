@@ -58,6 +58,20 @@ $('body').on('change', '[data-behavior~="inspections-count-filter"]', function(e
     $inspectionNoResults.attr('hidden', true)
   }
 
+  if ($inspectionRowsHidden.length < 20) {
+    $('#inspections-pagination').attr('hidden', true);
+  }
+  if ($inspectionRowsHidden.length >= 20) {
+    $('#inspections-pagination').removeAttr('hidden');
+  }
+
+  if ($inspectionRowsHidden.length >= 20) {
+    $('#inspections-amt').html('1-20');
+  }
+  if ($inspectionRowsHidden.length < 20) {
+    $('#inspections-amt').html($inspectionRowsHidden.length);
+  }
+
 })
 
 $('body').on('change', '[data-behavior~="inspections-select-row"]', function(event) {
