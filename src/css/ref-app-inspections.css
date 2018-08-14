@@ -135,6 +135,36 @@
   display: none;
 }
 
+.fic-progress-bar /* ul */ {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F0F0;
+  height: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.fic-progress-bar__item /* li */ {
+  margin: 0;
+  padding: 0;
+  border: 1px solid rgba(0,0,0,.1);
+  border-left: 0;
+}
+.fic-progress-bar__item:first-child{
+  border-left: 1px solid rgba(0,0,0,.1);
+}
+.fic-progress-bar__item:last-child{}
+.fic-progress-bar__item--complete {
+  background-color: #B2C9B7
+}
+.fic-progress-bar__item--in-progress {
+  background-color: #A6BBD4
+}
+.fic-progress-bar__item--assigned {
+  background-color: #DBDAD9
+}
+
 /* PROTOTYPE ONLY *************************************************************/
 .TBD {
   margin-top: 24px;

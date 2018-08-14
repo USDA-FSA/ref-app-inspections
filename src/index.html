@@ -126,12 +126,17 @@
     <div class="fsa-section">
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
-        <!-- #PARTIAL "inspection-hd.hbs"  -->
-        <p style="outline: 1px solid Orangered;">
+        <ul class="fic-progress-bar">
+          <li class="fic-progress-bar__item fic-progress-bar__item--complete" style="width:45%" aria-label="Complete: 45%" title="Complete: 45%"></li>
+          <li class="fic-progress-bar__item fic-progress-bar__item--in-progress" style="width:10%" aria-label="In Progress: 10%" title="In Progress: 10%"></li>
+          <li class="fic-progress-bar__item fic-progress-bar__item--assigned" style="width:25%" aria-label="Assigned: 25%" title="Assigned: 25%"></li>
+        </ul>
+        <p hidden>
           <strong>Filter UI:</strong>
           <button data-prototype-show="#pt__filter-alt-1" data-prototype-hide="#pt__filter-alt-2" type="button">Alt 1</button>
           <button data-prototype-show="#pt__filter-alt-2" data-prototype-hide="#pt__filter-alt-1" type="button">Alt 2</button>
         </p>
+        <!-- #PARTIAL "inspection-hd.hbs"  -->
         <div class="fic-inspection-hd">
           <div id="fic-inspection-hd__list-header" class="fic-inspection-list-header">
             <div class="fsa-grid fic-inspection-list-header__row">
