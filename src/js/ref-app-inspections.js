@@ -155,11 +155,18 @@ $('body').on('change', '[data-behavior~="reset-field"]', function(event) {
 $('body').on('click', '[data-behavior~="reset-filter-fields"]', function(event) {
 
   var $self = $(this);
-  var $row = $self.closest('tr')
+  var $component = $self.closest('table');
+  var $componentRows = $component.find('tr');
+  var $row = $self.closest('tr');
   var $target = $row.find('option:selected');
   var $targetDisabled = $($self.data('disable-targets'));
 
   $target.prop("selected", false);
   $targetDisabled.attr('disabled', true);
+  $component.removeClass('fic-inspections--status-filter-is-rejected fic-inspections--status-filter-is-logged fic-inspections--status-filter-is-assigned fic-inspections--status-filter-is-in-progress fic-inspections--status-filter-is-complete');
+  $componentRows.removeAttr('data-filtered-by-assignee data-not-filtered-by-assignee')
+  $component.find('.fic-inspections__tfoot').attr('hidden', true);
+  $('#inspections-pagination').removeAttr('hidden');
+  $('#inspections-amt').html('1-20');
 
 })
