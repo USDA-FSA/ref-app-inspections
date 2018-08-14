@@ -127,14 +127,19 @@
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
         <!-- #PARTIAL "inspection-hd.hbs"  -->
+        <p>
+          <strong>Filter UI:</strong>
+          <button data-prototype-show="#pt__filter-alt-1" data-prototype-hide="#pt__filter-alt-2" type="button">Alt 1</button>
+          <button data-prototype-show="#pt__filter-alt-2" data-prototype-hide="#pt__filter-alt-1" type="button">Alt 2</button>
+        </p>
         <div class="fic-inspection-hd">
           <div id="fic-inspection-hd__list-header" class="fic-inspection-list-header">
             <div class="fsa-grid fic-inspection-list-header__row">
               <div class="fsa-grid__1 fsa-grid__auto@m">
-                <span id="inspections-amt">1-20</span> of 2394
+                <span id="inspections-amt">1-20</span> of 136
               </div>
               <div class="fsa-grid__1 fsa-grid__auto@m">
-                <div class="fsa-text-align--right" hidden>
+                <div class="fsa-text-align--right" hidden="hidden" id="pt__filter-alt-2">
                   <form>
                     <span class="fsa-m-l--s">
                       <span class="fic-finder">
@@ -146,9 +151,10 @@
                       </span>
                     </span>
                     <span class="fsa-m-l--s">
-                      <label class="sr-only" for="inspectionsFilterByAssignee">Assigned to</label>
-                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
-                        <option>All Assignees</option>
+                      <label class="sr-only" for="inspectionsFilterByAssignee__alt">Assigned to</label>
+                      <select data-behavior="inspections-assignee-filter inspections-count-filter" data-filter-target="inspectionsTable" class="fsa-select fsa-select--small" name="inspectionsFilterByAssignee__alt" id="inspectionsFilterByAssignee__alt">
+                        <option value="assignedto-all">All</option>
+                        <option value="assignedto-not-assigned">Unassigned</option>
                         <option value="assignedto-norm-peterson">Norm Peterson</option>
                         <option value="assignedto-carla-tortelli">Carla Tortelli</option>
                         <option value="assignedto-ernie-pantusso">Ernie Pantusso</option>
@@ -161,9 +167,9 @@
                       </select>
                     </span>
                     <span class="fsa-m-l--s">
-                      <label class="sr-only" for="inspectionsFilterByStatus">Status</label>
-                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByStatus" id="inspectionsFilterByStatus" data-behavior="inspections-filter inspections-count-filter" data-filter-target="inspectionsTable">
-                        <option value="is-all" selected="">All Statuses</option>
+                      <label class="sr-only" for="inspectionsFilterByStatus__alt">Status</label>
+                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByStatus__alt" id="inspectionsFilterByStatus__alt" data-behavior="inspections-filter inspections-count-filter" data-filter-target="inspectionsTable">
+                        <option value="is-all" selected="">All</option>
                         <option value="is-rejected">Rejected</option>
                         <option value="is-logged">Logged</option>
                         <option value="is-assigned">Assigned</option>
@@ -211,7 +217,7 @@
                   <label for="inpections__select-all"><span class="sr-only">Select all</span></label>
                 </span>
               </th>
-              <th class="fsa-table__th--sticky" aria-sort="descending"><button type="button" class="fsa-table__sort fsa-table__sort--descending">Inspection</button></th>
+              <th class="fsa-table__th--sticky" aria-sort="descending"><button type="button" class="fsa-table__sort fsa-table__sort--descending">Name</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">State</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">County</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Farm</button></th>
@@ -219,7 +225,7 @@
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Due Date</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Status</button></th>
             </tr>
-            <tr>
+            <tr id="pt__filter-alt-1">
               <td>
                 <!--
                 <button data-behavior="reset-filter-fields" data-disable-targets="#inspectionsFilterByCounty, #inspectionsFilterByFarmNumber" title="Reset Filters" tabindex="0" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-btn--block">
@@ -490,7 +496,7 @@
                   <label for="inpections__select-inspection--06"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">06</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 06</button></strong></td>
               <td aria-label="State">Kansas</td>
               <td aria-label="County">Cowley</td>
               <td aria-label="Farm Number">3510</td>
@@ -505,7 +511,7 @@
                   <label for="inpections__select-inspection--07"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">07</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 07</button></strong></td>
               <td aria-label="State">Kansas</td>
               <td aria-label="County">Johnson</td>
               <td aria-label="Farm Number">8787</td>
@@ -520,7 +526,7 @@
                   <label for="inpections__select-inspection--10"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">10</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 10</button></strong></td>
               <td aria-label="State">Missouri</td>
               <td aria-label="County">Jackson</td>
               <td aria-label="Farm Number">8080</td>
@@ -535,7 +541,7 @@
                   <label for="inpections__select-inspection--17"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">17</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 17</button></strong></td>
               <td aria-label="State">California</td>
               <td aria-label="County">Ventura</td>
               <td aria-label="Farm Number">5644</td>
@@ -550,7 +556,7 @@
                   <label for="inpections__select-inspection--24"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">24</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 24</button></strong></td>
               <td aria-label="State">California</td>
               <td aria-label="County">Los Angeles</td>
               <td aria-label="Farm Number">6662</td>
@@ -565,7 +571,7 @@
                   <label for="inpections__select-inspection--31"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">31</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 31</button></strong></td>
               <td aria-label="State">California</td>
               <td aria-label="County">San Bernardino</td>
               <td aria-label="Farm Number">6664</td>
@@ -580,7 +586,7 @@
                   <label for="inpections__select-inspection--33"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">33</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 33</button></strong></td>
               <td aria-label="State">Kansas</td>
               <td aria-label="County">Miami</td>
               <td aria-label="Farm Number">7510</td>
@@ -595,7 +601,7 @@
                   <label for="inpections__select-inspection--37"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">37</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 37</button></strong></td>
               <td aria-label="State">Maryland</td>
               <td aria-label="County">Anne Arundel</td>
               <td aria-label="Farm Number">1325</td>
@@ -610,7 +616,7 @@
                   <label for="inpections__select-inspection--39"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">39</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 39</button></strong></td>
               <td aria-label="State">Oregon</td>
               <td aria-label="County">Clackamas </td>
               <td aria-label="Farm Number">1196</td>
@@ -625,7 +631,7 @@
                   <label for="inpections__select-inspection--41"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">41</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 41</button></strong></td>
               <td aria-label="State">Iowa</td>
               <td aria-label="County">Pottawattamie</td>
               <td aria-label="Farm Number">1196</td>
@@ -640,7 +646,7 @@
                   <label for="inpections__select-inspection--42"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">42</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 42</button></strong></td>
               <td aria-label="State">Florida</td>
               <td aria-label="County">Hillsborough</td>
               <td aria-label="Farm Number">5197</td>
@@ -655,7 +661,7 @@
                   <label for="inpections__select-inspection--47"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">47</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 47</button></strong></td>
               <td aria-label="State">Idaho</td>
               <td aria-label="County">Kootenia</td>
               <td aria-label="Farm Number">2181</td>
@@ -670,7 +676,7 @@
                   <label for="inpections__select-inspection--55"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">55</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 55</button></strong></td>
               <td aria-label="State">Texas</td>
               <td aria-label="County">Collingsworth</td>
               <td aria-label="Farm Number">8171</td>
@@ -685,7 +691,7 @@
                   <label for="inpections__select-inspection--64"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">64</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 64</button></strong></td>
               <td aria-label="State">California</td>
               <td aria-label="County">Santa Barbara</td>
               <td aria-label="Farm Number">3481</td>
@@ -700,7 +706,7 @@
                   <label for="inpections__select-inspection--77"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">77</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 77</button></strong></td>
               <td aria-label="State">Missouri</td>
               <td aria-label="County">Jackson</td>
               <td aria-label="Farm Number">7544</td>
@@ -715,7 +721,7 @@
                   <label for="inpections__select-inspection--79"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">79</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 79</button></strong></td>
               <td aria-label="State">Kansas</td>
               <td aria-label="County">Anderson</td>
               <td aria-label="Farm Number">2552</td>
@@ -730,7 +736,7 @@
                   <label for="inpections__select-inspection--85"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">85</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 85</button></strong></td>
               <td aria-label="State">Illinois</td>
               <td aria-label="County">Alexander</td>
               <td aria-label="Farm Number">6548</td>
@@ -745,7 +751,7 @@
                   <label for="inpections__select-inspection--91"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">91</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 91</button></strong></td>
               <td aria-label="State">Washington</td>
               <td aria-label="County">Cowlitz</td>
               <td aria-label="Farm Number">3069</td>
@@ -760,7 +766,7 @@
                   <label for="inpections__select-inspection--94"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">94</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 94</button></strong></td>
               <td aria-label="State">Washington</td>
               <td aria-label="County">Okanogan</td>
               <td aria-label="Farm Number">2993</td>
@@ -775,7 +781,7 @@
                   <label for="inpections__select-inspection--98"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
-              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">98</button></strong></td>
+              <td aria-label="Inspection Number"><strong><button type="button" class="fsa-btn fsa-btn--flat" data-behavior="open-modal" aria-controls="modal__inspection-06">Inspection 98</button></strong></td>
               <td aria-label="State">Nevada</td>
               <td aria-label="County">Churchill</td>
               <td aria-label="Farm Number">1320</td>
@@ -788,7 +794,7 @@
         <!-- /PARTIAL "table-inspections.hbs"  -->
         <!-- #PARTIAL "pagination.hbs"  -->
         <nav aria-label="Pagination" id="inspections-pagination">
-          <div class="fsa-pagination" data-current="1" data-total="120">
+          <div class="fsa-pagination" data-current="1" data-total="7">
           <ul class="fsa-pagination__list">
             <li class="fsa-pagination__item fsa-pagination__item--previous" aria-hidden="true">
               <span class="fsa-pagination__label fsa-pagination__label--previous fsa-pagination__label--disabled">Previous</span>
@@ -803,7 +809,7 @@
               <span class="fsa-pagination__label">…</span>
             </li>
             <li class="fsa-pagination__item">
-              <a class="fsa-pagination__label" href="link.html">120</a>
+              <a class="fsa-pagination__label" href="link.html">7</a>
             </li>
             <li class="fsa-pagination__item fsa-pagination__item--next">
               <a class="fsa-pagination__label fsa-pagination__label--next" href="link.html">Next</a>

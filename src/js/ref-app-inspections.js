@@ -45,7 +45,8 @@ $('body').on('change', '[data-behavior~="inspections-assignee-filter"]', functio
 $('body').on('change', '[data-behavior~="inspections-count-filter"]', function(event) {
 
   var $self = $(this);
-  var $component = $self.closest('table');
+  var $component = $('#' + $self.attr('data-filter-target'))
+
   var $inspectionRowsHidden = $component.find('.fic-inspections__row:not(:hidden)');
   var $inspectionNoResults = $component.find('.fic-inspections__tfoot');
 
@@ -170,3 +171,22 @@ $('body').on('click', '[data-behavior~="reset-filter-fields"]', function(event) 
   $('#inspections-amt').html('1-20');
 
 })
+
+$('body').on('click', '[data-prototype-show]', function(event) {
+
+  var $self = $(this);
+  var $target = $($self.data('prototype-show'));
+  $target.removeAttr('hidden')
+
+})
+
+$('body').on('click', '[data-prototype-hide]', function(event) {
+
+  var $self = $(this);
+  var $target = $($self.data('prototype-hide'));
+  $target.attr('hidden', true)
+
+})
+
+// <button data-prototype-show="#pt__filter-alt-1" data-prototype-hide="#pt__filter-alt-2" type="button">Alt 1</button>
+// <button data-prototype-show="#pt__filter-alt-2" data-prototype-hide="#pt__filter-alt-1" type="button">Alt 2</button>
