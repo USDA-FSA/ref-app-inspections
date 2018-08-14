@@ -162,7 +162,7 @@
                     </span>
                     <span class="fsa-m-l--s">
                       <label class="sr-only" for="inspectionsFilterByStatus">Status</label>
-                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByStatus" id="inspectionsFilterByStatus" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
+                      <select class="fsa-select fsa-select--small" name="inspectionsFilterByStatus" id="inspectionsFilterByStatus" data-behavior="inspections-filter inspections-count-filter" data-filter-target="inspectionsTable">
                         <option value="is-all" selected="">All Statuses</option>
                         <option value="is-rejected">Rejected</option>
                         <option value="is-logged">Logged</option>
@@ -188,11 +188,11 @@
                   <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
                   <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
                   <!--
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Assign[[[/button]]]
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Start[[[/button]]]
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Complete[[[/button]]]
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Approve[[[/button]]]
-                  [[[button disabled class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Reject[[[/button]]]
+                  [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Assign[[[/button]]]
+                  [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Start[[[/button]]]
+                  [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Complete[[[/button]]]
+                  [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Approve[[[/button]]]
+                  [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Reject[[[/button]]]
                   -->
                 </div>
               </div>
@@ -203,11 +203,11 @@
         <!-- #PARTIAL "table--inspections.hbs"  -->
         <table class="fsa-table fsa-table--borderless fsa-table--responsive fsa-table--responsive-horizontal fic-inspections fic-inspections--status-filter-is-all" id="inspectionsTable">
           <caption class="sr-only">Inspections</caption>
-          <thead>
+          <thead class="fic-inspections__thead">
             <tr class="fic-inspections__row--thead">
               <th class="fsa-table__th--sticky fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input data-behavior="inspections-select-all inspections-toggle-header" class="fsa-checkbox" id="inpections__select-all" type="checkbox" name="inpections__select-all" value="Select all">
+                  <input data-behavior="inspections-select-all inspections-toggle-header inspections-count-filter" class="fsa-checkbox" id="inpections__select-all" type="checkbox" name="inpections__select-all" value="Select all">
                   <label for="inpections__select-all"><span class="sr-only">Select all</span></label>
                 </span>
               </th>
@@ -221,6 +221,11 @@
             </tr>
             <tr>
               <td>
+                <!--
+                <button data-behavior="reset-filter-fields" data-disable-targets="#inspectionsFilterByCounty, #inspectionsFilterByFarmNumber" title="Reset Filters" tabindex="0" class="fsa-btn fsa-btn--secondary fsa-btn--small fsa-btn--block">
+                  ↻ Reset all Filters
+                </button>
+                -->
                 <strong data-behavior="reset-filter-fields" data-disable-targets="#inspectionsFilterByCounty, #inspectionsFilterByFarmNumber" title="Reset Filters" tabindex="0" style="padding-left: 8px; color: #205493; font-size: 23px; line-height: 1; display: inline-block; padding-top: 2px; font-weight: bold; font-family: monospace; cursor: pointer">
                   &#x21bb;
                 </strong>
@@ -228,7 +233,7 @@
               <td>
                 <span>
                   <label class="sr-only" for="inspectionsFilterByInspectioNumber">Filter by Inspection Number</label>
-                  <select disabled class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByInspectioNumber" name="inspectionsFilterByInspectioNumber">
+                  <select disabled="disabled" data-behavior="inspections-count-filter" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByInspectioNumber" name="inspectionsFilterByInspectioNumber">
                     <option value="All">All</option>
                   </select>
                 </span>
@@ -236,7 +241,7 @@
               <td>
                 <span>
                   <label class="sr-only" for="inspectionsFilterByState">Filter by State</label>
-                  <select data-behavior="enable-field disable-field reset-field" data-enable-target="#inspectionsFilterByCounty" data-disable-target="#inspectionsFilterByFarmNumber" data-reset-target="#inspectionsFilterByFarmNumber :selected, #inspectionsFilterByCounty :selected" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByState" name="inspectionsFilterByState">
+                  <select data-behavior="enable-field disable-field reset-field inspections-count-filter" data-enable-target="#inspectionsFilterByCounty" data-disable-target="#inspectionsFilterByFarmNumber" data-reset-target="#inspectionsFilterByFarmNumber :selected, #inspectionsFilterByCounty :selected" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByState" name="inspectionsFilterByState">
                     <option value="is-all-states" selected="selected">All</option>
                     <option value="is-AL">Alabama</option>
                     <option value="is-AK">Alaska</option>
@@ -294,7 +299,7 @@
               <td>
                 <span>
                   <label class="sr-only" for="inspectionsFilterByCounty">Filter by County</label>
-                  <select data-behavior="enable-field reset-field" data-enable-target="#inspectionsFilterByFarmNumber" data-reset-target="#inspectionsFilterByFarmNumber :selected" disabled class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByCounty" name="inspectionsFilterByCounty">
+                  <select data-behavior="enable-field reset-field inspections-count-filter" data-enable-target="#inspectionsFilterByFarmNumber" data-reset-target="#inspectionsFilterByFarmNumber :selected" disabled="disabled" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByCounty" name="inspectionsFilterByCounty">
                     <option value="is-all-states" selected="selected">All</option>
                     <option value="is-allen">Allen</option>
                     <option value="is-anderson" disabled>Anderson</option>
@@ -407,7 +412,7 @@
               <td>
                 <span>
                   <label class="sr-only" for="inspectionsFilterByFarmNumber">Filter by Farm Number</label>
-                  <select disabled class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByFarmNumber" name="inspectionsFilterByFarmNumber">
+                  <select disabled="disabled" data-behavior="inspections-count-filter" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByFarmNumber" name="inspectionsFilterByFarmNumber">
                     <option value="is-all-states" selected="selected">All</option>
                     <option value="is-1325">1325</option>
                     <option value="is-1196">1196</option>
@@ -423,8 +428,8 @@
               </td>
               <td>
                 <label class="sr-only" for="inspectionsFilterByAssignee">Filter by Assignee</label>
-                <select data-behavior="inspections-assignee-filter" data-filter-target="inspectionsTable" class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
-                  <option>All</option>
+                <select data-behavior="inspections-assignee-filter inspections-count-filter" data-filter-target="inspectionsTable" class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
+                  <option value="assignedto-all">All</option>
                   <option value="assignedto-not-assigned">Unassigned</option>
                   <option value="assignedto-norm-peterson">Norm Peterson</option>
                   <option value="assignedto-carla-tortelli">Carla Tortelli</option>
@@ -440,19 +445,21 @@
               <td>
                 <span>
                   <label class="sr-only" for="inspectionsFilterByDate">Filter by Date</label>
-                  <select class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByDate" name="inspectionsFilterByDate">
-                    <option value="is-all-states" selected="selected">All</option>
-                    <option value="is-1182">Today</option>
-                    <option value="is-1182">This Week</option>
-                    <option value="is-1182">This Month</option>
-                    <option value="is-1182">This Year</option>
+                  <select data-behavior="inspections-count-filter" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByDate" name="inspectionsFilterByDate">
+                    <option value="is-all" selected="selected">All</option>
+                    <option value="is-today">Today</option>
+                    <option value="is-this-week">This Week</option>
+                    <option value="is-this-month">This Month</option>
+                    <option value="is-this-year">This Year</option>
+                    <option value="is-last-year">Last Year</option>
+                    <option value="is-next-year">Next Year</option>
                   </select>
                 </span>
               </td>
               <td>
                 <span>
                   <label class="sr-only" for="inspectionsFilterByStatus">Filter by Status</label>
-                  <select class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByStatus" id="inspectionsFilterByStatus" data-behavior="inspections-filter" data-filter-target="inspectionsTable">
+                  <select class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByStatus" id="inspectionsFilterByStatus" data-behavior="inspections-filter inspections-count-filter" data-filter-target="inspectionsTable">
                     <option value="is-all" selected="">All</option>
                     <option value="is-rejected">Rejected</option>
                     <option value="is-logged">Logged</option>
@@ -464,11 +471,22 @@
               </td>
             </tr>
           </thead>
-          <tbody>
+          <tfoot class="fic-inspections__tfoot" hidden>
+            <tr>
+              <td class="fsa-p--none" colspan="100%">
+                <div class="fsa-alert fsa-alert--warning fsa-m--none" role="alert">
+                  <div class="fsa-alert__body">
+                    <h3 class="fsa-alert__heading">No Inspections match this filter set.</h3>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
+          <tbody class="fic-inspections__tbody">
             <tr class="fic-inspections__row" data-status="is-complete" data-assignee="assignedto-norm-peterson">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input disabled data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--06" type="checkbox" name="inpections__select-inspection--06" value="06">
+                  <input disabled="disabled" data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--06" type="checkbox" name="inpections__select-inspection--06" value="06">
                   <label for="inpections__select-inspection--06"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
@@ -558,7 +576,7 @@
             <tr class="fic-inspections__row" data-status="is-complete" data-assignee="assignedto-woody-boyd">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input disabled data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--33" type="checkbox" name="inpections__select-inspection--33" value="33">
+                  <input disabled="disabled" data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--33" type="checkbox" name="inpections__select-inspection--33" value="33">
                   <label for="inpections__select-inspection--33"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
@@ -618,7 +636,7 @@
             <tr class="fic-inspections__row" data-status="is-complete" data-assignee="assignedto-cliff-clavin">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input disabled data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--42" type="checkbox" name="inpections__select-inspection--42" value="42">
+                  <input disabled="disabled" data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--42" type="checkbox" name="inpections__select-inspection--42" value="42">
                   <label for="inpections__select-inspection--42"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
@@ -723,7 +741,7 @@
             <tr class="fic-inspections__row" data-status="is-complete" data-assignee="assignedto-norm-peterson">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
-                  <input disabled data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--91" type="checkbox" name="inpections__select-inspection--91" value="91">
+                  <input disabled="disabled" data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--91" type="checkbox" name="inpections__select-inspection--91" value="91">
                   <label for="inpections__select-inspection--91"><span class="sr-only">Select this row</span></label>
                 </span>
               </td>
@@ -1011,7 +1029,7 @@
                 </div>
               </div>
               <div class="fsa-field fsa-m-t--l">
-                <button data-saver class="fsa-btn fsa-btn--primary" disabled type="button" data-behavior="close-modal whiteout-dismiss growl-show growl-dismiss-delay add-employee" aria-controls="UNIQUE-ID__employee-added" data-added-employee="UNIQUE-ID__employee-88893">Save</button>
+                <button data-saver class="fsa-btn fsa-btn--primary" disabled="disabled" type="button" data-behavior="close-modal whiteout-dismiss growl-show growl-dismiss-delay add-employee" aria-controls="UNIQUE-ID__employee-added" data-added-employee="UNIQUE-ID__employee-88893">Save</button>
                 <button class="fsa-btn fsa-btn--flat" type="button" data-behavior="" aria-controls="UNIQUE-ID-employee-unsaved">Cancel</button>
               </div>
             </fieldset>

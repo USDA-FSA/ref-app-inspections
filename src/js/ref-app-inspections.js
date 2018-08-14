@@ -29,8 +29,34 @@ $('body').on('change', '[data-behavior~="inspections-assignee-filter"]', functio
   var newAssignee = $self.val();
   var $newAssigneeRow = $('[data-assignee="' + newAssignee + '"]')
 
-  $targetRows.attr('data-foo', 'bar')
-  $newAssigneeRow.attr('data-hey', 'yo')
+  $targetRows.removeAttr('data-filtered-by-assignee data-not-filtered-by-assignee');
+  $newAssigneeRow.attr('data-filtered-by-assignee', true)
+
+  var $notAssignedRows = $target.find('.fic-inspections__tbody tr:not([data-filtered-by-assignee])')
+
+  $notAssignedRows.attr('data-not-filtered-by-assignee', true);
+
+  if (newAssignee == 'assignedto-all') {
+    $notAssignedRows.removeAttr('data-filtered-by-assignee data-not-filtered-by-assignee');
+  }
+
+})
+
+$('body').on('change', '[data-behavior~="inspections-count-filter"]', function(event) {
+
+  var $self = $(this);
+  var $component = $self.closest('table');
+  var $inspectionRowsHidden = $component.find('.fic-inspections__row:not(:hidden)');
+  var $inspectionNoResults = $component.find('.fic-inspections__tfoot');
+
+  console.log('Number of viewable rows: ' + $inspectionRowsHidden.length);
+
+  if ($inspectionRowsHidden.length == '0') {
+    $inspectionNoResults.removeAttr('hidden')
+  }
+  else {
+    $inspectionNoResults.attr('hidden', true)
+  }
 
 })
 

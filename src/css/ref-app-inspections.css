@@ -161,3 +161,8 @@
 .fic-inspections--status-filter-is-assigned    [data-status]:not([data-status="is-assigned"]   ) { display: none; }
 .fic-inspections--status-filter-is-in-progress [data-status]:not([data-status="is-in-progress"]) { display: none; }
 .fic-inspections--status-filter-is-complete    [data-status]:not([data-status="is-complete"]   ) { display: none; }
+
+[data-filtered-by-assignee] {}
+[data-not-filtered-by-assignee] {
+  display: none;
+}
