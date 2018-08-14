@@ -21,6 +21,19 @@ $('body').on('change', '[data-behavior~="inspections-filter"]', function(event) 
 
 })
 
+$('body').on('change', '[data-behavior~="inspections-assignee-filter"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-filter-target'))
+  var $targetRows = $target.find('[data-assignee]')
+  var newAssignee = $self.val();
+  var $newAssigneeRow = $('[data-assignee="' + newAssignee + '"]')
+
+  $targetRows.attr('data-foo', 'bar')
+  $newAssigneeRow.attr('data-hey', 'yo')
+
+})
+
 $('body').on('change', '[data-behavior~="inspections-select-row"]', function(event) {
 
   var $self = $(this);

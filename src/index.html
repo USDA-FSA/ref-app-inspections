@@ -211,7 +211,7 @@
                   <label for="inpections__select-all"><span class="sr-only">Select all</span></label>
                 </span>
               </th>
-              <th class="fsa-table__th--sticky" aria-sort="descending"><button type="button" class="fsa-table__sort fsa-table__sort--descending">Number</button></th>
+              <th class="fsa-table__th--sticky" aria-sort="descending"><button type="button" class="fsa-table__sort fsa-table__sort--descending">Inspection</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">State</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">County</button></th>
               <th class="fsa-table__th--sticky"><button type="button" class="fsa-table__sort">Farm</button></th>
@@ -423,8 +423,9 @@
               </td>
               <td>
                 <label class="sr-only" for="inspectionsFilterByAssignee">Filter by Assignee</label>
-                <select class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
+                <select data-behavior="inspections-assignee-filter" data-filter-target="inspectionsTable" class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
                   <option>All</option>
+                  <option value="assignedto-not-assigned">Unassigned</option>
                   <option value="assignedto-norm-peterson">Norm Peterson</option>
                   <option value="assignedto-carla-tortelli">Carla Tortelli</option>
                   <option value="assignedto-ernie-pantusso">Ernie Pantusso</option>
@@ -464,7 +465,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr class="fic-inspections__row" data-status="is-complete">
+            <tr class="fic-inspections__row" data-status="is-complete" data-assignee="assignedto-norm-peterson">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input disabled data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--06" type="checkbox" name="inpections__select-inspection--06" value="06">
@@ -479,7 +480,7 @@
               <td aria-label="Due Date"><time datetime="2018-12-11">12/11/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-assigned">
+            <tr class="fic-inspections__row" data-status="is-assigned" data-assignee="assignedto-carla-tortelli">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--07" type="checkbox" name="inpections__select-inspection--07" value="07">
@@ -494,7 +495,7 @@
               <td aria-label="Due Date"><time datetime="2018-08-05">08/05/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-rejected">
+            <tr class="fic-inspections__row" data-status="is-rejected" data-assignee="assignedto-ernie-pantusso">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--10" type="checkbox" name="inpections__select-inspection--10" value="10">
@@ -509,7 +510,7 @@
               <td aria-label="Due Date"><time datetime="2018-10-01">10/01/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-logged">
+            <tr class="fic-inspections__row" data-status="is-logged" data-assignee="assignedto-not-assigned">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--17" type="checkbox" name="inpections__select-inspection--17" value="17">
@@ -520,11 +521,11 @@
               <td aria-label="State">California</td>
               <td aria-label="County">Ventura</td>
               <td aria-label="Farm Number">5644</td>
-              <td aria-label="Assigned to"></td>
+              <td aria-label="Assigned to"><span class="sr-only">not assigned</span></td>
               <td aria-label="Due Date"><time datetime="2018-11-10">11/10/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-in-progress">
+            <tr class="fic-inspections__row" data-status="is-in-progress" data-assignee="assignedto-diane-chambers">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--24" type="checkbox" name="inpections__select-inspection--24" value="24">
@@ -539,7 +540,7 @@
               <td aria-label="Due Date"><time datetime="2018-11-16">11/16/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-logged">
+            <tr class="fic-inspections__row" data-status="is-logged" data-assignee="assignedto-not-assigned">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--31" type="checkbox" name="inpections__select-inspection--31" value="31">
@@ -550,11 +551,11 @@
               <td aria-label="State">California</td>
               <td aria-label="County">San Bernardino</td>
               <td aria-label="Farm Number">6664</td>
-              <td aria-label="Assigned to"></td>
+              <td aria-label="Assigned to"><span class="sr-only">not assigned</span></td>
               <td aria-label="Due Date"><time datetime="2018-10-07">10/07/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-complete">
+            <tr class="fic-inspections__row" data-status="is-complete" data-assignee="assignedto-woody-boyd">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input disabled data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--33" type="checkbox" name="inpections__select-inspection--33" value="33">
@@ -569,7 +570,7 @@
               <td aria-label="Due Date"><time datetime="2018-10-05">10/05/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-logged">
+            <tr class="fic-inspections__row" data-status="is-logged" data-assignee="assignedto-not-assigned">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--37" type="checkbox" name="inpections__select-inspection--37" value="37">
@@ -580,11 +581,11 @@
               <td aria-label="State">Maryland</td>
               <td aria-label="County">Anne Arundel</td>
               <td aria-label="Farm Number">1325</td>
-              <td aria-label="Assigned to"></td>
+              <td aria-label="Assigned to"><span class="sr-only">not assigned</span></td>
               <td aria-label="Due Date"><time datetime="2019-05-05">05/05/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-in-progress">
+            <tr class="fic-inspections__row" data-status="is-in-progress" data-assignee="assignedto-woody-boyd">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--39" type="checkbox" name="inpections__select-inspection--39" value="39">
@@ -599,7 +600,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">05/05/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-assigned">
+            <tr class="fic-inspections__row" data-status="is-assigned" data-assignee="assignedto-diane-lane">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--41" type="checkbox" name="inpections__select-inspection--41" value="41">
@@ -614,7 +615,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">07/01/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-complete">
+            <tr class="fic-inspections__row" data-status="is-complete" data-assignee="assignedto-cliff-clavin">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input disabled data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--42" type="checkbox" name="inpections__select-inspection--42" value="42">
@@ -629,7 +630,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">08/30/2017</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-rejected">
+            <tr class="fic-inspections__row" data-status="is-rejected" data-assignee="assignedto-rebecca-howe">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--47" type="checkbox" name="inpections__select-inspection--47" value="47">
@@ -644,7 +645,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">05/26/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-assigned">
+            <tr class="fic-inspections__row" data-status="is-assigned" data-assignee="assignedto-ernie-pantusso">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--55" type="checkbox" name="inpections__select-inspection--55" value="55">
@@ -659,7 +660,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-05">03/29/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-rejected">
+            <tr class="fic-inspections__row" data-status="is-rejected" data-assignee="assignedto-carla-tortelli">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--64" type="checkbox" name="inpections__select-inspection--64" value="64">
@@ -674,7 +675,7 @@
               <td aria-label="Due Date"><time datetime="2018-11-19">11/19/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--0">Rejected</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-in-progress">
+            <tr class="fic-inspections__row" data-status="is-in-progress" data-assignee="assignedto-ernie-pantusso">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--77" type="checkbox" name="inpections__select-inspection--77" value="77">
@@ -689,7 +690,7 @@
               <td aria-label="Due Date"><time datetime="2018-11-03">11/03/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-assigned">
+            <tr class="fic-inspections__row" data-status="is-assigned" data-assignee="assignedto-sam-malone">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--79" type="checkbox" name="inpections__select-inspection--79" value="79">
@@ -704,7 +705,7 @@
               <td aria-label="Due Date"><time datetime="2018-09-02">09/02/2018</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--2">Assigned</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-in-progress">
+            <tr class="fic-inspections__row" data-status="is-in-progress" data-assignee="assignedto-rebecca-howe">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--85" type="checkbox" name="inpections__select-inspection--85" value="85">
@@ -719,7 +720,7 @@
               <td aria-label="Due Date"><time datetime="2019-01-05">01/05/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--3">In Progress</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-complete">
+            <tr class="fic-inspections__row" data-status="is-complete" data-assignee="assignedto-norm-peterson">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input disabled data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--91" type="checkbox" name="inpections__select-inspection--91" value="91">
@@ -734,7 +735,7 @@
               <td aria-label="Due Date"><time datetime="2019-05-07">05/07/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--4">Complete</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-logged">
+            <tr class="fic-inspections__row" data-status="is-logged" data-assignee="assignedto-not-assigned">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--94" type="checkbox" name="inpections__select-inspection--94" value="94">
@@ -745,11 +746,11 @@
               <td aria-label="State">Washington</td>
               <td aria-label="County">Okanogan</td>
               <td aria-label="Farm Number">2993</td>
-              <td aria-label="Assigned to"></td>
+              <td aria-label="Assigned to"><span class="sr-only">not assigned</span></td>
               <td aria-label="Due Date"><time datetime="2019-03-09">03/09/2019</time></td>
               <td aria-label="Status" class="fic-inspections__status fic-inspections__status--1">Logged</td>
             </tr>
-            <tr class="fic-inspections__row" data-status="is-in-progress">
+            <tr class="fic-inspections__row" data-status="is-in-progress" data-assignee="assignedto-rebecca-howe">
               <td aria-label="Select" class="fic-inspections__select-column">
                 <span class="fic-inspections__select-item">
                   <input data-behavior="inspections-select-row inspections-toggle-header" class="fsa-checkbox" id="inpections__select-inspection--98" type="checkbox" name="inpections__select-inspection--98" value="98">
