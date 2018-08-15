@@ -125,13 +125,21 @@
   <main id="main-content" tabindex="-1">
     <div class="fsa-section">
       <div class="fsa-section__bd">
+        <!--
+        <div class="fsa-grid">
+          <div class="fsa-grid__1/1 fsa-grid__1/4@s fsa-grid__3/12@m">
+          </div>
+          <div class="fsa-grid__1/1 fsa-grid__3/4@s fsa-grid__9/12@m">
+          </div>
+        </div>
+        -->
         <h1>Inspections</h1>
-        <ul class="fic-progress-bar">
-          <li class="fic-progress-bar__item fic-progress-bar__item--rejected" style="width:1%" aria-label="Rejected: 1%" title="Rejected: 1%"></li>
-          <li class="fic-progress-bar__item fic-progress-bar__item--complete" style="width:44%" aria-label="Complete: 44%" title="Complete: 44%"></li>
-          <li class="fic-progress-bar__item fic-progress-bar__item--in-progress" style="width:10%" aria-label="In Progress: 10%" title="In Progress: 10%"></li>
-          <li class="fic-progress-bar__item fic-progress-bar__item--assigned" style="width:25%" aria-label="Assigned: 25%" title="Assigned: 25%"></li>
-          <li class="fic-progress-bar__item fic-progress-bar__item--logged" style="width:20%" aria-label="Logged: 20%" title="Logged: 20%"></li>
+        <ul class="fic-progress-bar" tabindex="0" aria-label="Rejected 1% / Complete 44% / In Progress 10% / Assigned 25% / Logged 20%">
+          <li class="fic-progress-bar__item fic-progress-bar__item--rejected" style="width:1%"></li>
+          <li class="fic-progress-bar__item fic-progress-bar__item--complete" style="width:44%"></li>
+          <li class="fic-progress-bar__item fic-progress-bar__item--in-progress" style="width:10%"></li>
+          <li class="fic-progress-bar__item fic-progress-bar__item--assigned" style="width:25%"></li>
+          <li class="fic-progress-bar__item fic-progress-bar__item--logged" style="width:20%"></li>
         </ul>
         <p hidden>
           <strong>Filter UI:</strong>
