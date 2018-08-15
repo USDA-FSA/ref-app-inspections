@@ -1,5 +1,5 @@
 :root {
-  --progress-bgc: #E1F3F8;
+  --progress-bgc: #DEE8E0;
   --progress-rejected: #CD2026;
 }
 
@@ -62,6 +62,9 @@
   margin-right: 0;
 }
 .fic-inspections__status {}
+.fic-inspections__status-bd {
+  position: relative;
+}
 .fic-inspections__status--0 /*Rejected*/ {
   color: var(--progress-rejected);
 }
@@ -156,12 +159,14 @@
 }
 .fic-progress-bar--small {
   height: 6px;
-}
-.fic-progress-bar--extra-small {
-  height: 4px;
   border: 0;
-  box-shadow: none;
-  background-color: #F0F0F0;
+}
+
+.fic-inspections__status-bd .fic-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  right: 0;
 }
 
 .fic-progress-bar:hover,
@@ -231,7 +236,7 @@
 }
 
 .fic-progress-bar__item--general {
-  background-color: #DBDAD9
+  background-color: #B2C9B7
 }
 .fic-progress-bar__item--rejected {
   background-color: #F0BCBE
@@ -280,4 +285,16 @@
 [data-filtered-by-assignee] {}
 [data-not-filtered-by-assignee] {
   display: none;
+}
+
+.aoux-pt-strip {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #b6b4b6;
+  font-size: 11px;
+  padding: 6px;
+}
+.aoux-pt-strip button {
+  padding: 1px 2px;
+  line-height: 1;
+  cursor: pointer;
 }
