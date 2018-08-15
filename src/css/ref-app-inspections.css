@@ -24,6 +24,8 @@
 
 .fic-inspection-hd {}
 
+/*  */
+
 .fic-inspection-list-header {
   margin-top: 24px;
 }
@@ -31,12 +33,16 @@
   align-items: center
 }
 
+/*  */
+
 .fic-inspection-triage {
   margin-top: 24px;
 }
 .fic-inspection-triage__row {
   align-items: center;
 }
+
+/*  */
 
 .fic-inspections /* table */ {
   margin-top: 12px;
@@ -104,6 +110,8 @@
   ;
 }
 
+/*  */
+
 .fic-finder {
   display: inline-block;
 }
@@ -135,6 +143,8 @@
   display: none;
 }
 
+/*  */
+
 .fic-progress-bar /* ul */ {
   display: flex;
   list-style-type: none;
@@ -155,6 +165,9 @@
   border-left: 1px solid rgba(0,0,0,.1);
 }
 .fic-progress-bar__item:last-child{}
+.fic-progress-bar__item--rejected {
+  background-color: #F0BCBE
+}
 .fic-progress-bar__item--complete {
   background-color: #B2C9B7
 }
@@ -163,6 +176,9 @@
 }
 .fic-progress-bar__item--assigned {
   background-color: #DBDAD9
+}
+.fic-progress-bar__item--logged {
+  background-color: transparent
 }
 
 /* PROTOTYPE ONLY *************************************************************/
