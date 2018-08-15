@@ -134,13 +134,22 @@
         </div>
         -->
         <h1>Inspections</h1>
-        <ul class="fic-progress-bar" tabindex="0" aria-label="Rejected 1% / Complete 44% / In Progress 10% / Assigned 25% / Logged 20%">
-          <li class="fic-progress-bar__item fic-progress-bar__item--rejected" style="width:1%"></li>
-          <li class="fic-progress-bar__item fic-progress-bar__item--complete" style="width:44%"></li>
-          <li class="fic-progress-bar__item fic-progress-bar__item--in-progress" style="width:10%"></li>
-          <li class="fic-progress-bar__item fic-progress-bar__item--assigned" style="width:25%"></li>
-          <li class="fic-progress-bar__item fic-progress-bar__item--logged" style="width:20%"></li>
-        </ul>
+        <span class="fic-progress-bar fic-progress-bar--single fsa-m-t--m" tabindex="0" aria-label="33% Complete">
+          <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:33%"></span>
+        </span>
+        <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small fsa-m-t--m" tabindex="0" aria-label="75% Complete">
+          <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:75%"></span>
+        </span>
+        <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--extra-small fsa-m-t--m" tabindex="0" aria-label="50% Complete">
+          <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:50%"></span>
+        </span>
+        <span class="fic-progress-bar fsa-m-t--m" tabindex="0" aria-label="Rejected 1% / Complete 44% / In Progress 10% / Assigned 25% / Logged 20%">
+          <span class="fic-progress-bar__item fic-progress-bar__item--rejected" style="width:1%"></span>
+          <span class="fic-progress-bar__item fic-progress-bar__item--complete" style="width:44%"></span>
+          <span class="fic-progress-bar__item fic-progress-bar__item--in-progress" style="width:10%"></span>
+          <span class="fic-progress-bar__item fic-progress-bar__item--assigned" style="width:25%"></span>
+          <span class="fic-progress-bar__item fic-progress-bar__item--logged" style="width:20%"></span>
+        </span>
         <p hidden>
           <strong>Filter UI:</strong>
           <button data-prototype-show="#pt__filter-alt-1" data-prototype-hide="#pt__filter-alt-2" type="button">Alt 1</button>
