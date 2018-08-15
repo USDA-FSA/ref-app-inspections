@@ -188,5 +188,8 @@ $('body').on('click', '[data-prototype-hide]', function(event) {
 
 })
 
-// <button data-prototype-show="#pt__filter-alt-1" data-prototype-hide="#pt__filter-alt-2" type="button">Alt 1</button>
-// <button data-prototype-show="#pt__filter-alt-2" data-prototype-hide="#pt__filter-alt-1" type="button">Alt 2</button>
+$('body').on('click', '.yo', function(event) {
+
+  $(this).remove();
+
+})
