@@ -114,10 +114,12 @@ module.exports = {
 
   plugins:[
     new CopyWebpackPlugin([
+      /* Used to copy directly to /dist
       {
         from: './src/js',
         to: './js/'
       },
+      */
       {
         from: './src/img',
         to: './img/'
@@ -133,11 +135,29 @@ module.exports = {
     ]),
 
     new HTMLWebpackPlugin({
-      title: "Webpack Title",
+      title: "index",
       // the template you want to use
       template: "./src/index.hbs",
       // the output file name
       filename: path.join(__dirname, "./dist/index.html"),
+      inject: "body"
+    }),
+
+    new HTMLWebpackPlugin({
+      title: "settings",
+      // the template you want to use
+      template: "./src/settings.hbs",
+      // the output file name
+      filename: path.join(__dirname, "./dist/settings.html"),
+      inject: "body"
+    }),
+
+    new HTMLWebpackPlugin({
+      title: "boilerplate",
+      // the template you want to use
+      template: "./src/boilerplate.hbs",
+      // the output file name
+      filename: path.join(__dirname, "./dist/boilerplate.html"),
       inject: "body"
     }),
 
