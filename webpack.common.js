@@ -9,13 +9,23 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HandlebarsWebpackPlugin = require('handlebars-webpack-plugin');
 const path = require('path');
 
+const fsaStyleImg = path.join(__dirname, 'node_modules/fsa-style/src/img/');
 
 module.exports = {
   
   devtool: 'source-map',
 
   entry:  {
-    'fsa-style': './src/index.js'
+    'fsa-style': [
+      path.resolve(__dirname, 'src/index.js')
+    ]
+  },
+
+  resolve: {
+    modules: ['node_modules', 'src'],
+    alias: {
+      'fsaStyleScss' : path.join(__dirname, 'node_modules/fsa-style/src/stylesheets/fsa-style.scss')
+    }
   },
 
   module: {
@@ -113,6 +123,10 @@ module.exports = {
         to: './img/'
       },
       {
+        from: fsaStyleImg,
+        to: './img/'
+      },
+      {
         from: './src/fonts',
         to: './fonts/'
       }
@@ -147,12 +161,6 @@ module.exports = {
       },
       replace: [ ' type="text/javascript"' ]
     })
-  ],
-
-  resolve: {
-    modules: ['node_modules', 'src'],
-    alias: {
-      'fsaStyleScss' : path.join(__dirname, 'node_modules/fsa-style/src/stylesheets/fsa-style.scss')
-    }
-  }  
+    
+  ]  
 };
