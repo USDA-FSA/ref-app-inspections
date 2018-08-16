@@ -1,4 +1,4 @@
-{{#> ./layouts/base title='FIC - Main Page' }}
+{{#> ../layouts/base title='FIC - Main Page' }}
 
   {{#*inline "main-block"}}
 
@@ -8,11 +8,11 @@
           
           <h1>Inspections</h1>
           
-          {{> ./includes/inspection-hd }}
+          {{> ../includes/inspection-hd }}
 
-          {{> ./components/table/table-inspections }}
+          {{> ../components/table/table-inspections }}
           
-          {{> ./components/pagination/pagination }}
+          {{> ../components/pagination/pagination }}
 
         </div>
       </div>
@@ -22,8 +22,8 @@
 
   {{#*inline "hidden-block"}}
     <!-- HIDDEN - FOR MODALS/GROWL CONTENT -->
-    {{> ./includes/hidden }}
+    {{> ../includes/hidden }}
     <!-- /HIDDEN -->
   {{/inline}}
 
-{{/./layouts/base }}
+{{/../layouts/base }}

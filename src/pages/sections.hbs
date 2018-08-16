@@ -1,29 +1,12 @@
-{{#> ./layouts/base title='FIC - Boilerplate Page' }}
+{{#> ../layouts/base title='Sections Page' }}
 
   {{#*inline "header-block"}}
-  <header>
-    <div class="fsa-tophat">
-      <div class="fsa-tophat__bd">
-        <div class="fsa-tophat__primary">
-          <span class="fsa-tophat__agency">
-            <a class="fsa-tophat__link" href="//usda.gov" title="Link to USDA homepage">
-              <img role="presentation" class="fsa-tophat__agency-logo" src="img/usda-logo--white.svg" alt="">
-              <abbr class="fsa-tophat__agency-abbr" title="United States Department of Agriculture">USDA</abbr>
-              <span class="fsa-tophat__agency-fullname">United States Department of Agriculture</span>
-          </a>
-          </span>
-        </div>
-        <div class="fsa-tophat__secondary">
-          <span class="fsa-tophat__subagency">
-            <a class="fsa-tophat__link" href="//fsa.usda.gov" title="Link to FSA homepage">Farm Service Agency</a>
-          </span>
-        </div>
-      </div>
-    </div>
+    <header>
+    {{> ../components/tophat/tophat }}
     <div class="fsa-header-app">
       <div class="fsa-header-app__bd">
         <div class="fsa-header-app__primary">
-          <a class="fsa-header-app__home-link" href="boilerplate.html" title="Link to YAFANS home">
+          <a class="fsa-header-app__home-link" href="sections.html" title="Link to YAFANS home">
             <span class="fsa-header-app__app-name">
               <abbr class="fsa-header-app__app-abbr" title="Electronic Loan Deficiency Payment Schedule">YAFANS</abbr>
               <span class="fsa-header-app__app-full">Yet Another Farm App Name Superlong</span>
@@ -186,39 +169,16 @@
   {{/inline}}
 
   {{#*inline "main-block"}}
-
   <main id="main-content" tabindex="-1">
     <div class="fsa-section">
       <div class="fsa-section__bd">
-
         <h1>Hello fsa-style</h1>
-
-        <div class="fsa-grid">
-          <div class="fsa-grid__1 fsa-grid__7/12@m fsa-grid__9/12@l">
-            <p class="fsa-text--lead">Intro paragraphy lorem similique natus laborum provident porro necessitatibus, quibusdam recusandae alias delectus? Ut temporibus atque consequuntur sint saepe veritatis ab dolore voluptatum, eligendi iure!</p>
-            <p>Just a paragraph officia dicta aut odio modi! Eaque porro quas ad quasi molestias eos quae totam tempore est quibusdam consequuntur, beatae, eius iusto alias.</p>
-            <p>Ut officiis sit iusto quos omnis ipsam cum eius consequatur nesciunt sunt, enim facilis. Fuga fugit reiciendis quasi eligendi incidunt ipsa iusto.</p>
-          </div>
-          <div class="fsa-grid__1 fsa-grid__5/12@m fsa-grid__3/12@l">
-            <div class="fsa-box">
-              <div class="fsa-box__hd">
-                <h2 class="fsa-box__title">Getting Started</h2>
-              </div>
-              <div class="fsa-box__bd">
-                <p>Several resources are at your disposal to get started.</p>
-                <ul>
-                  <li><a href="http://usda-fsa.github.io/fsa-design-system/">FSA Design System</a>, and its <a href="https://github.com/USDA-FSA/fsa-design-system">GitHub repository</a></li>
-                  <li><a href="http://usda-fsa.github.io/fsa-style/">FSA Style</a> (CSS Framework), and its <a href="https://github.com/USDA-FSA/fsa-style">GitHub repository</a></li>
-                </ul>
-              </div>
-              <div class="fsa-box__ft"></div>
-
-            </div>
-          </div>
-        </div>
-
-        <h2>Second-level head</h2>
-
+        <p class="fsa-text--lead">Similique natus laborum provident porro necessitatibus, quibusdam recusandae alias delectus? Ut temporibus atque consequuntur sint saepe veritatis ab dolore voluptatum, eligendi iure!</p>
+      </div>
+    </div>
+    <div class="fsa-section fsa-section--contrast">
+      <div class="fsa-section__bd">
+        <h2>Contrast Section</h2>
         <div class="fsa-grid">
           <div class="fsa-grid__1 fsa-grid__6/12@m">
             <h3 class="fsa-m-t--none">Third-level head</h3>
@@ -231,9 +191,11 @@
             <p>Con molestias autem eum voluptatum, rerum nesciunt hic delectus.</p>
           </div>
         </div>
-
-        <h2>Second-level head</h2>
-
+      </div>
+    </div>
+    <div class="fsa-section">
+      <div class="fsa-section__bd">
+        <h2>Default Section</h2>
         <div class="fsa-grid">
           <div class="fsa-grid__1 fsa-grid__6/12@m fsa-grid__3/12@l">
             <h3 class="fsa-m-t--none">Third-level head</h3>
@@ -256,9 +218,11 @@
             <p>Dolor ab, odit consectetur unde quis in, eaque possimus, unde dolor maxime ducimus. Quasi, obcaecati?</p>
           </div>
         </div>
-
-        <h2>Second-level head</h2>
-
+      </div>
+    </div>
+    <div class="fsa-section fsa-section--light">
+      <div class="fsa-section__bd">
+        <h2>Light Section</h2>
         <div class="fsa-grid">
           <div class="fsa-grid__1 fsa-grid__4/12@l">
             <h3 class="fsa-m-t--none">Third-level head</h3>
@@ -293,9 +257,11 @@
             <p>Pinveoribus modi excepturi eaque blandintore ducimus eligendi amet totam laudantium eius, quaerat sequi dicta labore inventore.</p>
           </div>
         </div>
-
-        <h2>Second-level head</h2>
-
+      </div>
+    </div>
+    <div class="fsa-section">
+      <div class="fsa-section__bd">
+        <h2>Default Section</h2>
         <div class="fsa-grid">
           <div class="fsa-grid__1 fsa-grid__4/12@l">
             <h3 class="fsa-m-t--none">Third-level head</h3>
@@ -313,23 +279,10 @@
             <p>Labore aperiam, nostrum quae repellat aliquid hic deleniti consequatur enim nam dolorem cupiditate quis? Rem, maxime, quis. Dolorem dicta dolorum, error quo.</p>
           </div>
         </div>
-
       </div>
-
     </div>
-
   </main>
-
   {{/inline}}
 
-  {{#*inline "hidden-block"}}
-    <!-- HIDDEN - FOR MODALS/GROWL CONTENT -->
 
-    <!-- /HIDDEN -->
-  {{/inline}}
-
-  <script src="js/fsa-style-docs.min.js"></script>
-
-  
-
-{{/./layouts/base }}
+{{/../layouts/base }}

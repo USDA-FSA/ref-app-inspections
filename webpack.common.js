@@ -137,7 +137,7 @@ module.exports = {
     new HTMLWebpackPlugin({
       title: "index",
       // the template you want to use
-      template: "./src/index.hbs",
+      template: "./src/pages/index.hbs",
       // the output file name
       filename: path.join(__dirname, "./dist/index.html"),
       inject: "body"
@@ -146,7 +146,7 @@ module.exports = {
     new HTMLWebpackPlugin({
       title: "settings",
       // the template you want to use
-      template: "./src/settings.hbs",
+      template: "./src/pages/settings.hbs",
       // the output file name
       filename: path.join(__dirname, "./dist/settings.html"),
       inject: "body"
@@ -155,9 +155,18 @@ module.exports = {
     new HTMLWebpackPlugin({
       title: "boilerplate",
       // the template you want to use
-      template: "./src/boilerplate.hbs",
+      template: "./src/pages/boilerplate.hbs",
       // the output file name
       filename: path.join(__dirname, "./dist/boilerplate.html"),
+      inject: "body"
+    }),
+
+    new HTMLWebpackPlugin({
+      title: "sections",
+      // the template you want to use
+      template: "./src/pages/sections.hbs",
+      // the output file name
+      filename: path.join(__dirname, "./dist/sections.html"),
       inject: "body"
     }),
 
