@@ -55,6 +55,7 @@
   </div>
 
   <header>
+
     <!-- #PARTIAL "tophat.hbs"  -->
     <div class="fsa-tophat">
       <div class="fsa-tophat__bd">
@@ -75,6 +76,7 @@
       </div>
     </div>
     <!-- /PARTIAL "tophat.hbs"  -->
+
     <!-- #PARTIAL "header-app.hbs"  -->
     <div class="fsa-header-app">
       <div class="fsa-header-app__bd">
@@ -138,6 +140,7 @@
       </div>
       <!-- /PARTIAL "nav-global.hbs" -->
     </nav>
+
   </header>
 
   <main id="main-content" tabindex="-1">
@@ -152,28 +155,29 @@
         </div>
         -->
         <h1>Inspections</h1>
+
         <div hidden>
           <p>Tooltip <code>&lt;a&gt;</code> <a href="link.html" class="fic-tooltip" aria-label="Hi there">esse non enim</a> quisquam.</p>
           <p>Tooltip <code>&lt;span&gt;</code> <span tabindex="0" class="fic-tooltip" aria-label="Hi there">lorem ipsum</span> yshgua.</p>
           <p>Tooltip <code>.fsa-box</code> <div tabindex="0" class="fsa-box fic-tooltip" aria-label="Hi there">lorem ipsum</div> yshgua.</p>
           <p>Tooltip <code>.fsa-label</code> <span tabindex="0" class="fsa-label fic-tooltip" aria-label="Hi there">lorem ipsum</span> yshgua.</p>
           <p>Tooltip <code>.fsa-badge</code> <span tabindex="0" class="fsa-badge fic-tooltip" aria-label="Hi there">5</span> yshgua.</p>
+          <div class="fsa-m-t--m">
+            <!-- #PARTIAL "progress-bar.hbs"  -->
+            <span class="fic-progress-bar fic-tooltip fic-tooltip--include-value" aria-label="Overall Progress" aria-valuenow="33%" tabindex="0">
+              <span class="fic-progress-bar__item" aria-hidden="true" style="width:33%"></span>
+            </span>
+            <!-- /PARTIAL "progress-bar.hbs"  -->
+          </div>
+          <div class="fsa-m-t--m">
+            <!-- #PARTIAL "progress-bar.hbs"  -->
+            <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" aria-label="Overall Progress" aria-valuenow="75%" tabindex="0">
+              <span class="fic-progress-bar__item" aria-hidden="true" style="width:75%"></span>
+            </span>
+            <!-- /PARTIAL "progress-bar.hbs"  -->
+          </div>
         </div>
 
-        <div class="fsa-m-t--m">
-          <!-- #PARTIAL "progress-bar.hbs"  -->
-          <span class="fic-progress-bar fic-tooltip fic-tooltip--include-value" aria-label="Overall Progress" aria-valuenow="33%" tabindex="0">
-            <span class="fic-progress-bar__item" aria-hidden="true" style="width:33%"></span>
-          </span>
-          <!-- /PARTIAL "progress-bar.hbs"  -->
-        </div>
-        <div class="fsa-m-t--m">
-          <!-- #PARTIAL "progress-bar.hbs"  -->
-          <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" aria-label="Overall Progress" aria-valuenow="75%" tabindex="0">
-            <span class="fic-progress-bar__item" aria-hidden="true" style="width:75%"></span>
-          </span>
-          <!-- /PARTIAL "progress-bar.hbs"  -->
-        </div>
         <div class="fsa-m-t--m">
           <!-- #PARTIAL "progress-bar.hbs"  -->
           <span class="fic-progress-bar" aria-label="Overall Progress" aria-valuenow="80%">
@@ -185,6 +189,7 @@
           </span>
           <!-- /PARTIAL "progress-bar.hbs"  -->
         </div>
+
         <div class="fic-inspection-hd">
           <div id="fic-inspection-hd__list-header" class="fic-inspection-list-header">
             <div class="fsa-grid fic-inspection-list-header__row">
@@ -559,9 +564,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Complete
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="100%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:100%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="100%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:100%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -581,9 +588,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Assigned
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="50%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:50%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="50%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:50%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -603,9 +612,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Rejected
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="100%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:100%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="100%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:100%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -625,9 +636,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Not Started
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="25%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:25%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="25%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:25%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -647,9 +660,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   In Progress
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="75%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:75%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="75%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:75%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -669,9 +684,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Not Started
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="25%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:25%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="25%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:25%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -691,9 +708,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Complete
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="100%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:100%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="100%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:100%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -713,9 +732,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Not Started
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="25%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:25%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="25%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:25%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -735,9 +756,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   In Progress
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="75%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:75%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="75%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:75%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -757,9 +780,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Assigned
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="50%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:50%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="50%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:50%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -779,9 +804,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Complete
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="100%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:100%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="100%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:100%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -801,9 +828,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Rejected
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="100%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:100%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="100%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:100%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -823,9 +852,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Assigned
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="50%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:50%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="50%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:50%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -845,9 +876,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Rejected
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="100%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:100%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="100%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:100%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -867,9 +900,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   In Progress
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="75%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:75%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="75%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:75%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -889,9 +924,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Assigned
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="50%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:50%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="50%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:50%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -911,9 +948,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   In Progress
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="75%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:75%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="75%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:75%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -933,9 +972,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Complete
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="100%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:100%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="100%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:100%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -955,9 +996,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   Not Started
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="25%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:25%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="25%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:25%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -977,9 +1020,11 @@
               <td aria-label="Status">
                 <div class="fic-inspections__status-bd">
                   In Progress
-                  <span class="fic-progress-bar fic-progress-bar--single fic-progress-bar--small" tabindex="0" aria-label="75%">
-                    <span class="fic-progress-bar__item fic-progress-bar__item--general" style="width:75%"></span>
-                  </span>
+                  <div class="fic-inspections__progress-bar">
+                    <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" tabindex="0" aria-label="Progress" aria-valuenow="75%">
+                      <span class="fic-progress-bar__item" aria-hidden="true" style="width:75%"></span>
+                    </span>
+                  </div>
                 </div>
               </td>
             </tr>
@@ -1288,6 +1333,7 @@
           </tbody>
         </table>
         <!-- /PARTIAL "table-inspections.hbs"  -->
+
         <!-- #PARTIAL "pagination.hbs"  -->
         <nav aria-label="Pagination" id="inspections-pagination">
           <div class="fsa-pagination" data-current="1" data-total="7">
