@@ -8,7 +8,7 @@ $('body').on('change', '[data-behavior~="inspections-filter"]', function(event) 
   var newStatus = $self.val();
 
   $target
-    .removeClass('fic-inspections--status-filter-is-all fic-inspections--status-filter-is-complete fic-inspections--status-filter-is-assigned fic-inspections--status-filter-is-logged fic-inspections--status-filter-is-in-progress fic-inspections--status-filter-is-rejected ')
+    .removeClass('fic-inspections--status-filter-is-all fic-inspections--status-filter-is-complete fic-inspections--status-filter-is-assigned fic-inspections--status-filter-is-not-started fic-inspections--status-filter-is-in-progress fic-inspections--status-filter-is-rejected ')
     .addClass('fic-inspections--status-filter-' + newStatus)
   ;
 
@@ -164,7 +164,7 @@ $('body').on('click', '[data-behavior~="reset-filter-fields"]', function(event) 
 
   $target.prop("selected", false);
   $targetDisabled.attr('disabled', true);
-  $component.removeClass('fic-inspections--status-filter-is-rejected fic-inspections--status-filter-is-logged fic-inspections--status-filter-is-assigned fic-inspections--status-filter-is-in-progress fic-inspections--status-filter-is-complete');
+  $component.removeClass('fic-inspections--status-filter-is-rejected fic-inspections--status-filter-is-not-started fic-inspections--status-filter-is-assigned fic-inspections--status-filter-is-in-progress fic-inspections--status-filter-is-complete');
   $componentRows.removeAttr('data-filtered-by-assignee data-not-filtered-by-assignee')
   $component.find('.fic-inspections__tfoot').attr('hidden', true);
   $('#inspections-pagination').removeAttr('hidden');

@@ -88,7 +88,7 @@ TODO SASSify everything below.
 .fic-inspections__status--0 /*Rejected*/ {
   color: var(--progress-rejected);
 }
-.fic-inspections__status--1 /*Logged*/ {
+.fic-inspections__status--1 /*Not Started*/ {
   background:
     linear-gradient(
       90deg,
@@ -168,34 +168,17 @@ TODO SASSify everything below.
 
 /*  */
 
-.fic-progress-bar {
-  display: block;
-  display: flex;
-  height: var(--size-default);
-  border-radius: var(--size-base);
+.fic-tooltip {
   position: relative;
-  background-color: #fff;
-  box-shadow: 0 0 0 1px var(--color-fsa-tertiary-200) inset;
-}
-.fic-progress-bar--small {
-  height: calc(var(--size-base) + 2px);
-  border: 0;
 }
 
-.fic-inspections__status-bd .fic-progress-bar {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
-.fic-progress-bar:hover,
-.fic-progress-bar:focus {
-  outline: 0;
+.fic-tooltip:hover,
+.fic-tooltip:focus {
   z-index: 1;
 }
 
-.fic-progress-bar:before,
-.fic-progress-bar:after {
+.fic-tooltip:before,
+.fic-tooltip:after {
   opacity: 0;
   content: '';
   margin-bottom: -var(--size-base);
@@ -205,7 +188,7 @@ TODO SASSify everything below.
   transition: all .23s ease-in-out
 }
 
-.fic-progress-bar:before {
+.fic-tooltip:before {
   bottom: calc(100% + var(--size-base));
   transform: translateX(-50%);
   width: 0;
@@ -215,7 +198,7 @@ TODO SASSify everything below.
   border-color: var(--color-fsa-tertiary) transparent transparent transparent;
 }
 
-.fic-progress-bar:after {
+.fic-tooltip:after {
   content: attr(aria-label);
   text-align: center;
   bottom: calc(100% + var(--size-small));
@@ -224,21 +207,50 @@ TODO SASSify everything below.
   color: #fff;
   font-size: 14px;
   padding: var(--size-base) var(--size-small);
+  white-space: nowrap;
   border-radius: var(--size-base);
+  outline: 0;
 }
 
-.fic-progress-bar:hover:before,
-.fic-progress-bar:focus:before,
-.fic-progress-bar:hover:after,
-.fic-progress-bar:focus:after {
+.fic-tooltip--include-value:after {
+  content: attr(aria-label) ': ' attr(aria-valuenow) ;
+}
+
+.fic-tooltip:hover:before,
+.fic-tooltip:focus:before,
+.fic-tooltip:hover:after,
+.fic-tooltip:focus:after {
   margin-bottom: 0;
   opacity: 1;
 }
 
+/*  */
+
+.fic-progress-bar {
+  display: block;
+  display: flex;
+  height: var(--size-default);
+  border-radius: var(--size-base);
+  box-shadow: 0 0 0 1px var(--color-fsa-tertiary-200) inset;
+}
+.fic-progress-bar--small {
+  height: calc(var(--size-base) + 2px);
+  border: 0;
+}
+.fic-progress-bar--segmented {}
+
+.fic-inspections__status-bd .fic-progress-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 .fic-progress-bar__item {
+  background-color: var(--color-fsa-primary-200);
   display: inline-block; /* fallback */
   border: 1px solid rgba(0,0,0,.05);
   border-left: 0;
+  transition: all .23s ease-in-out;
 }
 .fic-progress-bar__item:first-child {
   border-left: 1px solid rgba(0,0,0,.1);
@@ -254,9 +266,6 @@ TODO SASSify everything below.
   border: 0
 }
 
-.fic-progress-bar__item--general {
-  background-color: var(--color-fsa-primary-200);
-}
 .fic-progress-bar__item--rejected {
   background-color: var(--color-fsa-red-200);
 }
@@ -269,7 +278,7 @@ TODO SASSify everything below.
 .fic-progress-bar__item--assigned {
   background-color: var(--color-fsa-tertiary-200)
 }
-.fic-progress-bar__item--logged {
+.fic-progress-bar__item--not-started {
   background-color: transparent;
   border: 0;
 }
@@ -288,7 +297,7 @@ TODO SASSify everything below.
   text-shadow: -1px -1px 0 var(--color-fsa-tertiary-200);
 }
 
-.fic-inspections--status-filter-is-logged  .fic-inspections__status--0, .fic-inspections--status-filter-is-logged  .fic-inspections__status--1, .fic-inspections--status-filter-is-logged  .fic-inspections__status--2, .fic-inspections--status-filter-is-logged  .fic-inspections__status--3, .fic-inspections--status-filter-is-logged  .fic-inspections__status--4,
+.fic-inspections--status-filter-is-not-started  .fic-inspections__status--0, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--1, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--2, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--3, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--4,
 .fic-inspections--status-filter-is-assigned  .fic-inspections__status--0, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--1, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--2, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--3, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--4
 .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--0, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--1, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--2, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--3, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--4
 .fic-inspections--status-filter-is-complete  .fic-inspections__status--0, .fic-inspections--status-filter-is-complete  .fic-inspections__status--1, .fic-inspections--status-filter-is-complete  .fic-inspections__status--2, .fic-inspections--status-filter-is-complete  .fic-inspections__status--3, .fic-inspections--status-filter-is-complete  .fic-inspections__status--4 {
@@ -296,7 +305,7 @@ TODO SASSify everything below.
 }
 
 .fic-inspections--status-filter-is-rejected    [data-status]:not([data-status="is-rejected"]   ) { display: none; }
-.fic-inspections--status-filter-is-logged      [data-status]:not([data-status="is-logged"]     ) { display: none; }
+.fic-inspections--status-filter-is-not-started [data-status]:not([data-status="is-not-started"]) { display: none; }
 .fic-inspections--status-filter-is-assigned    [data-status]:not([data-status="is-assigned"]   ) { display: none; }
 .fic-inspections--status-filter-is-in-progress [data-status]:not([data-status="is-in-progress"]) { display: none; }
 .fic-inspections--status-filter-is-complete    [data-status]:not([data-status="is-complete"]   ) { display: none; }
