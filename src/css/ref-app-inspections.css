@@ -118,14 +118,35 @@ TODO SASSify everything below.
   margin-right: 0;
 }
 .fic-inspections__status {}
-.fic-inspections__status-bd {
-  position: relative;
+.fic-inspections__status-bd {}
+
+@media (max-width: 37.5em) {
+  .fic-inspections__status-bd {
+    padding-bottom: var(--size-medium);
+  }
 }
+
+@media (min-width: 37.5em) {
+  .fic-inspections__status-bd {
+    position: relative;
+  }
+}
+
 .fic-inspections__progress-bar {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: var(--size-medium);
+  right: var(--size-medium);
+  padding-top: calc(var(--size-base) * 3);
 }
+
+@media (min-width: 37.5em) {
+  .fic-inspections__progress-bar {
+    left: 0;
+    right: 0;
+    padding-top: 0;
+  }
+}
+
 .fic-inspections__status--0 /*Rejected*/ {
   color: var(--progress-text--rejected);
 }
