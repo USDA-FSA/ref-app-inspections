@@ -157,11 +157,11 @@
         <h1>Inspections</h1>
 
         <div hidden>
-          <p>Tooltip <code>&lt;a&gt;</code> <a href="link.html" class="fic-tooltip" aria-label="Hi there">esse non enim</a> quisquam.</p>
-          <p>Tooltip <code>&lt;span&gt;</code> <span tabindex="0" class="fic-tooltip" aria-label="Hi there">lorem ipsum</span> yshgua.</p>
-          <p>Tooltip <code>.fsa-box</code> <div tabindex="0" class="fsa-box fic-tooltip" aria-label="Hi there">lorem ipsum</div> yshgua.</p>
-          <p>Tooltip <code>.fsa-label</code> <span tabindex="0" class="fsa-label fic-tooltip" aria-label="Hi there">lorem ipsum</span> yshgua.</p>
-          <p>Tooltip <code>.fsa-badge</code> <span tabindex="0" class="fsa-badge fic-tooltip" aria-label="Hi there">5</span> yshgua.</p>
+          <p>Tooltip <code>&lt;a&gt;</code> <a href="link.html" class="fic-tooltip" aria-label="Label">esse non enim</a> quisquam.</p>
+          <p>Tooltip <code>&lt;span&gt;</code> <span tabindex="0" class="fic-tooltip" aria-label="Label longer for whatever reason">lorem ipsum</span> yshgua.</p>
+          <p>Tooltip <code>&lt;span&gt;</code> <span tabindex="0" class="fic-tooltip" aria-label="Label really for some moronic reason, let's avoid doing this since the tooltip component is meant for really low-key labels">really long label</span> yshgua.</p>
+          <p>Tooltip <code>.fsa-label</code> <span tabindex="0" class="fsa-label fic-tooltip" aria-label="Label">lorem ipsum</span> yshgua.</p>
+          <p>Tooltip <code>.fsa-badge</code> <span tabindex="0" class="fsa-badge fic-tooltip" aria-label="Label">5</span> yshgua.</p>
           <div class="fsa-m-t--m">
             <!-- #PARTIAL "progress-bar.hbs"  -->
             <span class="fic-progress-bar fic-tooltip fic-tooltip--include-value" aria-label="Overall Progress" aria-valuenow="33%" tabindex="0">
@@ -211,7 +211,7 @@
                     <span class="fsa-m-l--s">
                       <label class="sr-only" for="inspectionsFilterByAssignee__alt">Assigned to</label>
                       <select data-behavior="inspections-assignee-filter inspections-count-filter" data-filter-target="inspectionsTable" class="fsa-select fsa-select--small" name="inspectionsFilterByAssignee__alt" id="inspectionsFilterByAssignee__alt">
-                        <option value="assignedto-all">All</option>
+                        <option value="assignedto-all">All Assignees</option>
                         <option value="assignedto-not-assigned">Unassigned</option>
                         <option value="assignedto-norm-peterson">Norm Peterson</option>
                         <option value="assignedto-carla-tortelli">Carla Tortelli</option>
@@ -227,7 +227,7 @@
                     <span class="fsa-m-l--s">
                       <label class="sr-only" for="inspectionsFilterByStatus__alt">Status</label>
                       <select class="fsa-select fsa-select--small" name="inspectionsFilterByStatus__alt" id="inspectionsFilterByStatus__alt" data-behavior="inspections-filter inspections-count-filter" data-filter-target="inspectionsTable">
-                        <option value="is-all" selected="">All</option>
+                        <option value="is-all" selected="">All Statuses</option>
                         <option value="is-rejected">Rejected</option>
                         <option value="is-not-started">Not Started</option>
                         <option value="is-assigned">Assigned</option>
@@ -291,9 +291,14 @@
                   ↻ Reset all Filters
                 </button>
                 -->
-                <strong data-behavior="reset-filter-fields" data-disable-targets="#inspectionsFilterByCounty, #inspectionsFilterByFarmNumber" title="Reset Filters" tabindex="0" style="padding-left: 9px; color: #205493; font-size: 23px; line-height: 1; display: inline-block; padding-top: 2px; font-weight: bold; font-family: monospace; cursor: pointer">
-                  &#x21bb;
-                </strong>
+                <!--
+                TODO design reset button
+                -->
+                <span class="fic-tooltip" aria-label="Reset Filters">
+                  <strong data-behavior="reset-filter-fields" data-disable-targets="#inspectionsFilterByCounty, #inspectionsFilterByFarmNumber" title="Reset Filters" tabindex="0" style="padding-left: 9px; color: #205493; font-size: 23px; line-height: 1; display: inline-block; padding-top: 2px; font-weight: bold; font-family: monospace; cursor: pointer">
+                    &#x21bb;
+                  </strong>
+                </span>
               </td>
               <td>
                 <span>

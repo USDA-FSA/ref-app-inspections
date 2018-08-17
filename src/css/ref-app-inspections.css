@@ -156,7 +156,8 @@ TODO SASSify everything below.
   text-decoration: none !important;
   width: calc(var(--size-base) * 7);
   text-align: center;
-  margin-left: calc(-var(--size-base) * 7) !important;
+  /* TODO fix this CSS */
+  margin-left: -28px !important;
   font-weight: bold;
 }
 .fic-finder__clearer:focus,
@@ -179,7 +180,7 @@ TODO SASSify everything below.
 
 .fic-tooltip:hover,
 .fic-tooltip:focus {
-  z-index: 1;
+  z-index: 9999;
 }
 
 .fic-tooltip:before,
@@ -191,7 +192,7 @@ TODO SASSify everything below.
   bottom: 100%;
   left: 50%;
   position: absolute;
-  transition: all .23s ease-in-out
+  transition: all .23s ease-in-out;
 }
 
 @supports (pointer-events: none) {
@@ -220,8 +221,12 @@ TODO SASSify everything below.
   background-color: var(--color-fsa-tertiary);
   color: #fff;
   font-size: 14px;
+  font-weight: normal;
   padding: var(--size-base) var(--size-small);
   white-space: nowrap;
+  max-width: 364px;
+  text-overflow: ellipsis;
+  overflow: hidden;
   border-radius: var(--size-base);
   outline: 0;
 }
