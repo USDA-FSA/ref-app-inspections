@@ -53,7 +53,7 @@ TODO SASSify everything below.
   --progress-text--rejected: #CD2026;
   --progress-bgc--rejected    : var(--color-fsa-red-200);
   --progress-bgc--complete    : var(--color-fsa-primary-200);
-  --progress-bgc--in-progress : var(--color-fsa-secondary-200);
+  --progress-bgc--in-progress : var(--color-fsa-aqua-200);
   --progress-bgc--assigned    : var(--color-fsa-tertiary-200);
   --progress-bgc--not-started : transparent;
 
@@ -317,7 +317,7 @@ TODO SASSify everything below.
 .fic-progress-bar--segmented {}
 
 .fic-progress-bar__item {
-  background-color: var(--color-fsa-primary-200);
+  background-color: var(--progress-bgc--complete);
   display: inline-block; /* fallback */
   border: 1px solid rgba(0,0,0,.05);
   border-left: 0;
@@ -336,8 +336,6 @@ TODO SASSify everything below.
 .fic-progress-bar--extra-small .fic-progress-bar__item {
   border: 0
 }
-
-
 
 .fic-progress-bar__item--rejected {
   background-color: var(--progress-bgc--rejected);
