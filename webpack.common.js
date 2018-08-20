@@ -3,11 +3,12 @@
 //
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
 const HTMLBeautifyPlugin = require('html-beautify-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HandlebarsWebpackPlugin = require('handlebars-webpack-plugin');
 const path = require('path');
+//const HTMLWebpackPlugin = require('html-webpack-plugin');
+const WebpackPages = require('./webpack.pages.js');
 
 const fsaStyleImg = path.join(__dirname, 'node_modules/fsa-style/src/img/');
 
@@ -134,62 +135,29 @@ module.exports = {
       }
     ]),
 
-    new HTMLWebpackPlugin({
-      title: "index",
-      // the template you want to use
-      template: "./src/index.hbs",
-      // the output file name
-      filename: path.join(__dirname, "./dist/index.html"),
-      inject: "body"
-    }),
-
-    new HTMLWebpackPlugin({
-      title: "handlebars",
-      // the template you want to use
-      template: "./src/handlebars.hbs",
-      // the output file name
-      filename: path.join(__dirname, "./dist/handlebars.html"),
-      inject: "body"
-    }),
-
-    new HTMLWebpackPlugin({
-      title: "settings",
-      // the template you want to use
-      template: "./src/settings.hbs",
-      // the output file name
-      filename: path.join(__dirname, "./dist/settings.html"),
-      inject: "body"
-    }),
-
-    new HTMLWebpackPlugin({
-      title: "boilerplate",
-      // the template you want to use
-      template: "./src/boilerplate.hbs",
-      // the output file name
-      filename: path.join(__dirname, "./dist/boilerplate.html"),
-      inject: "body"
-    }),
-
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: "css/[name].css",
       chunkFilename: "[name].css"
-    }),
-
-    new HTMLBeautifyPlugin({
-      config: {
-          html: {
-              end_with_newline: true,
-              indent_size: 2,
-              indent_with_tabs: true,
-              indent_inner_html: true,
-              preserve_newlines: true,
-              unformatted: ['p', 'i', 'b', 'span']
-          }
-      },
-      replace: [ ' type="text/javascript"' ]
-    })
-
-  ]
+    })   
+  ]  
 };
+
+module.exports.plugins = WebpackPages.AddPages( module.exports.plugins );
+
+module.exports.plugins.push(
+    new HTMLBeautifyPlugin({
+    config: {
+        html: {
+            end_with_newline: true,
+            indent_size: 2,
+            indent_with_tabs: true,
+            indent_inner_html: true,
+            preserve_newlines: true,
+            unformatted: ['p', 'i', 'b', 'span']
+        }
+    },
+    replace: [ ' type="text/javascript"' ]
+  })
+);
