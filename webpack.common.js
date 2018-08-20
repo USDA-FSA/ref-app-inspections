@@ -12,7 +12,7 @@ const path = require('path');
 const fsaStyleImg = path.join(__dirname, 'node_modules/fsa-style/src/img/');
 
 module.exports = {
-  
+
   devtool: 'source-map',
 
   entry:  {
@@ -30,7 +30,7 @@ module.exports = {
 
   module: {
     rules: [
-      
+
       {
         test: /\.html$/,
         use: [
@@ -61,7 +61,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
-          { 
+          {
             loader: 'babel-loader'
           }
         ]
@@ -80,7 +80,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          'sass-loader'           
+          'sass-loader'
         ]
       },
       {
@@ -144,6 +144,15 @@ module.exports = {
     }),
 
     new HTMLWebpackPlugin({
+      title: "handlebars",
+      // the template you want to use
+      template: "./src/handlebars.hbs",
+      // the output file name
+      filename: path.join(__dirname, "./dist/handlebars.html"),
+      inject: "body"
+    }),
+
+    new HTMLWebpackPlugin({
       title: "settings",
       // the template you want to use
       template: "./src/settings.hbs",
@@ -181,6 +190,6 @@ module.exports = {
       },
       replace: [ ' type="text/javascript"' ]
     })
-    
-  ]  
+
+  ]
 };
