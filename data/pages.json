@@ -1,6 +1,12 @@
 {
   "pages" : [
     {
+      "title" : "handlebars",
+      "template" : "./src/pages/handlebars.hbs",
+      "filePath" : "./dist/handlebars.html",
+      "inject" : "body"
+    },
+    {
       "title" : "index",
       "template" : "./src/pages/index.hbs",
       "filePath" : "./dist/index.html",
