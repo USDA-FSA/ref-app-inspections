@@ -1,0 +1,31 @@
+.fic-finder {
+  display: inline-block;
+}
+.fic-finder--block {
+  display: block;
+}
+.fic-finder__entry {
+  display: flex;
+}
+.fic-finder__input {
+  padding-right: calc(var(--size-base) * 7);
+}
+.fic-finder__clearer {
+  text-decoration: none !important;
+  width: calc(var(--size-base) * 7);
+  text-align: center;
+  /* TODO fix this CSS */
+  margin-left: -28px !important;
+  font-weight: bold;
+}
+.fic-finder__clearer:focus,
+.fic-finder__clearer:active {
+  outline: 0;
+  transform: translate(1px, 1px);
+}
+.fic-finder__clearer:before {
+  content: '\00d7'
+}
+.fic-finder__input:placeholder-shown + .fic-finder__clearer {
+  display: none;
+}

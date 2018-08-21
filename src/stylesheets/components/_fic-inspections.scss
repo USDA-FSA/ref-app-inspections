@@ -1,0 +1,115 @@
+.fic-inspections /* table */ {
+  margin-top: 12px;
+}
+.fic-inspections__row /*tr*/ {}
+.fic-inspections__row--selected /*tr*/ {
+  background-color: var(--color-fsa-tertiary-100);
+}
+.fic-inspections__select-column /* th,td */ {
+  width: calc(var(--size-base) * 10);
+}
+.fic-inspections__select-item /* span */ {
+  padding-left: var(--size-small);
+}
+.fic-inspections__select-item .fsa-checkbox + label,
+.fic-inspections__select-item .fsa-checkbox + label:before {
+  margin-right: 0;
+}
+.fic-inspections__status {}
+.fic-inspections__status-bd {}
+
+@media (max-width: 37.5em) {
+  .fic-inspections__status-bd {
+    padding-bottom: var(--size-medium);
+  }
+}
+
+@media (min-width: 37.5em) {
+  .fic-inspections__status-bd {
+    position: relative;
+  }
+}
+
+.fic-inspections__progress-bar {
+  position: absolute;
+  left: var(--size-medium);
+  right: var(--size-medium);
+  padding-top: calc(var(--size-base) * 3);
+}
+
+@media (min-width: 37.5em) {
+  .fic-inspections__progress-bar {
+    left: 0;
+    right: 0;
+    padding-top: 0;
+  }
+}
+
+.fic-inspections__status--0 /*Rejected*/ {
+  color: var(--progress-text--rejected);
+}
+.fic-inspections__status--1 /*Not Started*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 18%,
+      var(--progress-bgc) 18%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--2 /*Assigned*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 45%,
+      var(--progress-bgc) 45%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--3 /*In Progress*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 80%,
+      var(--progress-bgc) 80%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--4 /*Complete*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 100%,
+      var(--progress-bgc) 100%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+
+
+// All of the below are PURELY FOR DEMO PURPOSES
+
+.fic-inspections--status-filter-is-not-started  .fic-inspections__status--0, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--1, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--2, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--3, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--4,
+.fic-inspections--status-filter-is-assigned  .fic-inspections__status--0, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--1, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--2, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--3, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--4
+.fic-inspections--status-filter-is-in-progress  .fic-inspections__status--0, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--1, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--2, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--3, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--4
+.fic-inspections--status-filter-is-complete  .fic-inspections__status--0, .fic-inspections--status-filter-is-complete  .fic-inspections__status--1, .fic-inspections--status-filter-is-complete  .fic-inspections__status--2, .fic-inspections--status-filter-is-complete  .fic-inspections__status--3, .fic-inspections--status-filter-is-complete  .fic-inspections__status--4 {
+  background-image: none
+}
+
+.fic-inspections--status-filter-is-rejected    [data-status]:not([data-status="is-rejected"]   ) { display: none; }
+.fic-inspections--status-filter-is-not-started [data-status]:not([data-status="is-not-started"]) { display: none; }
+.fic-inspections--status-filter-is-assigned    [data-status]:not([data-status="is-assigned"]   ) { display: none; }
+.fic-inspections--status-filter-is-in-progress [data-status]:not([data-status="is-in-progress"]) { display: none; }
+.fic-inspections--status-filter-is-complete    [data-status]:not([data-status="is-complete"]   ) { display: none; }
+
+[data-filtered-by-assignee] {}
+[data-not-filtered-by-assignee] {
+  display: none;
+}
