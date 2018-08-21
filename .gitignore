@@ -5,4 +5,4 @@ dist
 npm-debug.log
 debug.log
 .ugly
-scratch.html
+scratch.*
