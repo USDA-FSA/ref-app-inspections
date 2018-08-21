@@ -13,7 +13,7 @@ const WebpackPages = require('./webpack.pages.js');
 const fsaStyleImg = path.join(__dirname, 'node_modules/fsa-style/src/img/');
 
 module.exports = {
-  
+
   devtool: 'source-map',
 
   entry:  {
@@ -31,7 +31,7 @@ module.exports = {
 
   module: {
     rules: [
-      
+
       {
         test: /\.html$/,
         use: [
@@ -62,7 +62,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
-          { 
+          {
             loader: 'babel-loader'
           }
         ]
@@ -81,7 +81,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          'sass-loader'           
+          'sass-loader'
         ]
       },
       {
