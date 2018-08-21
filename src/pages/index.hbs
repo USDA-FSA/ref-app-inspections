@@ -1,38 +1,50 @@
-{{#> ../layouts/base title='index' }}
-
-  {{#*inline "header-block"}}
-    <p>[header-block]</p>
-  {{/inline}}
+{{#> ../layouts/base title='FIC - Main Page' }}
 
   {{#*inline "main-block"}}
-  <main id="main-content" tabindex="-1">
-  	<div class="fsa-section">
-  		<div class="fsa-section__bd">
-        <h2>img watch test</h2>
-        <div class="fsa-grid">
-          <div class="fsa-grid__1/1 fsa-grid__1/4@s">
-            <h3>jpg</h3>
-            <img src="img/01.jpg" alt="">
-            <img src="img/02.jpg" alt="">
-            <img src="img/03.jpg" alt="">
-            <img src="img/04.jpg" alt="">
+
+    <main id="main-content" tabindex="-1">
+      <div class="fsa-section">
+        <div class="fsa-section__bd">
+          <h1>Inspections</h1>
+
+          <h2>img watch test</h2>
+          <div class="fsa-grid">
+            <div class="fsa-grid__1/1 fsa-grid__1/4@s">
+              <h3>jpg</h3>
+              <img src="img/01.jpg" alt="">
+              <img src="img/02.jpg" alt="">
+              <img src="img/03.jpg" alt="">
+              <img src="img/04.jpg" alt="">
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/4@s">
+              <h3>svg</h3>
+              <img src="img/01.svg" alt="">
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/4@s">
+              <h3>png</h3>
+              <img src="img/01.png" alt="">
+            </div>
+            <div class="fsa-grid__1/1 fsa-grid__1/4@s">
+              <h3>gif</h3>
+              <img src="img/01.gif" alt="">
+            </div>
           </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/4@s">
-            <h3>svg</h3>
-            <img src="img/01.svg" alt="">
-          </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/4@s">
-            <h3>png</h3>
-            <img src="img/01.png" alt="">
-          </div>
-          <div class="fsa-grid__1/1 fsa-grid__1/4@s">
-            <h3>gif</h3>
-            <img src="img/01.gif" alt="">
-          </div>
+          <h2>stuff</h2>
+          {{> ../includes/inspection-hd }}
+          {{> ../components/table/table-inspections }}
+          {{> ../components/pagination/pagination }}
+
+
         </div>
-  		</div>
-  	</div>
-  </main>
+      </div>
+    </main>
+
+  {{/inline}}
+
+  {{#*inline "hidden-block"}}
+    <!-- HIDDEN - FOR MODALS/GROWL CONTENT -->
+    {{> ../includes/hidden }}
+    <!-- /HIDDEN -->
   {{/inline}}
 
 {{/../layouts/base }}
