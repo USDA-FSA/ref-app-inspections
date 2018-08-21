@@ -8,7 +8,7 @@ $('body').on('change', '[data-behavior~="inspections-filter"]', function(event) 
   var newStatus = $self.val();
 
   $target
-    .removeClass('fic-inspections--status-filter-is-all fic-inspections--status-filter-is-complete fic-inspections--status-filter-is-assigned fic-inspections--status-filter-is-logged fic-inspections--status-filter-is-in-progress fic-inspections--status-filter-is-rejected ')
+    .removeClass('fic-inspections--status-filter-is-all fic-inspections--status-filter-is-complete fic-inspections--status-filter-is-assigned fic-inspections--status-filter-is-not-started fic-inspections--status-filter-is-in-progress fic-inspections--status-filter-is-rejected ')
     .addClass('fic-inspections--status-filter-' + newStatus)
   ;
 
@@ -17,6 +17,60 @@ $('body').on('change', '[data-behavior~="inspections-filter"]', function(event) 
   }
   else {
     $('#inspections-pagination').attr('hidden', 'true');
+  }
+
+})
+
+$('body').on('change', '[data-behavior~="inspections-assignee-filter"]', function(event) {
+
+  var $self = $(this);
+  var $target = $('#' + $self.attr('data-filter-target'))
+  var $targetRows = $target.find('[data-assignee]')
+  var newAssignee = $self.val();
+  var $newAssigneeRow = $('[data-assignee="' + newAssignee + '"]')
+
+  $targetRows.removeAttr('data-filtered-by-assignee data-not-filtered-by-assignee');
+  $newAssigneeRow.attr('data-filtered-by-assignee', true)
+
+  var $notAssignedRows = $target.find('.fic-inspections__tbody tr:not([data-filtered-by-assignee])')
+
+  $notAssignedRows.attr('data-not-filtered-by-assignee', true);
+
+  if (newAssignee == 'assignedto-all') {
+    $notAssignedRows.removeAttr('data-filtered-by-assignee data-not-filtered-by-assignee');
+  }
+
+})
+
+$('body').on('change', '[data-behavior~="inspections-count-filter"]', function(event) {
+
+  var $self = $(this);
+  var $component = $('#' + $self.attr('data-filter-target'))
+
+  var $inspectionRowsHidden = $component.find('.fic-inspections__row:not(:hidden)');
+  var $inspectionNoResults = $component.find('.fic-inspections__tfoot');
+
+  console.log('Number of viewable rows: ' + $inspectionRowsHidden.length);
+
+  if ($inspectionRowsHidden.length == '0') {
+    $inspectionNoResults.removeAttr('hidden')
+  }
+  else {
+    $inspectionNoResults.attr('hidden', true)
+  }
+
+  if ($inspectionRowsHidden.length < 20) {
+    $('#inspections-pagination').attr('hidden', true);
+  }
+  if ($inspectionRowsHidden.length >= 20) {
+    $('#inspections-pagination').removeAttr('hidden');
+  }
+
+  if ($inspectionRowsHidden.length >= 20) {
+    $('#inspections-amt').html('1-20');
+  }
+  if ($inspectionRowsHidden.length < 20) {
+    $('#inspections-amt').html($inspectionRowsHidden.length);
   }
 
 })
@@ -102,11 +156,40 @@ $('body').on('change', '[data-behavior~="reset-field"]', function(event) {
 $('body').on('click', '[data-behavior~="reset-filter-fields"]', function(event) {
 
   var $self = $(this);
-  var $row = $self.closest('tr')
+  var $component = $self.closest('table');
+  var $componentRows = $component.find('tr');
+  var $row = $self.closest('tr');
   var $target = $row.find('option:selected');
   var $targetDisabled = $($self.data('disable-targets'));
 
   $target.prop("selected", false);
   $targetDisabled.attr('disabled', true);
+  $component.removeClass('fic-inspections--status-filter-is-rejected fic-inspections--status-filter-is-not-started fic-inspections--status-filter-is-assigned fic-inspections--status-filter-is-in-progress fic-inspections--status-filter-is-complete');
+  $componentRows.removeAttr('data-filtered-by-assignee data-not-filtered-by-assignee')
+  $component.find('.fic-inspections__tfoot').attr('hidden', true);
+  $('#inspections-pagination').removeAttr('hidden');
+  $('#inspections-amt').html('1-20');
+
+})
+
+$('body').on('click', '[data-prototype-show]', function(event) {
+
+  var $self = $(this);
+  var $target = $($self.data('prototype-show'));
+  $target.removeAttr('hidden')
+
+})
+
+$('body').on('click', '[data-prototype-hide]', function(event) {
+
+  var $self = $(this);
+  var $target = $($self.data('prototype-hide'));
+  $target.attr('hidden', true)
+
+})
+
+$('body').on('click', '.yo', function(event) {
+
+  $(this).remove();
 
 })
