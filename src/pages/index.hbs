@@ -7,33 +7,43 @@
         <div class="fsa-section__bd">
           <h1>Inspections</h1>
 
-          <h2>img watch test</h2>
-          <div class="fsa-grid">
-            <div class="fsa-grid__1/1 fsa-grid__1/4@s">
-              <h3>jpg</h3>
-              <img src="img/01.jpg" alt="">
-              <img src="img/02.jpg" alt="">
-              <img src="img/03.jpg" alt="">
-              <img src="img/04.jpg" alt="">
+          <div hidden>
+            <p>Tooltip <code>&lt;a&gt;</code> <a href="link.html" class="fic-tooltip" aria-label="Label">esse non enim</a> quisquam.</p>
+            <p>Tooltip <code>&lt;span&gt;</code> <span tabindex="0" class="fic-tooltip" aria-label="Label longer for whatever reason">lorem ipsum</span> yshgua.</p>
+            <p>Tooltip <code>&lt;span&gt;</code> <span tabindex="0" class="fic-tooltip" aria-label="Label really for some moronic reason, let's avoid doing this since the tooltip component is meant for really low-key labels">really long label</span> yshgua.</p>
+            <p>Tooltip <code>.fsa-label</code> <span tabindex="0" class="fsa-label fic-tooltip" aria-label="Label">lorem ipsum</span> yshgua.</p>
+            <p>Tooltip <code>.fsa-badge</code> <span tabindex="0" class="fsa-badge fic-tooltip" aria-label="Label">5</span> yshgua.</p>
+            <div class="fsa-m-t--m">
+              <!-- #PARTIAL "progress-bar.hbs"  -->
+              <span class="fic-progress-bar fic-tooltip fic-tooltip--include-value" aria-label="Overall Progress" aria-valuenow="33%" tabindex="0">
+                <span class="fic-progress-bar__item" aria-hidden="true" style="width:33%"></span>
+              </span>
+              <!-- /PARTIAL "progress-bar.hbs"  -->
             </div>
-            <div class="fsa-grid__1/1 fsa-grid__1/4@s">
-              <h3>svg</h3>
-              <img src="img/01.svg" alt="">
-            </div>
-            <div class="fsa-grid__1/1 fsa-grid__1/4@s">
-              <h3>png</h3>
-              <img src="img/01.png" alt="">
-            </div>
-            <div class="fsa-grid__1/1 fsa-grid__1/4@s">
-              <h3>gif</h3>
-              <img src="img/01.gif" alt="">
+            <div class="fsa-m-t--m">
+              <!-- #PARTIAL "progress-bar.hbs"  -->
+              <span class="fic-progress-bar fic-progress-bar--small fic-tooltip fic-tooltip--include-value" aria-label="Overall Progress" aria-valuenow="75%" tabindex="0">
+                <span class="fic-progress-bar__item" aria-hidden="true" style="width:75%"></span>
+              </span>
+              <!-- /PARTIAL "progress-bar.hbs"  -->
             </div>
           </div>
-          <h2>stuff</h2>
+
+          <div class="fsa-m-t--m">
+            <!-- #PARTIAL "progress-bar.hbs"  -->
+            <span class="fic-progress-bar" aria-label="Overall Progress" aria-valuenow="80%">
+              <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--rejected fic-tooltip fic-tooltip--include-value" aria-label="Rejected" aria-valuenow="4%" style="width:4%"></span>
+              <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--complete fic-tooltip fic-tooltip--include-value" aria-label="Complete" aria-valuenow="47%" style="width:47%"></span>
+              <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--in-progress fic-tooltip fic-tooltip--include-value" aria-label="In Progress" aria-valuenow="10%" style="width:10%"></span>
+              <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--assigned fic-tooltip fic-tooltip--include-value" aria-label="Assigned" aria-valuenow="25%" style="width:25%"></span>
+              <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--not-started fic-tooltip fic-tooltip--include-value" aria-label="Not Started" aria-valuenow="20%" style="width:20%"></span>
+            </span>
+            <!-- /PARTIAL "progress-bar.hbs"  -->
+          </div>
+
           {{> ../includes/inspection-hd }}
           {{> ../components/table/table-inspections }}
           {{> ../components/pagination/pagination }}
-
 
         </div>
       </div>

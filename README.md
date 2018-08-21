@@ -7,5 +7,3 @@ The [fsa-prototype-kit](https://github.com/USDA-FSA/fsa-prototype-kit/) is integ
 To install the dependencies, run `npm install`.
 
 Run  `npm start` to spin up a Webpack Dev Server.
-
-If that doesn't work, just view `src` locally.
