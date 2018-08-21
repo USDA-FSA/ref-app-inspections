@@ -2,13 +2,10 @@
 
 Prototyping SPA-based Reference App.
 
-The initial state is just raw HTML in anticipation of using [fsa-prototype-kit](https://github.com/USDA-FSA/fsa-prototype-kit/).
+The [fsa-prototype-kit](https://github.com/USDA-FSA/fsa-prototype-kit/) is integrated, and `npm build` will create a `dist` directory.
 
-As such, nothing "builds" to `dist`. So I just run it from `src` like so...
+To install the dependencies, run `npm install`.
 
-```
-npm install -g browser-sync
-npm start
-```
+Run  `npm start` to spin up a Webpack Dev Server.
 
 If that doesn't work, just view `src` locally.

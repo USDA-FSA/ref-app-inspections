@@ -1,0 +1,91 @@
+Arguments: 
+  c:\softwaredistribution\node-v9.3.0-win-x64\node.exe c:\softwaredistribution\node-v9.3.0-win-x64\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Riverbed\Steelhead Mobile\;C:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\HID Global\ActivClient\;C:\Program Files\HID Global\ActivClient\;C:\softwaredistribution\tools\svn-client-1.8.11;C:\Program Files (x86)\Google\Chrome\Application;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Riverbed\Steelhead Mobile\;C:\Program Files (x86)\HID Global\ActivClient\;C:\Program Files\HID Global\ActivClient\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Users\Casey.Hill\AppData\Local\Programs\Git\cmd;C:\Users\Casey.Hill\AppData\Local\atom\bin;C:\Ruby23-x64\bin;C:\Python27;c:\softwaredistribution\node-v9.3.0-win-x64\;C:\softwaredistribution\Sun\jdk1.7.0_151\bin
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  9.3.0
+
+Platform: 
+  win32 x64
+
+npm manifest: 
+  {
+    "name": "baseline-webpack",
+    "version": "1.0.0",
+    "description": "Webpack Baseline Project",
+    "main": "index.js",
+    "scripts": {
+      "start": "webpack-dev-server --mode development --config webpack.dev.js",
+      "build": "webpack --mode production --optimize-minimize --config webpack.prod.js",
+      "watch": "webpack --watch"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/usda-fsa/fsa-style.git"
+    },
+    "author": "USDA FSA Enterprise Architecture",
+    "contributors": [
+      "Casey Hill <bignamehere@gmail.com> (https://github.com/bignamehere)",
+      "Francis Rupert <France.Rupert@gmail.com> (https://github.com/francisrupert)"
+    ],
+    "devDependencies": {
+      "autoprefixer": "^8.6.0",
+      "babel-core": "^6.26.3",
+      "babel-loader": "^7.1.4",
+      "babel-preset-env": "^1.7.0",
+      "clean-webpack-plugin": "^0.1.19",
+      "copy-webpack-plugin": "^4.5.1",
+      "css-loader": "^0.28.11",
+      "file-loader": "^1.1.11",
+      "fsa-style": "^2.1.5",
+      "handlebars": "^4.0.11",
+      "handlebars-loader": "^1.7.0",
+      "handlebars-webpack-plugin": "^1.5.0",
+      "html-loader": "^0.5.5",
+      "html-webpack-plugin": "^3.2.0",
+      "imports-loader": "^0.8.0",
+      "lodash": "^4.17.10",
+      "mini-css-extract-plugin": "^0.4.0",
+      "node-sass": "^4.9.0",
+      "path": "^0.12.7",
+      "postcss-import": "^11.1.0",
+      "postcss-loader": "^2.1.5",
+      "sass-loader": "^7.0.1",
+      "style-loader": "^0.21.0",
+      "stylelint": "^9.2.1",
+      "stylelint-webpack-plugin": "^0.10.5",
+      "url-loader": "^1.0.1",
+      "webpack": "^4.16.5",
+      "webpack-cli": "^2.1.3",
+      "webpack-dev-server": "^3.1.5",
+      "webpack-merge": "^4.1.2"
+    },
+    "dependencies": {
+      "html-beautify-webpack-plugin": "^1.0.5",
+      "pixrem": "^4.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000874.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (c:\softwaredistribution\node-v9.3.0-win-x64\node_modules\yarn\lib\cli.js:123716:19)
+      at Object.onceWrapper (events.js:254:19)
+      at ClientRequest.emit (events.js:159:13)
+      at TLSSocket.emitTimeout (_http_client.js:710:34)
+      at Object.onceWrapper (events.js:254:19)
+      at TLSSocket.emit (events.js:159:13)
+      at TLSSocket.Socket._onTimeout (net.js:421:8)
+      at ontimeout (timers.js:466:11)
+      at tryOnTimeout (timers.js:304:5)
+      at Timer.listOnTimeout (timers.js:264:5)
