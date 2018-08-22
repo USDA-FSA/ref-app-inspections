@@ -30,5 +30,7 @@ import './stylesheets/_aoux-pt-strip.scss';
 import jQuery from 'jquery';
 
 // Project-specific JS
-import './js/fsa-style-docs.min.js';
-import './js/ref-app-inspections.js';
+import './js/fsa-style-docs.min.js'; // TODO import only select ones from https://github.com/USDA-FSA/fsa-style/tree/master/src/js/components
+import './js/fic-finder.js';
+import './js/fic-inspections.js';
+import './js/aoux-pt-strip.js';

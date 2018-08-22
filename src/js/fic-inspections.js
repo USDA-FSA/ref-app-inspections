@@ -1,6 +1,4 @@
 
-console.log('ref-app-inspections.js loaded');
-
 $('body').on('change', '[data-behavior~="inspections-filter"]', function(event) {
 
   var $self = $(this);
@@ -115,17 +113,6 @@ $('body').on('change', '[data-behavior~="inspections-select-all"]', function(eve
 
 })
 
-$('body').on('click', '[data-behavior~="clear-finder-entry"]', function(event) {
-
-  var $self = $(this);
-
-  $self.siblings('.fic-finder__input')
-    .val('')
-    .focus()
-  ;
-
-})
-
 $('body').on('change', '[data-behavior~="enable-field"]', function(event) {
 
   var $self = $(this);
@@ -169,27 +156,5 @@ $('body').on('click', '[data-behavior~="reset-filter-fields"]', function(event) 
   $component.find('.fic-inspections__tfoot').attr('hidden', true);
   $('#inspections-pagination').removeAttr('hidden');
   $('#inspections-amt').html('1-20');
-
-})
-
-$('body').on('click', '[data-prototype-show]', function(event) {
-
-  var $self = $(this);
-  var $target = $($self.data('prototype-show'));
-  $target.removeAttr('hidden')
-
-})
-
-$('body').on('click', '[data-prototype-hide]', function(event) {
-
-  var $self = $(this);
-  var $target = $($self.data('prototype-hide'));
-  $target.attr('hidden', true)
-
-})
-
-$('body').on('click', '.yo', function(event) {
-
-  $(this).remove();
 
 })
