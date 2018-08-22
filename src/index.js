@@ -21,6 +21,9 @@ import './stylesheets/components/_test-card.scss';
 
 import './stylesheets/_SHAME.scss';
 
+// Prototype-only
+import './stylesheets/_aoux-pt-strip.scss';
+
 // JS //////////////////////////////////////////////////////////////////////////
 
 //
