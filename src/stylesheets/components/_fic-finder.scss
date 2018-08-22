@@ -1,0 +1,52 @@
+.fic-finder {
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  & {
+    display: inline-block;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  &--block {
+    display: block;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  &__entry {
+    display: flex;
+  }
+
+  &__input {
+    padding-right: calc(var(--size-base) * 7);
+  }
+
+  &__clearer {
+
+    & {
+      text-decoration: none !important;
+      width: calc(var(--size-base) * 7);
+      text-align: center;
+      /* TODO fix this CSS */
+      margin-left: -28px !important;
+      font-weight: bold;
+    }
+
+    &:focus,
+    &:active {
+      outline: 0;
+      transform: translate(1px, 1px);
+    }
+
+    &:before {
+      content: '\00d7'
+    }
+
+  }
+
+  &__input:placeholder-shown + &__clearer {
+    display: none;
+  }
+
+}
