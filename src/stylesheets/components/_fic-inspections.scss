@@ -1,4 +1,4 @@
-.fic-inspections{
+.fic-inspections {
 
   & /* table */ {
     margin-top: 12px;
@@ -101,13 +101,19 @@
 
 }
 
-// All of the below are PURELY FOR DEMO PURPOSES to fake SPA functionality
+// All of the below are PURELY FOR DEMO PURPOSES to fake SPA functionality /////
 
-.fic-inspections--status-filter-is-not-started  .fic-inspections__status--0, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--1, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--2, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--3, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--4,
-.fic-inspections--status-filter-is-assigned  .fic-inspections__status--0, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--1, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--2, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--3, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--4
-.fic-inspections--status-filter-is-in-progress  .fic-inspections__status--0, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--1, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--2, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--3, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--4
-.fic-inspections--status-filter-is-complete  .fic-inspections__status--0, .fic-inspections--status-filter-is-complete  .fic-inspections__status--1, .fic-inspections--status-filter-is-complete  .fic-inspections__status--2, .fic-inspections--status-filter-is-complete  .fic-inspections__status--3, .fic-inspections--status-filter-is-complete  .fic-inspections__status--4 {
-  background-image: none
+.fic-inspections--status-filter-is-not-started,
+.fic-inspections--status-filter-is-assigned,
+.fic-inspections--status-filter-is-in-progress,
+.fic-inspections--status-filter-is-complete {
+  .fic-inspections__status--0,
+  .fic-inspections__status--1,
+  .fic-inspections__status--2,
+  .fic-inspections__status--3,
+  .fic-inspections__status--4 {
+    background-image: none;
+  }
 }
 
 .fic-inspections--status-filter-is-rejected    [data-status]:not([data-status="is-rejected"]   ) { display: none; }

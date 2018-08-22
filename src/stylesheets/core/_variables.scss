@@ -42,18 +42,18 @@ TODO SASSify everything below.
   --color-fsa-link: #0068AD;
   --color-fsa-link-hover: #183F6E;
 
-  --size-base          : 4px;
+  --size-base          : .4rem;
   --size-small         : calc(var(--size-base) * 2);
   --size-default       : calc(var(--size-base) * 3);
   --size-medium        : calc(var(--size-base) * 6);
   --size-large         : calc(var(--size-base) * 9);
   --size-extra-large   : calc(var(--size-medium) * 2);
 
-  --progress-bgc: #DEE8E0;
-  --progress-text--rejected: #CD2026;
-  --progress-bgc--rejected    : var(--color-fsa-red-200);
-  --progress-bgc--complete    : var(--color-fsa-primary-200);
-  --progress-bgc--in-progress : var(--color-fsa-aqua-200);
+  --progress-text--rejected   : var(--color-fsa-red);
+  --progress-bgc              : var(--color-fsa-aqua-100);
+  --progress-bgc--rejected    : var(--color-fsa-red-300);
+  --progress-bgc--complete    : var(--color-fsa-aqua-300);
+  --progress-bgc--in-progress : var(--color-fsa-secondary-300);
   --progress-bgc--assigned    : var(--color-fsa-tertiary-200);
   --progress-bgc--not-started : transparent;
 
