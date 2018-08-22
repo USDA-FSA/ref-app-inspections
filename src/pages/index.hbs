@@ -14,37 +14,37 @@
           <p>Tooltip <code>.fsa-label</code> <span tabindex="0" class="fsa-label fic-tooltip" aria-label="Label">lorem ipsum</span> yshgua.</p>
           <p>Tooltip <code>.fsa-badge</code> <span tabindex="0" class="fsa-badge fic-tooltip" aria-label="Label">5</span> yshgua.</p>
 
+          <div class="fsa-m-t--m">
+            {{> ../components/fic-progress
+              CLASS="fic-tooltip"
+              FOCUSABLE="true"
+              LABEL="7 of 10"
+              LABEL-VALUE="70%"
+            }}
+          </div>
 
-        </div>
-        <div class="fsa-m-t--m">
-          {{> ../components/fic-progress
-            CLASS="fic-tooltip"
-            FOCUSABLE="true"
-            LABEL="7 of 10"
-            LABEL-VALUE="70%"
-          }}
-        </div>
+          <div class="fsa-m-t--m">
+            {{> ../components/fic-progress
+              VARIATION=""
+              CLASS="fic-tooltip fic-tooltip--include-value"
+              FOCUSABLE="true"
+              LABEL="Overall Progress"
+              LABEL-VALUE="33%"
+              VALUENOW="TRUE"
+            }}
+          </div>
 
-        <div class="fsa-m-t--m">
-          {{> ../components/fic-progress
-            VARIATION=""
-            CLASS="fic-tooltip fic-tooltip--include-value"
-            FOCUSABLE="true"
-            LABEL="Overall Progress"
-            LABEL-VALUE="33%"
-            VALUENOW="TRUE"
-          }}
-        </div>
+          <div class="fsa-m-t--m">
+            {{> ../components/fic-progress
+              VARIATION="small"
+              CLASS="fic-tooltip fic-tooltip--include-value"
+              FOCUSABLE="true"
+              LABEL="Progress"
+              LABEL-VALUE="67%"
+              VALUENOW="TRUE"
+            }}
+          </div>
 
-        <div class="fsa-m-t--m">
-          {{> ../components/fic-progress
-            VARIATION="small"
-            CLASS="fic-tooltip fic-tooltip--include-value"
-            FOCUSABLE="true"
-            LABEL="Progress"
-            LABEL-VALUE="67%"
-            VALUENOW="TRUE"
-          }}
         </div>
 
         <div class="fsa-m-t--m">
