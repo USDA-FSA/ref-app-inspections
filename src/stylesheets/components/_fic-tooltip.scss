@@ -9,6 +9,7 @@
   &:hover,
   &:focus {
     z-index: 9999;
+    outline: 0;
   }
 
   &:before,
@@ -55,7 +56,6 @@
     text-overflow: ellipsis;
     overflow: hidden;
     border-radius: var(--size-base);
-    outline: 0;
   }
 
   &--include-value:after {
