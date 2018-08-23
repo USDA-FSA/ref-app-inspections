@@ -118,7 +118,9 @@ $('body').on('change', '[data-behavior~="enable-field"]', function(event) {
   var $self = $(this);
   var $target = $($self.data('enable-target'));
 
-  $target.removeAttr('disabled');
+  setTimeout(function () {
+    $target.removeAttr('disabled');
+  }, 4000);
 
 })
 
@@ -156,5 +158,27 @@ $('body').on('click', '[data-behavior~="reset-filter-fields"]', function(event) 
   $component.find('.fic-inspections__tfoot').attr('hidden', true);
   $('#inspections-pagination').removeAttr('hidden');
   $('#inspections-amt').html('1-20');
+
+})
+
+$('body').on('change', '[data-behavior~="inspections-progressing"]', function(event) {
+
+  var $self = $(this);
+  var $targetProgress = $('#' + $self.attr('data-progress-target'));
+  var $targetDisable = $($self.attr('data-disable-target'));
+  var $progressBar = $targetProgress.find('.fic-progress-target__item');
+  var classToToggle = 'fic-progress-bar--indeterminate-hidden';
+
+  $targetDisable
+    .css('opacity','.5')
+    .css('pointer-events','none')
+  ;
+
+  $progressBar.removeClass(classToToggle);
+
+  setTimeout(function () {
+    $progressBar.addClass(classToToggle);
+    $targetDisable.removeAttr('style');
+  }, 5000);
 
 })

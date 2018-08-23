@@ -35,7 +35,7 @@
       <td>
         <span>
           <label class="sr-only" for="inspectionsFilterByInspectioNumber">Filter by Inspection Number</label>
-          <select disabled="disabled" data-behavior="inspections-count-filter" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByInspectioNumber" name="inspectionsFilterByInspectioNumber" data-filter-target="inspectionsTable">
+          <select disabled="disabled" data-behavior="inspections-count-filter inspections-progressing" data-disable-target="#pt__progress-alt-1, #pt__progress-alt-2" data-progress-target="progress-target--001" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByInspectioNumber" name="inspectionsFilterByInspectioNumber" data-filter-target="inspectionsTable">
             <option value="All">All</option>
           </select>
         </span>
@@ -43,7 +43,7 @@
       <td>
         <span>
           <label class="sr-only" for="inspectionsFilterByState">Filter by State</label>
-          <select data-behavior="enable-field disable-field reset-field inspections-count-filter" data-enable-target="#inspectionsFilterByCounty" data-disable-target="#inspectionsFilterByFarmNumber" data-reset-target="#inspectionsFilterByFarmNumber :selected, #inspectionsFilterByCounty :selected" data-filter-target="inspectionsTable" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByState" name="inspectionsFilterByState">
+          <select data-behavior="enable-field disable-field reset-field inspections-count-filter inspections-progressing" data-disable-target="#pt__progress-alt-1, #pt__progress-alt-2" data-progress-target="progress-target--001" data-enable-target="#inspectionsFilterByCounty" data-disable-target="#inspectionsFilterByFarmNumber" data-reset-target="#inspectionsFilterByFarmNumber :selected, #inspectionsFilterByCounty :selected" data-filter-target="inspectionsTable" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByState" name="inspectionsFilterByState">
             <option value="is-all-states" selected="selected">All</option>
             <option value="is-AL">Alabama</option>
             <option value="is-AK">Alaska</option>
@@ -101,7 +101,7 @@
       <td>
         <span>
           <label class="sr-only" for="inspectionsFilterByCounty">Filter by County</label>
-          <select data-behavior="enable-field reset-field inspections-count-filter" data-enable-target="#inspectionsFilterByFarmNumber" data-reset-target="#inspectionsFilterByFarmNumber :selected" disabled="disabled" data-filter-target="inspectionsTable" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByCounty" name="inspectionsFilterByCounty">
+          <select data-behavior="enable-field reset-field inspections-count-filter inspections-progressing" data-disable-target="#pt__progress-alt-1, #pt__progress-alt-2" data-progress-target="progress-target--001" data-enable-target="#inspectionsFilterByFarmNumber" data-reset-target="#inspectionsFilterByFarmNumber :selected" disabled="disabled" data-filter-target="inspectionsTable" class="fsa-select fsa-select--small fsa-select--block" id="inspectionsFilterByCounty" name="inspectionsFilterByCounty">
             <option value="is-all-states" selected="selected">All</option>
             <option value="is-allen">Allen</option>
             <option value="is-anderson" disabled>Anderson</option>
@@ -214,7 +214,7 @@
       <td>
         <span>
           <label class="sr-only" for="inspectionsFilterByFarmNumber">Filter by Farm Number</label>
-          <select disabled="disabled" data-behavior="inspections-count-filter" class="fsa-select fsa-select--small fsa-select--block" data-filter-target="inspectionsTable" id="inspectionsFilterByFarmNumber" name="inspectionsFilterByFarmNumber" >
+          <select disabled="disabled" data-behavior="inspections-count-filter inspections-progressing" data-disable-target="#pt__progress-alt-1, #pt__progress-alt-2" data-progress-target="progress-target--001" class="fsa-select fsa-select--small fsa-select--block" data-filter-target="inspectionsTable" id="inspectionsFilterByFarmNumber" name="inspectionsFilterByFarmNumber" >
             <option value="is-all-states" selected="selected">All</option>
             <option value="is-1325">1325</option>
             <option value="is-1196">1196</option>
@@ -230,7 +230,7 @@
       </td>
       <td>
         <label class="sr-only" for="inspectionsFilterByAssignee">Filter by Assignee</label>
-        <select data-behavior="inspections-assignee-filter inspections-count-filter" data-filter-target="inspectionsTable" class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
+        <select data-behavior="inspections-assignee-filter inspections-count-filter inspections-progressing" data-disable-target="#pt__progress-alt-1, #pt__progress-alt-2" data-progress-target="progress-target--001" data-filter-target="inspectionsTable" class="fsa-select fsa-select--block fsa-select--small" name="inspectionsFilterByAssignee" id="inspectionsFilterByAssignee">
           <option value="assignedto-all">All</option>
           <option value="assignedto-not-assigned">Unassigned</option>
           <option value="assignedto-norm-peterson">Norm Peterson</option>
