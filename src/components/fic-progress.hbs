@@ -1,15 +1,3 @@
-{{!--
-
-  {{> ../components/fic-progress
-    VARIATION="small|[omit]"
-    CLASS="[whatever]"
-    FOCUSABLE="true|[omit]"
-    LABEL="[text]"
-    LABEL-VALUE="[value]"
-    VALUENOW="true|[omit]"
-  }}
-
---}}
 <span
   aria-label="{{ LABEL }}"
   class="
@@ -27,6 +15,7 @@
   {{#if VALUENOW}}
     aria-valuenow="{{ LABEL-VALUE }}"
   {{/if}}
+  {{ BOOL }}
 >
   <span
     class="fic-progress-bar__item"

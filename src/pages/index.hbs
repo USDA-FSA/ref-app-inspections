@@ -6,14 +6,6 @@
       <div class="fsa-section__bd">
         <h1>Inspections</h1>
 
-        <div class="fsa-m-t--m">
-          {{> ../components/fic-progress
-            VARIATION="indeterminate"
-            CLASS="fic-progress-bar--small"
-            LABEL="Loading"
-          }}
-        </div>
-
         <div hidden>
 
           <p>Tooltip <code>&lt;a&gt;</code> <a href="link.html" class="fic-tooltip" aria-label="Label">esse non enim</a> quisquam.</p>
@@ -56,7 +48,6 @@
         </div>
 
         <div class="fsa-m-t--m">
-          <!-- #PARTIAL "progress-bar.hbs"  -->
           <span class="fic-progress-bar" aria-label="Overall Progress" aria-valuenow="80%">
             <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--rejected fic-tooltip fic-tooltip--include-value" aria-label="Rejected" aria-valuenow="4%" style="width:4%"><span class="fic-progress-bar__text">4%</span></span>
             <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--complete fic-tooltip fic-tooltip--include-value" aria-label="Complete" aria-valuenow="47%" style="width:47%"><span class="fic-progress-bar__text">47%</span></span>
@@ -64,10 +55,10 @@
             <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--assigned fic-tooltip fic-tooltip--include-value" aria-label="Assigned" aria-valuenow="25%" style="width:25%"><span class="fic-progress-bar__text">25%</span></span>
             <span tabindex="0" class="fic-progress-bar__item fic-progress-bar__item--not-started fic-tooltip fic-tooltip--include-value" aria-label="Not Started" aria-valuenow="20%" style="width:20%"><span class="fic-progress-bar__text">20%</span></span>
           </span>
-          <!-- /PARTIAL "progress-bar.hbs"  -->
         </div>
 
         {{> ../components/inspection-hd }}
+        {{> ../components/fic-progress-target V1="true" ID="progress-target--001" }}
         {{> ../components/table/fic-inspections }}
         {{> ../components/pagination/pagination }}
 

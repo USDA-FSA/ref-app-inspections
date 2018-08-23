@@ -42,20 +42,31 @@
   //////////////////////////////////////////////////////////////////////////////
 
   &--small {
-    height: calc(var(--size-base) + 2px);
+    height: var(--size-base);
+    border: 0;
+  }
+
+  &--tiny {
+    height: calc(var(--size-base) / 2);
     border: 0;
   }
 
   &--indeterminate {
 
     position: relative;
+    opacity: 1;
+    pointer-events: none;
     overflow: hidden;
     background-color: var(--color-fsa-aqua-100);
+    box-shadow: none;
+    border-radius: 0;
+    will-change: opacity;
+    transition: opacity .23s ease-in-out;
 
     &:before {
       content: '';
       position: absolute;
-      background-color: var(--progress-bgc--complete);
+      background-color: var(--color-fsa-aqua);
       top: 0;
       left: 0;
       bottom: 0;
@@ -63,6 +74,10 @@
       animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
     }
 
+  }
+
+  &--indeterminate-hidden {
+    opacity: 0;
   }
 
   &--segmented {}
@@ -126,6 +141,20 @@
   &__text {
     position: absolute;
     left: -999em;
+  }
+
+}
+
+.fic-progress-target {
+
+  position: relative;
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
   }
 
 }
