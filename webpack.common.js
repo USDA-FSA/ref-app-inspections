@@ -120,12 +120,6 @@ module.exports.plugins = WebpackPages.AddPages( './src/pages/' );
 
 module.exports.plugins.push(
   new CopyWebpackPlugin([
-    /* Used to copy directly to /dist
-    {
-      from: './src/js',
-      to: './js/'
-    },
-    */
     {
       from: './src/img',
       to: './img/'
