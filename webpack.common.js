@@ -7,10 +7,11 @@ const HTMLBeautifyPlugin = require('html-beautify-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const HandlebarsWebpackPlugin = require('handlebars-webpack-plugin');
 const path = require('path');
-//const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
 const WebpackPages = require('./webpack.pages.js');
 
 const fsaStyleImg = path.join(__dirname, 'node_modules/fsa-style/src/img/');
+
 
 module.exports = {
   
@@ -111,43 +112,46 @@ module.exports = {
         ]
       }
     ]
-  },
-
-  plugins:[
-    new CopyWebpackPlugin([
-      /* Used to copy directly to /dist
-      {
-        from: './src/js',
-        to: './js/'
-      },
-      */
-      {
-        from: './src/img',
-        to: './img/'
-      },
-      {
-        from: fsaStyleImg,
-        to: './img/'
-      },
-      {
-        from: './src/fonts',
-        to: './fonts/'
-      }
-    ]),
-
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "css/[name].css",
-      chunkFilename: "[name].css"
-    })   
-  ]  
+  }   
 };
 
-module.exports.plugins = WebpackPages.AddPages( module.exports.plugins );
+// Creates array for HTMLWebpackPlugin pages based on files in directory
+module.exports.plugins = WebpackPages.AddPages( './src/pages/' );
 
 module.exports.plugins.push(
-    new HTMLBeautifyPlugin({
+  new CopyWebpackPlugin([
+    /* Used to copy directly to /dist
+    {
+      from: './src/js',
+      to: './js/'
+    },
+    */
+    {
+      from: './src/img',
+      to: './img/'
+    },
+    {
+      from: fsaStyleImg,
+      to: './img/'
+    },
+    {
+      from: './src/fonts',
+      to: './fonts/'
+    }
+  ])
+);
+
+module.exports.plugins.push(
+  new MiniCssExtractPlugin({
+    // Options similar to the same options in webpackOptions.output
+    // both options are optional
+    filename: "css/[name].css",
+    chunkFilename: "[name].css"
+  })
+);
+
+module.exports.plugins.push(
+  new HTMLBeautifyPlugin({
     config: {
         html: {
             end_with_newline: true,

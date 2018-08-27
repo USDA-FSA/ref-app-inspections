@@ -3,30 +3,34 @@
 //
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const pagesData = require('./data/pages');
+const fs = require('fs');
 
-function addPages( plugins ){
+function addPages(dir){
 
-    var pArr = pagesData.pages;
+  var plugins = [];
+  //var dir = './src/pages/';
 
-    for (var i = 0; i <  pArr.length; i++ ){
-      var p = pArr[i];
-      plugins.push(
-        new HTMLWebpackPlugin({
-          title: p.title,
-          template: p.template,
-          filename: path.join(__dirname, p.filePath),
-          inject: p.inject
-        })
-      );
-      p = null;
-      p = undefined;
-    }
+  fs.readdirSync(dir).forEach (function(file) {
 
-    pArr = null;
-    pArray = undefined;
+    var fn = file.split('.')[0];
+    var newTitle = fn;
+    var newTemplate = dir + file;
+    var newFilename = path.resolve(__dirname, "./dist/"+ fn +".html" );
 
-    return plugins;
+    plugins.push(
+      new HTMLWebpackPlugin(
+        {
+          "title" : newTitle,
+          "template" : newTemplate,
+          "filename" : newFilename,
+          "inject" : "body"
+        }
+      )
+    );
+  });
+
+  return plugins;
+   
 }
 
 module.exports = {
