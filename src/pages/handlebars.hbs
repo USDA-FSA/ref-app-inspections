@@ -8,12 +8,12 @@
           <h1>[handlebars.hbs]</h1>
           <div class="hbs-play">
             <div class="hbs-play__item">
-              <h2 class="hbs-play__title">componentAuthor.hbs</h2>
+              <h2 class="hbs-play__title">Author.hbs</h2>
               <p>{{> ../components/author/author LABEL="Author" AUTHOR="Francis Rupert" }}</p>
               <p>{{> ../components/author/author LABEL="Previous Author" }}</p>
             </div>
             <div class="hbs-play__item">
-              <h2 class="hbs-play__title">componentCard.hbs</h2>
+              <h2 class="hbs-play__title">Card.hbs</h2>
               <div class="fsa-grid">
                 <div class="fsa-grid__1/1 fsa-grid__1/3@m">
                   {{> ../components/card/card francis="variation" }}
@@ -27,17 +27,17 @@
               </div>
             </div>
             <div class="hbs-play__item">
-              <h2 class="hbs-play__title">componentLorem.hbs</h2>
+              <h2 class="hbs-play__title">lorem.hbs</h2>
               <p>{{> ../components/lorem/lorem lorem="variation" }}</p>
               <p>{{> ../components/lorem/lorem ipsum="variation" }}</p>
               <p>{{> ../components/lorem/lorem dolor="variation" }}</p>
             </div>
             <div class="hbs-play__item">
-              <h2 class="hbs-play__title"> componentItems.hbs > fsa-label.hbs</h2>
+              <h2 class="hbs-play__title"> items.hbs > fsa-label.hbs</h2>
               {{> ../components/items/items }}
             </div>
             <div class="hbs-play__item">
-              <h2 class="hbs-play__title"> fsa-field.hbs</h2>
+              <h2 class="hbs-play__title"> field.hbs</h2>
               {{> ../components/field/field
                 ID="blah-0003"
                 LABEL="Name"
@@ -68,7 +68,7 @@
               }}
             </div>
             <div class="hbs-play__item">
-              <h2 class="hbs-play__title">componentTest.hbs</h2>
+              <h2 class="hbs-play__title">test.hbs</h2>
               <div class="fsa-grid">
                 <div class="fsa-grid__1/1 fsa-grid__1/2@s">
                   {{> ../components/test/test
@@ -84,27 +84,27 @@
                 </div>
               </div>
               <div class="fsa-grid__1/1 fsa-grid__1/3@m">
-                {{> ../components/componentCard joe="variation" }}
+                {{> ../components/card/card joe="variation" }}
               </div>
             </div>
           </div>
           <div class="hbs-play__item">
-            <h2 class="hbs-play__title">componentLorem.hbs</h2>
-            <p>{{> ../components/componentLorem lorem="variation" }}</p>
-            <p>{{> ../components/componentLorem ipsum="variation" }}</p>
-            <p>{{> ../components/componentLorem dolor="variation" }}</p>
+            <h2 class="hbs-play__title">lorem.hbs</h2>
+            <p>{{> ../components/lorem/lorem lorem="variation" }}</p>
+            <p>{{> ../components/lorem/lorem ipsum="variation" }}</p>
+            <p>{{> ../components/lorem/lorem dolor="variation" }}</p>
           </div>
           <div class="hbs-play__item">
-            <h2 class="hbs-play__title"> componentItems.hbs > fsa-label.hbs</h2>
-            {{> ../components/componentItems }}
+            <h2 class="hbs-play__title"> items.hbs > fsa-label.hbs</h2>
+            {{> ../components/items/items }}
           </div>
           <div class="hbs-play__item">
-            <h2 class="hbs-play__title"> fsa-field.hbs</h2>
-            {{> ../components/fsa-field
+            <h2 class="hbs-play__title"> field.hbs</h2>
+            {{> ../components/field/field
               ID="blah-0003"
               LABEL="Name"
             }}
-            {{> ../components/fsa-field
+            {{> ../components/field/field
               ID="blah-0001"
               REQUIRED=""
               ERROR=""
@@ -116,7 +116,7 @@
               HELP="Alpha characters, no numbers or special characters"
               MESSAGE="This field is required"
             }}
-            {{> ../components/fsa-field
+            {{> ../components/field/field
               ID="blah-0002"
               REQUIRED="TRUE"
               ERROR="TRUE"
