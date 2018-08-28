@@ -8,7 +8,6 @@ const fs = require('fs');
 function addPages(dir){
 
   var plugins = [];
-  //var dir = './src/pages/';
 
   fs.readdirSync(dir).forEach (function(file) {
 
