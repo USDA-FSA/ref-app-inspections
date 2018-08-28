@@ -1,0 +1,99 @@
+{{#> ../layouts/base title='Testing Handlebars' }}
+
+  {{#*inline "main-block"}}
+
+    <main id="main-content" tabindex="-1">
+      <div class="fsa-section">
+        <div class="fsa-section__bd">
+          <h1>[handlebars.hbs]</h1>
+          <div class="hbs-play">
+            <div class="hbs-play__item">
+              <h2 class="hbs-play__title">componentAuthor.hbs</h2>
+              <p>{{> ../components/componentAuthor LABEL="Author" AUTHOR="Francis Rupert" }}</p>
+              <p>{{> ../components/componentAuthor LABEL="Previous Author" }}</p>
+            </div>
+            <div class="hbs-play__item">
+              <h2 class="hbs-play__title">componentCard.hbs</h2>
+              <div class="fsa-grid">
+                <div class="fsa-grid__1/1 fsa-grid__1/3@m">
+                  {{> ../components/componentCard francis="variation" }}
+                </div>
+                <div class="fsa-grid__1/1 fsa-grid__1/3@m">
+                  {{> ../components/componentCard casey="variation" }}
+                </div>
+                <div class="fsa-grid__1/1 fsa-grid__1/3@m">
+                  {{> ../components/componentCard joe="variation" }}
+                </div>
+              </div>
+            </div>
+            <div class="hbs-play__item">
+              <h2 class="hbs-play__title">componentLorem.hbs</h2>
+              <p>{{> ../components/componentLorem lorem="variation" }}</p>
+              <p>{{> ../components/componentLorem ipsum="variation" }}</p>
+              <p>{{> ../components/componentLorem dolor="variation" }}</p>
+            </div>
+            <div class="hbs-play__item">
+              <h2 class="hbs-play__title"> componentItems.hbs > fsa-label.hbs</h2>
+              {{> ../components/componentItems }}
+            </div>
+            <div class="hbs-play__item">
+              <h2 class="hbs-play__title"> fsa-field.hbs</h2>
+              {{> ../components/fsa-field
+                ID="blah-0003"
+                LABEL="Name"
+              }}
+              {{> ../components/fsa-field
+                ID="blah-0001"
+                REQUIRED=""
+                ERROR=""
+                LABEL_DESC="Optional"
+                CLASS_EXTRA="fic-field"
+                BEHAVIOR="validate-commodity"
+                LABEL="Commodity Name"
+                INPUT_VALUE="Wheat"
+                HELP="Alpha characters, no numbers or special characters"
+                MESSAGE="This field is required"
+              }}
+              {{> ../components/fsa-field
+                ID="blah-0002"
+                REQUIRED="TRUE"
+                ERROR="TRUE"
+                LABEL_DESC="Required"
+                CLASS_EXTRA=""
+                BEHAVIOR=""
+                LABEL="Abbreviation"
+                INPUT_VALUE=""
+                HELP="No more than 3 characters"
+                MESSAGE="This field is required"
+              }}
+            </div>
+            <div class="hbs-play__item">
+              <h2 class="hbs-play__title">componentTest.hbs</h2>
+              <div class="fsa-grid">
+                <div class="fsa-grid__1/1 fsa-grid__1/2@s">
+                  {{> ../components/componentTest
+                    TITLE="Component Test 1"
+                    CLASS_EXTRA="component-test--highlight component-test--highlight-small"
+                  }}
+                </div>
+                <div class="fsa-grid__1/1 fsa-grid__1/2@s">
+                  {{> ../components/componentTest
+                    TITLE="Component Test 2"
+                    CLASS_EXTRA="component-test--highlight"
+                  }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+  {{/inline}}
+
+  {{#*inline "hidden-block"}}
+    <!-- HIDDEN - FOR MODALS/GROWL CONTENT -->
+    <!-- /HIDDEN -->
+  {{/inline}}
+
+{{/../layouts/base }}
