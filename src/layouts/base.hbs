@@ -3,7 +3,7 @@
 <!--[if gt IE 8]><!-->
 <html lang="en">
 <!--<![endif]-->
-{{> ../includes/head title=title }}
+{{> ../includes/head title="title" }}
 <body>
   {{> ../includes/skipnav }}
   {{> ../includes/fsa-browser-upgrade }}
@@ -16,9 +16,11 @@
   </header>
   {{/header-block}}
 
+  <main id="main-content" tabindex="-1">
   {{#> main-block}}
   <!-- BASE main-block -->
   {{/main-block}}
+  </main>
 
   {{#> footer-block}}
   <footer>
@@ -27,7 +29,7 @@
     {{> ../components/footer/footer-screen-id }}
   </footer>
   {{/footer-block}}
-  
+
   {{#> hidden-block}}
   <!-- BASE hidden-block -->
   {{/hidden-block}}
@@ -35,6 +37,9 @@
   {{#> scripts-block}}
   <!-- BASE scripts-block -->
   {{/scripts-block}}
+
+  {{#> aoux-pt-block}}
+  {{/aoux-pt-block}}
 
 </body>
 

@@ -1,0 +1,419 @@
+/*
+Using native CSS variables in lieu of SASS.
+TODO SASSify everything below.
+*/
+:root {
+
+  --color-fsa-primary: #236430;
+  --color-fsa-secondary: #205493;
+  --color-fsa-tertiary: #494440;
+
+  --color-fsa-primary-900: #1A4B24;
+  --color-fsa-primary: #236430;
+  --color-fsa-primary-300: #4D8157;
+  --color-fsa-primary-200: #B2C9B7;
+  --color-fsa-primary-100: #DEE8E0;
+  --color-fsa-secondary-900: #183F6E;
+  --color-fsa-secondary: #205493;
+  --color-fsa-secondary-300: #4F78AA;
+  --color-fsa-secondary-200: #A6BBD4;
+  --color-fsa-secondary-100: #DEE5EF;
+  --color-fsa-tertiary-900: #2F2C2A;
+  --color-fsa-tertiary: #494440;
+  --color-fsa-tertiary-300: #75716E;
+  --color-fsa-tertiary-200: #DBDAD9;
+  --color-fsa-tertiary-100: #F0F0F0;
+
+  --color-fsa-aqua: #00A6D2;
+  --color-fsa-red: #CD2026;
+
+  --color-fsa-aqua-900: #046B99;
+  --color-fsa-aqua: #00A6D2;
+  --color-fsa-aqua-300: #02BFE7;
+  --color-fsa-aqua-200: #9BDAF1;
+  --color-fsa-aqua-100: #E1F3F8;
+  --color-fsa-red-900: #981B1E;
+  --color-fsa-red: #CD2026;
+  --color-fsa-red-300: #E1797D;
+  --color-fsa-red-200: #F0BCBE;
+  --color-fsa-red-100: #F9E4E5;
+
+  --color-fsa-base: #2F2C2A;
+  --color-fsa-link: #0068AD;
+  --color-fsa-link-hover: #183F6E;
+
+  --size-base          : 4px;
+  --size-small         : calc(var(--size-base) * 2);
+  --size-default       : calc(var(--size-base) * 3);
+  --size-medium        : calc(var(--size-base) * 6);
+  --size-large         : calc(var(--size-base) * 9);
+  --size-extra-large   : calc(var(--size-medium) * 2);
+
+  --progress-bgc: #DEE8E0;
+  --progress-text--rejected: #CD2026;
+  --progress-bgc--rejected    : var(--color-fsa-red-200);
+  --progress-bgc--complete    : var(--color-fsa-primary-200);
+  --progress-bgc--in-progress : var(--color-fsa-aqua-200);
+  --progress-bgc--assigned    : var(--color-fsa-tertiary-200);
+  --progress-bgc--not-started : transparent;
+
+}
+
+/* [name] **********************************************************************/
+
+/* TO BE MOVED TO fsa-style ****************************************************/
+
+.fsa-nav-global__list {
+  z-index: 2;
+}
+
+.fsa-table__th--sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  background-color: #f8fafc;
+  z-index: 1;
+  box-shadow: 0 1px 0 0 var(--color-fsa-tertiary-200);
+}
+
+/* FIC Styles ******************************************************************/
+
+.fic-inspection-hd {}
+
+/*  */
+
+.fic-inspection-list-header {
+  margin-top: var(--size-medium);
+}
+.fic-inspection-list-header__row {
+  align-items: center
+}
+
+/*  */
+
+.fic-inspection-triage {
+  margin-top: var(--size-medium);
+}
+.fic-inspection-triage__row {
+  align-items: center;
+}
+
+/*  */
+
+.fic-inspections /* table */ {
+  margin-top: 12px;
+}
+.fic-inspections__row /*tr*/ {}
+.fic-inspections__row--selected /*tr*/ {
+  background-color: var(--color-fsa-tertiary-100);
+}
+.fic-inspections__select-column /* th,td */ {
+  width: calc(var(--size-base) * 10);
+}
+.fic-inspections__select-item /* span */ {
+  padding-left: var(--size-small);
+}
+.fic-inspections__select-item .fsa-checkbox + label,
+.fic-inspections__select-item .fsa-checkbox + label:before {
+  margin-right: 0;
+}
+.fic-inspections__status {}
+.fic-inspections__status-bd {}
+
+@media (max-width: 37.5em) {
+  .fic-inspections__status-bd {
+    padding-bottom: var(--size-medium);
+  }
+}
+
+@media (min-width: 37.5em) {
+  .fic-inspections__status-bd {
+    position: relative;
+  }
+}
+
+.fic-inspections__progress-bar {
+  position: absolute;
+  left: var(--size-medium);
+  right: var(--size-medium);
+  padding-top: calc(var(--size-base) * 3);
+}
+
+@media (min-width: 37.5em) {
+  .fic-inspections__progress-bar {
+    left: 0;
+    right: 0;
+    padding-top: 0;
+  }
+}
+
+.fic-inspections__status--0 /*Rejected*/ {
+  color: var(--progress-text--rejected);
+}
+.fic-inspections__status--1 /*Not Started*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 18%,
+      var(--progress-bgc) 18%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--2 /*Assigned*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 45%,
+      var(--progress-bgc) 45%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--3 /*In Progress*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 80%,
+      var(--progress-bgc) 80%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+.fic-inspections__status--4 /*Complete*/ {
+  background:
+    linear-gradient(
+      90deg,
+      var(--progress-bgc) 100%,
+      var(--progress-bgc) 100%,
+      transparent 0%,
+      transparent 100%
+    )
+  ;
+}
+
+/*  */
+
+.fic-finder {
+  display: inline-block;
+}
+.fic-finder--block {
+  display: block;
+}
+.fic-finder__entry {
+  display: flex;
+}
+.fic-finder__input {
+  padding-right: calc(var(--size-base) * 7);
+}
+.fic-finder__clearer {
+  text-decoration: none !important;
+  width: calc(var(--size-base) * 7);
+  text-align: center;
+  /* TODO fix this CSS */
+  margin-left: -28px !important;
+  font-weight: bold;
+}
+.fic-finder__clearer:focus,
+.fic-finder__clearer:active {
+  outline: 0;
+  transform: translate(1px, 1px);
+}
+.fic-finder__clearer:before {
+  content: '\00d7'
+}
+.fic-finder__input:placeholder-shown + .fic-finder__clearer {
+  display: none;
+}
+
+/*  */
+
+.fic-tooltip {
+  position: relative;
+}
+
+.fic-tooltip:hover,
+.fic-tooltip:focus {
+  z-index: 9999;
+}
+
+.fic-tooltip:before,
+.fic-tooltip:after {
+  display: none;
+  opacity: 0;
+  content: '';
+  margin-bottom: -var(--size-base);
+  bottom: 100%;
+  left: 50%;
+  position: absolute;
+  transition: all .23s ease-in-out;
+}
+
+@supports (pointer-events: none) {
+  .fic-tooltip:before,
+  .fic-tooltip:after {
+    display: block;
+    pointer-events: none;
+  }
+}
+
+.fic-tooltip:before {
+  bottom: calc(100% + var(--size-base));
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: var(--size-base) var(--size-base) 0 var(--size-base);
+  border-color: var(--color-fsa-tertiary) transparent transparent transparent;
+}
+
+.fic-tooltip:after {
+  content: attr(aria-label);
+  text-align: center;
+  bottom: calc(100% + var(--size-small));
+  transform: translateX(-50%);
+  background-color: var(--color-fsa-tertiary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  padding: var(--size-base) var(--size-small);
+  white-space: nowrap;
+  max-width: 364px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border-radius: var(--size-base);
+  outline: 0;
+}
+
+.fic-tooltip--include-value:after {
+  content: attr(aria-label) ': ' attr(aria-valuenow) ;
+}
+
+.fic-tooltip:hover:before,
+.fic-tooltip:focus:before,
+.fic-tooltip:hover:after,
+.fic-tooltip:focus:after {
+  display: block;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+/*  */
+
+.fic-progress-bar {
+  display: block;
+  display: flex;
+  height: var(--size-default);
+  border-radius: var(--size-base);
+  box-shadow: 0 0 0 1px var(--color-fsa-tertiary-200) inset;
+}
+.fic-progress-bar--small {
+  height: calc(var(--size-base) + 2px);
+  border: 0;
+}
+.fic-progress-bar--segmented {}
+
+.fic-progress-bar__item {
+  background-color: var(--progress-bgc--complete);
+  display: inline-block; /* fallback */
+  border: 1px solid rgba(0,0,0,.05);
+  border-left: 0;
+  transition: all .23s ease-in-out;
+}
+.fic-progress-bar__item:first-child {
+  border-left: 1px solid rgba(0,0,0,.1);
+  border-radius: var(--size-base) 0 0 var(--size-base);
+}
+.fic-progress-bar__item:last-child {
+  border-radius: 0 var(--size-base) var(--size-base) 0;
+}
+.fic-progress-bar__item:only-child {
+  border-radius: var(--size-base) 0 0 var(--size-base);
+}
+.fic-progress-bar--extra-small .fic-progress-bar__item {
+  border: 0
+}
+
+.fic-progress-bar__item--rejected {
+  background-color: var(--progress-bgc--rejected);
+}
+.fic-progress-bar__item--complete {
+  background-color: var(--progress-bgc--complete);
+}
+.fic-progress-bar__item--in-progress {
+  background-color: var(--progress-bgc--in-progress);
+}
+.fic-progress-bar__item--assigned {
+  background-color: var(--progress-bgc--assigned);
+}
+.fic-progress-bar__item--not-started {
+  background-color: var(--progress-bgc--not-started);
+  border: 0;
+}
+
+/* PROTOTYPE ONLY *************************************************************/
+.TBD {
+  margin-top: var(--size-medium);
+  background-color: white;
+  border: 1px solid var(--color-fsa-tertiary-200);
+  padding: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+  color: var(--color-fsa-tertiary-100);
+  text-shadow: -1px -1px 0 var(--color-fsa-tertiary-200);
+}
+
+.fic-inspections--status-filter-is-not-started  .fic-inspections__status--0, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--1, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--2, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--3, .fic-inspections--status-filter-is-not-started  .fic-inspections__status--4,
+.fic-inspections--status-filter-is-assigned  .fic-inspections__status--0, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--1, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--2, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--3, .fic-inspections--status-filter-is-assigned  .fic-inspections__status--4
+.fic-inspections--status-filter-is-in-progress  .fic-inspections__status--0, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--1, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--2, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--3, .fic-inspections--status-filter-is-in-progress  .fic-inspections__status--4
+.fic-inspections--status-filter-is-complete  .fic-inspections__status--0, .fic-inspections--status-filter-is-complete  .fic-inspections__status--1, .fic-inspections--status-filter-is-complete  .fic-inspections__status--2, .fic-inspections--status-filter-is-complete  .fic-inspections__status--3, .fic-inspections--status-filter-is-complete  .fic-inspections__status--4 {
+  background-image: none
+}
+
+.fic-inspections--status-filter-is-rejected    [data-status]:not([data-status="is-rejected"]   ) { display: none; }
+.fic-inspections--status-filter-is-not-started [data-status]:not([data-status="is-not-started"]) { display: none; }
+.fic-inspections--status-filter-is-assigned    [data-status]:not([data-status="is-assigned"]   ) { display: none; }
+.fic-inspections--status-filter-is-in-progress [data-status]:not([data-status="is-in-progress"]) { display: none; }
+.fic-inspections--status-filter-is-complete    [data-status]:not([data-status="is-complete"]   ) { display: none; }
+
+[data-filtered-by-assignee] {}
+[data-not-filtered-by-assignee] {
+  display: none;
+}
+
+.aoux-pt-strip {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #b6b4b6;
+  font-size: 11px;
+  padding: 6px;
+  position: relative;
+}
+.aoux-pt-strip button {
+  padding: 1px 2px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.yo {
+  color: red;
+  position: absolute;
+  z-index: 9999;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 var(--size-default) rgba(0, 0, 0, .6);
+  background-color: rgba(255, 0, 150, 1);
+  color: white;
+  padding: var(--size-default);
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.yo:hover {
+  background-color: rgba(200, 0, 150, 1);
+}
