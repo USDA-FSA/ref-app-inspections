@@ -1,0 +1,55 @@
+/* PROTOTYPE ONLY *************************************************************/
+.TBD {
+  margin-top: var(--size-medium);
+  background-color: white;
+  border: 1px solid var(--color-fsa-tertiary-200);
+  padding: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 72px;
+  font-weight: bold;
+  color: var(--color-fsa-tertiary-100);
+  text-shadow: -1px -1px 0 var(--color-fsa-tertiary-200);
+}
+
+.aoux-pt-strip {
+  will-change: bottom;
+  transition: all 1s ease-in-out;
+  background-color: #f2f2f2;
+  border-top: 1px solid #b6b4b6;
+  font-size: 11px;
+  padding: 6px;
+  position: fixed;
+  z-index: 2;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  html:hover & {
+    // transition: all 2s ease-in-out;
+    bottom: 0;
+  }
+}
+.aoux-pt-strip button {
+  padding: 1px 2px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.yo {
+  color: red;
+  position: fixed;
+  z-index: 9999;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 var(--size-default) rgba(0, 0, 0, .6);
+  background-color: rgba(255, 0, 150, 1);
+  color: white;
+  padding: var(--size-default);
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.yo:hover {
+  background-color: rgba(200, 0, 150, 1);
+}

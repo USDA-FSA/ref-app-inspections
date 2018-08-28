@@ -1,0 +1,71 @@
+<div id="fic-inspection-hd__list-header" class="fic-inspection-list-header">
+  <div class="fsa-grid fic-inspection-list-header__row">
+    <div class="fsa-grid__1 fsa-grid__auto@m">
+      <span id="inspections-amt">1-20</span> of 136
+    </div>
+    <div class="fsa-grid__1 fsa-grid__auto@m">
+      <div class="fsa-text-align--right" hidden="hidden" id="pt__filter-alt-2">
+        <form>
+          <span class="fsa-m-l--s">
+            <span class="fic-finder">
+              <label class="fic-finder__label sr-only" for="inspectionFind">Quick Find</label>
+              <span class="fic-finder__entry">
+                <input class="fsa-input fsa-input--small fic-finder__input" placeholder="Quick Find" type="text" id="inspectionFind" data-behavior="inspections-find">
+                <button tabindex="-1" data-behavior="clear-finder-entry" class="fsa-btn fsa-btn--flat fic-finder__clearer" type="button" aria-label="Clear input"></button>
+              </span>
+            </span>
+          </span>
+          <span class="fsa-m-l--s">
+            <label class="sr-only" for="inspectionsFilterByAssignee__alt">Assigned to</label>
+            <select data-behavior="inspections-assignee-filter inspections-count-filter" data-filter-target="inspectionsTable" class="fsa-select fsa-select--small" name="inspectionsFilterByAssignee__alt" id="inspectionsFilterByAssignee__alt">
+              <option value="assignedto-all">All Assignees</option>
+              <option value="assignedto-not-assigned">Unassigned</option>
+              <option value="assignedto-norm-peterson">Norm Peterson</option>
+              <option value="assignedto-carla-tortelli">Carla Tortelli</option>
+              <option value="assignedto-ernie-pantusso">Ernie Pantusso</option>
+              <option value="assignedto-diane-chambers">Diane Chambers</option>
+              <option value="assignedto-woody-boyd">Woody Boyd</option>
+              <option value="assignedto-diane-lane">Diane Lane</option>
+              <option value="assignedto-cliff-clavin">Cliff Clavin</option>
+              <option value="assignedto-rebecca-howe">Rebecca Howe</option>
+              <option value="assignedto-sam-malone">Sam Malone</option>
+            </select>
+          </span>
+          <span class="fsa-m-l--s">
+            <label class="sr-only" for="inspectionsFilterByStatus__alt">Status</label>
+            <select class="fsa-select fsa-select--small" name="inspectionsFilterByStatus__alt" id="inspectionsFilterByStatus__alt" data-behavior="inspections-filter inspections-count-filter" data-filter-target="inspectionsTable">
+              <option value="is-all" selected="">All Statuses</option>
+              <option value="is-rejected">Rejected</option>
+              <option value="is-not-started">Not Started</option>
+              <option value="is-assigned">Assigned</option>
+              <option value="is-in-progress">In Progress</option>
+              <option value="is-complete">Complete</option>
+            </select>
+          </span>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="fic-inspection-hd__triage" class="fic-inspection-triage" hidden>
+  <div class="fsa-grid fic-inspection-triage__row">
+    <div class="fsa-grid__1 fsa-grid__auto@m">
+      <span id="triage-selection">2</span> selected
+    </div>
+    <div class="fsa-grid__1 fsa-grid__auto@m">
+      <div class="fsa-text-align--right">
+        <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
+        <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
+        <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
+        <button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small">[action]</button>
+        <!--
+        [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Assign[[[/button]]]
+        [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Start[[[/button]]]
+        [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Complete[[[/button]]]
+        [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Approve[[[/button]]]
+        [[[button disabled="disabled" class="fsa-btn fsa-btn--secondary fsa-btn--small"]]]Reject[[[/button]]]
+        -->
+      </div>
+    </div>
+  </div>
+</div>

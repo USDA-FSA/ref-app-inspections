@@ -1,0 +1,67 @@
+{{#if V1}}
+  {{!-- Small size, Hidden --}}
+  <div class="fic-progress-target" id="{{ID}}">
+    <div class="fic-progress-target__item">
+      {{> ../components/fic-progress
+        CLASS="
+        fic-progress-bar--small
+        fic-progress-bar--indeterminate
+        fic-progress-bar--indeterminate-hidden
+        fic-progress-target__item
+        fic-progress-target__bar
+        "
+        LABEL="Loading"
+      }}
+    </div>
+  </div>
+{{/if}}
+
+{{#if V2}}
+  {{!-- Default size, Hidden --}}
+  <div class="fic-progress-target" id="{{ID}}">
+    <div class="fic-progress-target__item">
+      {{> ../components/fic-progress
+        CLASS="
+        fic-progress-bar--indeterminate
+        fic-progress-bar--indeterminate-hidden
+        fic-progress-target__item
+        fic-progress-target__bar
+        "
+        LABEL="Loading"
+      }}
+    </div>
+  </div>
+{{/if}}
+
+{{#if V3}}
+  {{!-- Small size, not hidden --}}
+  <div class="fic-progress-target" id="{{ID}}">
+    <div class="fic-progress-target__item">
+      {{> ../components/fic-progress
+        CLASS="
+        fic-progress-bar--small
+        fic-progress-bar--indeterminate
+        fic-progress-target__item
+        fic-progress-target__bar
+        "
+        LABEL="Loading"
+      }}
+    </div>
+  </div>
+{{/if}}
+
+{{#if V4}}
+  {{!-- Default size, not hidden --}}
+  <div class="fic-progress-target" id="{{ID}}">
+    <div class="fic-progress-target__item">
+      {{> ../components/fic-progress
+        CLASS="
+        fic-progress-bar--indeterminate
+        fic-progress-target__item
+        fic-progress-target__bar
+        "
+        LABEL="Loading"
+      }}
+    </div>
+  </div>
+{{/if}}

@@ -1,0 +1,21 @@
+
+/* [name] **********************************************************************/
+
+/* TO BE MOVED TO fsa-style ****************************************************/
+
+.fsa-nav-global__list {
+  z-index: 2;
+}
+
+.fsa-table__th--sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  background-color: #f8fafc;
+  z-index: 1;
+  box-shadow: 0 1px 0 0 var(--color-fsa-tertiary-200);
+}
+
+[hidden] {
+  display: none !important;
+}

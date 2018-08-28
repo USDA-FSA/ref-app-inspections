@@ -1,0 +1,146 @@
+
+@keyframes fic-anim-indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+
+.fic-progress-bar {
+
+  & {
+    display: block;
+    display: flex;
+    height: var(--size-default);
+    border-radius: var(--size-base);
+    box-shadow: 0 0 0 1px var(--color-fsa-tertiary-200) inset;
+  }
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  &--small {
+    height: var(--size-base);
+    border: 0;
+  }
+
+  &--tiny {
+    height: calc(var(--size-base) / 2);
+    border: 0;
+  }
+
+  &--indeterminate {
+
+    position: relative;
+    opacity: 1;
+    pointer-events: none;
+    overflow: hidden;
+    background-color: var(--color-fsa-aqua-100);
+    box-shadow: none;
+    border-radius: 0;
+    will-change: opacity;
+    transition: opacity .23s ease-in-out;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background-color: var(--color-fsa-aqua);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      animation: fic-anim-indeterminate-short 1.5s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+      animation-direction: alternate;
+    }
+
+  }
+
+  &--indeterminate-hidden {
+    opacity: 0;
+  }
+
+  &--segmented {}
+
+  //////////////////////////////////////////////////////////////////////////////
+
+  &__item {
+
+    & {
+
+      background-color: var(--progress-bgc--complete);
+      display: inline-block; /* fallback */
+      border: 1px solid rgba(0,0,0,.05);
+      border-left: 0;
+      transition: all .23s ease-in-out;
+
+      .fic-progress-bar--indeterminate & {
+        display: none;
+      }
+
+    }
+
+    &:first-child {
+      border-left: 1px solid rgba(0,0,0,.1);
+      border-radius: var(--size-base) 0 0 var(--size-base);
+    }
+
+    &:last-child {
+      border-radius: 0 var(--size-base) var(--size-base) 0;
+    }
+
+    &:only-child {
+      border-radius: var(--size-base) 0 0 var(--size-base);
+    }
+
+    ////////////////////////////////////////////////////////////////////////////
+
+    &--rejected {
+      background-color: var(--progress-bgc--rejected);
+    }
+
+    &--complete {
+      background-color: var(--progress-bgc--complete);
+    }
+
+    &--in-progress {
+      background-color: var(--progress-bgc--in-progress);
+    }
+
+    &--assigned {
+      background-color: var(--progress-bgc--assigned);
+    }
+
+    &--not-started {
+      background-color: var(--progress-bgc--not-started);
+      border: 0;
+    }
+
+  }
+
+  &__text {
+    position: absolute;
+    left: -999em;
+  }
+
+}
+
+.fic-progress-target {
+
+  position: relative;
+
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+}

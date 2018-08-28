@@ -1,0 +1,25 @@
+<span
+  aria-label="{{ LABEL }}"
+  class="
+    fic-progress-bar
+    {{#if VARIATION}}
+      fic-progress-bar--{{ VARIATION }}
+    {{/if}}
+    {{#if CLASS}}
+      {{ CLASS }}
+    {{/if}}
+  "
+  {{#if FOCUSABLE}}
+    tabindex="0"
+  {{/if}}
+  {{#if VALUENOW}}
+    aria-valuenow="{{ LABEL-VALUE }}"
+  {{/if}}
+  {{ BOOL }}
+>
+  <span
+    class="fic-progress-bar__item"
+    style="width:{{ LABEL-VALUE }}">
+    <span class="fic-progress-bar__text">{{ LABEL-VALUE }}</span>
+  </span>
+</span>
