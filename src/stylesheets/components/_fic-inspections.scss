@@ -1,0 +1,128 @@
+.fic-inspections {
+
+  & /* table */ {
+    margin-top: 0;
+  }
+
+  &__row /*tr*/ {
+    &--selected {
+      background-color: var(--color-fsa-tertiary-100);
+    }
+  }
+
+  &__select-column /* th,td */ {
+    width: calc(var(--size-base) * 10);
+  }
+
+  &__select-item /* span */ {
+
+    padding-left: var(--size-small);
+
+    .fsa-checkbox + label,
+    .fsa-checkbox + label:before {
+      margin-right: 0;
+    }
+
+  }
+
+  &__status /* td */ {
+    &--0 /*Rejected*/ {
+      color: var(--progress-text--rejected);
+    }
+    &--1 /*Not Started*/ {
+      background:
+        linear-gradient(
+          90deg,
+          var(--progress-bgc) 18%,
+          var(--progress-bgc) 18%,
+          transparent 0%,
+          transparent 100%
+        )
+      ;
+    }
+    &--2 /*Assigned*/ {
+      background:
+        linear-gradient(
+          90deg,
+          var(--progress-bgc) 45%,
+          var(--progress-bgc) 45%,
+          transparent 0%,
+          transparent 100%
+        )
+      ;
+    }
+    &--3 /*In Progress*/ {
+      background:
+        linear-gradient(
+          90deg,
+          var(--progress-bgc) 80%,
+          var(--progress-bgc) 80%,
+          transparent 0%,
+          transparent 100%
+        )
+      ;
+    }
+    &--4 /*Complete*/ {
+      background:
+        linear-gradient(
+          90deg,
+          var(--progress-bgc) 100%,
+          var(--progress-bgc) 100%,
+          transparent 0%,
+          transparent 100%
+        )
+      ;
+    }
+  }
+
+  &__status-bd {
+    @media (max-width: 37.5em) {
+      padding-bottom: var(--size-medium);
+    }
+    @media (min-width: 37.5em) {
+      position: relative;
+    }
+  }
+
+  &__progress-bar {
+
+    position: absolute;
+    left: var(--size-medium);
+    right: var(--size-medium);
+    padding-top: calc(var(--size-base) * 3);
+
+    @media (min-width: 37.5em) {
+      left: 0;
+      right: 0;
+      padding-top: 0;
+    }
+
+  }
+
+}
+
+// All of the below are PURELY FOR DEMO PURPOSES to fake SPA functionality /////
+
+.fic-inspections--status-filter-is-not-started,
+.fic-inspections--status-filter-is-assigned,
+.fic-inspections--status-filter-is-in-progress,
+.fic-inspections--status-filter-is-complete {
+  .fic-inspections__status--0,
+  .fic-inspections__status--1,
+  .fic-inspections__status--2,
+  .fic-inspections__status--3,
+  .fic-inspections__status--4 {
+    background-image: none;
+  }
+}
+
+.fic-inspections--status-filter-is-rejected    [data-status]:not([data-status="is-rejected"]   ) { display: none; }
+.fic-inspections--status-filter-is-not-started [data-status]:not([data-status="is-not-started"]) { display: none; }
+.fic-inspections--status-filter-is-assigned    [data-status]:not([data-status="is-assigned"]   ) { display: none; }
+.fic-inspections--status-filter-is-in-progress [data-status]:not([data-status="is-in-progress"]) { display: none; }
+.fic-inspections--status-filter-is-complete    [data-status]:not([data-status="is-complete"]   ) { display: none; }
+
+[data-filtered-by-assignee] {}
+[data-not-filtered-by-assignee] {
+  display: none;
+}
