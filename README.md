@@ -2,8 +2,8 @@
 
 Prototyping SPA-based Reference App.
 
-The [fsa-prototype-kit](https://github.com/USDA-FSA/fsa-prototype-kit/) is integrated, and `npm build` will create a `dist` directory.
+The [fsa-prototype-kit](https://github.com/USDA-FSA/fsa-prototype-kit/) is integrated.
 
-To install the dependencies, run `npm install`.
-
-Run  `npm start` to spin up a Webpack Dev Server.
+1. `yarn`: installs dependencies.
+1. `yarn build`: builds `dist`.
+1. `yarn start`: spins up Webpack Dev Server and watches.
