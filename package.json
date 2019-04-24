@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --config webpack.dev.js",
     "build": "webpack --mode production --optimize-minimize --config webpack.prod.js",
-    "watch": "webpack --watch",
-    "prestart": "yarn build"
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
