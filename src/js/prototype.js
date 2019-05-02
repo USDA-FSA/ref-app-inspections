@@ -1,0 +1,1 @@
+console.log('src/js/prototype.js logged');

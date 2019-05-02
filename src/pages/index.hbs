@@ -1,4 +1,12 @@
-{{#> ../layouts/base title='Inspections - FIC' }}
+{{#> ../layouts/base TITLE='Inspections - FIC' }}
+
+  {{#*inline "header-block"}}
+    <header>
+      {{> ../components/tophat/tophat }}
+      {{> ../components/header-app/header-app }}
+      {{> ../components/global-nav/global-nav NAV1_ACTIVE=true }}
+    </header>
+  {{/inline}}
 
   {{#*inline "main-block"}}
 
@@ -70,11 +78,19 @@
   {{#*inline "hidden-block"}}
     <!-- HIDDEN - FOR MODALS/GROWL CONTENT -->
     {{> ../includes/hidden }}
+    {{> ../components/growl/growl-cancel GROWL_ID="growl_cancel_steps" }}
+    {{> ../components/modal/modal MODAL_URL_1="sections.html" }}
     <!-- /HIDDEN -->
   {{/inline}}
 
+  {{#*inline "scripts-block"}}
+
+    {{> ../includes/scripts }}
+
+  {{/inline}}
+
   {{#*inline "aoux-pt-block"}}
-    {{> ../includes/aoux-pt-strip inspections="true" }}
+    {{> ../includes/aoux-pt-strip INSPECTIONS="TRUE" }}
   {{/inline}}
 
 {{/../layouts/base }}
